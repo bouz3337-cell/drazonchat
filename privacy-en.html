@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DrazonChat privacy policy · DrazonChat</title>
+<style>
+:root { --bg: #FBF8F2; --fg: #20232B; --muted: #5E5A52; --line: #E4DCCB; --accent: #8A6A34; --card: #FFFFFF; }
+@media (prefers-color-scheme: dark) { :root { --bg: #14161D; --fg: #F4EFE6; --muted: #B0ACA3; --line: #2C2F39; --accent: #C9A96E; --card: #1B1E27; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.7 system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo",
+       "Malgun Gothic", "Noto Sans KR", sans-serif; }
+header { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between; padding: 16px clamp(16px, 4vw, 40px);
+         border-bottom: 1px solid var(--line); }
+.brand { color: var(--accent); font-weight: 700; letter-spacing: .02em; text-decoration: none; font-size: 18px; }
+nav { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14px; }
+nav a { color: var(--muted); text-decoration: none; } nav a:hover, nav a[aria-current] { color: var(--fg); }
+main { max-width: 760px; margin: 0 auto; padding: 24px clamp(16px, 4vw, 40px) 64px; }
+h1 { font-size: 28px; line-height: 1.3; margin: 8px 0 16px; text-wrap: balance; }
+h2 { font-size: 19px; margin: 36px 0 8px; padding-top: 8px; border-top: 1px solid var(--line); }
+a { color: var(--accent); } code { font-size: .92em; background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
+.table { overflow-x: auto; } table { border-collapse: collapse; width: 100%; font-size: 15px; background: var(--card); }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; } th { font-weight: 600; }
+ul { padding-left: 22px; } .missing { background: #F6D365; color: #20232B; padding: 0 3px; border-radius: 3px; }
+footer { max-width: 760px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px) 40px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<header><a class="brand" href="index.html">DrazonChat</a><nav><a href="support-en.html">Help and support</a><a href="privacy-en.html" aria-current="page">Privacy policy</a><a href="privacy.html" lang="ko">한국어</a></nav></header>
+<main>
+<h1>DrazonChat privacy policy</h1>
+<p>Effective date: 2026-10-15<br>
+Operator: 전요한, contact: bouz3337@gmail.com, support: <a href="https://discord.gg/Q5yyQab9AM">https://discord.gg/Q5yyQab9AM</a></p>
+<h2>1. What the service is</h2>
+<p>DrazonChat is a Discord bot that translates chat into the other person's language. It translates only the messages of people who <strong>turned translation on themselves</strong>, and it stops as soon as they turn it off.</p>
+<h2>2. What we store and for how long</h2>
+<div class="table"><table><thead><tr><th>What</th><th>Why</th><th>How long</th></tr></thead><tbody><tr><td>Per-server auto-translation settings (on or off, my language and their language, tone, whether to show your original under translations, the language codes of your last 10 messages). One set per user for DMs and servers without the bot</td><td>To translate only the messages of people who turned it on, in the languages and tone they chose</td><td>Deleted on request, when the bot leaves that server, or after 12 months without use (if there are only settings and no translations, 12 months from the last settings change)</td></tr><tr><td>The original text of translated messages</td><td>So the 🔎 button on a translated message can show the full original</td><td>14 days (this is the copy the bot stores; the original shown in small text under a translation is covered in section 4)</td></tr><tr><td>Translation cache (translations of texts up to 200 characters, not linked to who sent them)</td><td>So the same sentence isn't translated twice</td><td>30 days</td></tr><tr><td>Plan, monthly translation count, alert setting, the day the free tone trial started</td><td>To count the limit and apply the plan</td><td>Deleted after 12 months without use</td></tr><tr><td>Alert levels sent this period, daily extra translations after the limit</td><td>So the same alert isn't sent twice and extras are counted</td><td>Cleared within 400 days after the period ends</td></tr><tr><td>Display-language code (the Discord language of the last command or button you used)</td><td>To send DM alerts in that language</td><td>Deleted after 12 months without use</td></tr><tr><td>Days on which you translated (one row per day)</td><td>To measure whether the service keeps being used</td><td>90 days</td></tr><tr><td>Profile picture used on translated messages (your avatar with a gold ring, 256px)</td><td>To post translations under your own name and picture</td><td>1 day in the operator's private storage channel. The copy Discord keeps on a translated message stays as long as that message exists</td></tr></tbody></table></div>
+<p>Kept only in memory: recent messages in the same channel (text, display name, user ID, message ID) for 15 minutes, as conversation context; gone when the bot restarts. For rate limiting, user IDs and request times for 1 minute. To send each kind of notice DM (a message that couldn't be translated, reaching the limit) at most once a day, user IDs and the reason for the notice until the end of that day (for notices that a channel's settings or the bot's permissions stop auto-translation there, with the channel ID, for 30 days). To tell whether a problem hit many people at once, the user IDs and times of messages that couldn't be translated; only the last 10 minutes are used, and older ones are removed the next time this happens or at the cleanup that runs every 12 hours. These notice records are removed as soon as you delete your data and are gone when the bot restarts.</p>
+<h2>3. What is sent out for translation</h2>
+<p>Translation is done with the Claude API of Anthropic PBC (United States). We send:</p>
+<ul><li>Auto-translation: the message text, the writer's Discord display name (and username if different), and up to 6 recent messages from the same channel within the last 15 minutes written by <strong>users who turned auto-translation on</strong> (3 on the Free plan, 600 characters in total) with their display names.</li><li>Right-click translation and <code>/translate once</code>: the message you picked (or typed), its writer's name, and the same-channel context before it (same rule as above).</li><li>Meaning explanation (a feature being tested): the message you picked, its writer's name, and the same-channel context before it (same rule as above). The explanation is not stored and only you see it.</li><li>Under Anthropic's commercial terms, this data is not used to train models and is deleted within 30 days (up to 2 years if flagged for a usage-policy violation).</li></ul>
+<p>Not sent: messages starting with <code>//</code>, messages with stickers or polls, messages over 1,500 characters, messages without letters. Text translated from the phrasebook or the cache is not sent for that translation (it may still be sent as context for a later message). Messages in age-restricted channels are not translated.</p>
+<p>Cross-border transfer: items (list above), country (United States), recipient (Anthropic PBC, privacy@anthropic.com), purpose (translation and meaning explanations), retention (30 days, with the exception above), how to refuse (turn translation off or don't turn it on; then nothing is sent).</p>
+<p>Nothing is sent to third parties other than Anthropic. Discord's own processing is covered by Discord's privacy policy.</p>
+<h2>4. What is public in the channel</h2>
+<ul><li>Translations are posted in the channel under the writer's name and picture. They are not removed by a deletion request; the writer can remove them at any time with message right-click → Apps → "Delete my translation". This works even if the bot's webhook has been deleted from the server: the bot then deletes its own message directly. To recognize the writer, the 🔎 button on a translated message carries the writer's Discord user ID. It isn't shown on screen, but it is part of the message data, so Discord apps and other bots that can read the channel can see it.</li><li>By default, the original is posted in small text under each translation (only the beginning of long messages). It is part of the translated message, so anyone in the channel can see it as long as that message exists, regardless of the 14-day retention in section 2 or a deletion request. You can turn it off per server in settings (<code>/translate setup</code>); it then applies to translations posted after that. As above, the writer can delete those translated messages at any time with "Delete my translation".</li><li>The 🔎 button on a translated message lets anyone in the channel see the full original and its writer for 14 days (shown only to the person who pressed it).</li></ul>
+<h2>5. Logs</h2>
+<p>Operating logs keep only user IDs, counts, and the type and location of errors. No conversation content. When a deletion is processed, the user ID and the number of deleted rows are logged.</p>
+<h2>6. Deleting your data</h2>
+<ul><li>In Discord, run <code>/translate delete-my-data</code> and press the confirm button within 10 minutes. It deletes everything in the table in section 2 except the translation cache, plus the profile picture and the recent messages and notice records in memory. If you use the bot again afterwards, new records start from then.</li><li>Translated messages posted in channels (including the original shown under them and the profile picture on them) are not deleted by a deletion request. The writer can delete them at any time with message right-click → Apps → "Delete my translation" (this works even if the bot's webhook was deleted; see section 4). The translation cache isn't linked to who sent the text, so it can't be picked out; it is deleted after 30 days.</li><li>Or ask through support (<a href="https://discord.gg/Q5yyQab9AM">https://discord.gg/Q5yyQab9AM</a>) and the operator will delete it.</li></ul>
+<h2>7. Content we don't translate</h2>
+<p>Sexually explicit content is not translated, under the translation model's usage policy. If the model declines, the original is left as is and nothing is counted. Translation is off in age-restricted channels.</p>
+<h2>8. Changes</h2>
+<p>When this policy changes, we announce it through the bot's help link and the support channel, and note the date above the effective date.</p>
+</main>
+<footer>DrazonChat</footer>
+</body>
+</html>
