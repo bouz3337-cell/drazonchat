@@ -3,38 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>DrazonChat privacy policy · DrazonChat</title>
-<style>
-:root { --bg: #FBF8F2; --fg: #20232B; --muted: #5E5A52; --line: #E4DCCB; --accent: #8A6A34; --card: #FFFFFF; }
-@media (prefers-color-scheme: dark) { :root { --bg: #14161D; --fg: #F4EFE6; --muted: #B0ACA3; --line: #2C2F39; --accent: #C9A96E; --card: #1B1E27; } }
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.7 system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo",
-       "Malgun Gothic", "Noto Sans KR", sans-serif; }
-header { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between; padding: 16px clamp(16px, 4vw, 40px);
-         border-bottom: 1px solid var(--line); }
-.brand { color: var(--accent); font-weight: 700; letter-spacing: .02em; text-decoration: none; font-size: 18px; }
-nav { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14px; }
-nav a { color: var(--muted); text-decoration: none; } nav a:hover, nav a[aria-current] { color: var(--fg); }
-main { max-width: 760px; margin: 0 auto; padding: 24px clamp(16px, 4vw, 40px) 64px; }
-h1 { font-size: 28px; line-height: 1.3; margin: 8px 0 16px; text-wrap: balance; }
-h2 { font-size: 19px; margin: 36px 0 8px; padding-top: 8px; border-top: 1px solid var(--line); }
-a { color: var(--accent); } code { font-size: .92em; background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
-.table { overflow-x: auto; } table { border-collapse: collapse; width: 100%; font-size: 15px; background: var(--card); }
-th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; } th { font-weight: 600; }
-ul { padding-left: 22px; } .missing { background: #F6D365; color: #20232B; padding: 0 3px; border-radius: 3px; }
-footer { max-width: 760px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px) 40px; color: var(--muted); font-size: 13px; }
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<header><a class="brand" href="index.html">DrazonChat</a><nav><a href="support-en.html">Help and support</a><a href="privacy-en.html" aria-current="page">Privacy policy</a><a href="privacy.html" lang="ko">한국어</a></nav></header>
-<main>
+<header class="site-header"><div class="wrap"><a class="brand" href="index.html"><img class="brand-seal" src="seal.png" width="32" height="32" alt=""><span class="brand-name">Drazon<span>Chat</span></span></a><nav class="site-nav"><a href="plans-en.html">Plans</a><a href="support-en.html">Help and support</a><a href="privacy-en.html" aria-current="page">Privacy policy</a></nav><a class="lang-switch" href="privacy.html" lang="ko" hreflang="ko">한국어</a></div></header>
+<main id="main">
 <h1>DrazonChat privacy policy</h1>
 <p>Effective date: 2026-10-15<br>
 Operator: 전요한, contact: bouz3337@gmail.com, support: <a href="https://discord.gg/Q5yyQab9AM">https://discord.gg/Q5yyQab9AM</a></p>
 <h2>1. What the service is</h2>
 <p>DrazonChat is a Discord bot that translates chat into the other person's language. It translates only the messages of people who <strong>turned translation on themselves</strong>, and it stops as soon as they turn it off.</p>
 <h2>2. What we store and for how long</h2>
-<div class="table"><table><thead><tr><th>What</th><th>Why</th><th>How long</th></tr></thead><tbody><tr><td>Per-server auto-translation settings (on or off, my language and their language, tone, whether to show your original under translations, the language codes of your last 10 messages). One set per user for DMs and servers without the bot</td><td>To translate only the messages of people who turned it on, in the languages and tone they chose</td><td>Deleted on request, when the bot leaves that server, or after 12 months without use (if there are only settings and no translations, 12 months from the last settings change)</td></tr><tr><td>The original text of translated messages</td><td>So the 🔎 button on a translated message can show the full original</td><td>14 days (this is the copy the bot stores; the original shown in small text under a translation is covered in section 4)</td></tr><tr><td>Translation cache (translations of texts up to 200 characters, not linked to who sent them)</td><td>So the same sentence isn't translated twice</td><td>30 days</td></tr><tr><td>Plan, monthly translation count, alert setting, the day the free tone trial started</td><td>To count the limit and apply the plan</td><td>Deleted after 12 months without use</td></tr><tr><td>Alert levels sent this period, daily extra translations after the limit</td><td>So the same alert isn't sent twice and extras are counted</td><td>Cleared within 400 days after the period ends</td></tr><tr><td>Display-language code (the Discord language of the last command or button you used)</td><td>To send DM alerts in that language</td><td>Deleted after 12 months without use</td></tr><tr><td>Days on which you translated (one row per day)</td><td>To measure whether the service keeps being used</td><td>90 days</td></tr><tr><td>Profile picture used on translated messages (your avatar with a gold ring, 256px)</td><td>To post translations under your own name and picture</td><td>1 day in the operator's private storage channel. The copy Discord keeps on a translated message stays as long as that message exists</td></tr></tbody></table></div>
+<div class="table table--stack"><table><thead><tr><th>What</th><th>Why</th><th>How long</th></tr></thead><tbody><tr><td data-label="What">Per-server auto-translation settings (on or off, my language and their language, tone, whether to show your original under translations, the language codes of your last 10 messages). One set per user for DMs and servers without the bot</td><td data-label="Why">To translate only the messages of people who turned it on, in the languages and tone they chose</td><td data-label="How long">Deleted on request, when the bot leaves that server, or after 12 months without use (if there are only settings and no translations, 12 months from the last settings change)</td></tr><tr><td data-label="What">The original text of translated messages</td><td data-label="Why">So the 🔎 button on a translated message can show the full original</td><td data-label="How long">14 days (this is the copy the bot stores; the original shown in small text under a translation is covered in section 4)</td></tr><tr><td data-label="What">Translation cache (translations of texts up to 200 characters, not linked to who sent them)</td><td data-label="Why">So the same sentence isn't translated twice</td><td data-label="How long">30 days</td></tr><tr><td data-label="What">Plan, monthly translation count, alert setting, the day the free tone trial started</td><td data-label="Why">To count the limit and apply the plan</td><td data-label="How long">Deleted after 12 months without use</td></tr><tr><td data-label="What">Alert levels sent this period, daily extra translations after the limit</td><td data-label="Why">So the same alert isn't sent twice and extras are counted</td><td data-label="How long">Cleared within 400 days after the period ends</td></tr><tr><td data-label="What">Display-language code (the Discord language of the last command or button you used)</td><td data-label="Why">To send DM alerts in that language</td><td data-label="How long">Deleted after 12 months without use</td></tr><tr><td data-label="What">Days on which you translated (one row per day)</td><td data-label="Why">To measure whether the service keeps being used</td><td data-label="How long">90 days</td></tr><tr><td data-label="What">Profile picture used on translated messages (your avatar with a gold ring, 256px)</td><td data-label="Why">To post translations under your own name and picture</td><td data-label="How long">1 day in the operator's private storage channel. The copy Discord keeps on a translated message stays as long as that message exists</td></tr></tbody></table></div>
 <p>Kept only in memory: recent messages in the same channel (text, display name, user ID, message ID) for 15 minutes, as conversation context; gone when the bot restarts. For rate limiting, user IDs and request times for 1 minute. To send each kind of notice DM (a message that couldn't be translated, reaching the limit) at most once a day, user IDs and the reason for the notice until the end of that day (for notices that a channel's settings or the bot's permissions stop auto-translation there, with the channel ID, for 30 days). To tell whether a problem hit many people at once, the user IDs and times of messages that couldn't be translated; only the last 10 minutes are used, and older ones are removed the next time this happens or at the cleanup that runs every 12 hours. These notice records are removed as soon as you delete your data and are gone when the bot restarts.</p>
 <h2>3. What is sent out for translation</h2>
 <p>Translation is done with the Claude API of Anthropic PBC (United States). We send:</p>
@@ -53,6 +35,6 @@ Operator: 전요한, contact: bouz3337@gmail.com, support: <a href="https://disc
 <h2>8. Changes</h2>
 <p>When this policy changes, we announce it through the bot's help link and the support channel, and note the date above the effective date.</p>
 </main>
-<footer>DrazonChat</footer>
+<footer class="site-footer"><div class="wrap"><nav class="footer-nav"><a href="terms-en.html">Terms</a><a href="refund-en.html">Refund policy</a><a href="privacy-en.html" aria-current="page">Privacy policy</a><a href="support-en.html">Help and support</a></nav><div class="biz biz--pending"><p>We're in a test period before business registration and don't take payments.</p><p><span class="biz-label">Contact</span><a href="mailto:bouz3337@gmail.com">bouz3337@gmail.com</a></p></div><p class="footer-end"><img src="seal.png" width="20" height="20" alt="">© 2026 DrazonChat</p></div></footer>
 </body>
 </html>

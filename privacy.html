@@ -3,38 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>DrazonChat 개인정보 처리방침 · DrazonChat</title>
-<style>
-:root { --bg: #FBF8F2; --fg: #20232B; --muted: #5E5A52; --line: #E4DCCB; --accent: #8A6A34; --card: #FFFFFF; }
-@media (prefers-color-scheme: dark) { :root { --bg: #14161D; --fg: #F4EFE6; --muted: #B0ACA3; --line: #2C2F39; --accent: #C9A96E; --card: #1B1E27; } }
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.7 system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo",
-       "Malgun Gothic", "Noto Sans KR", sans-serif; }
-header { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between; padding: 16px clamp(16px, 4vw, 40px);
-         border-bottom: 1px solid var(--line); }
-.brand { color: var(--accent); font-weight: 700; letter-spacing: .02em; text-decoration: none; font-size: 18px; }
-nav { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14px; }
-nav a { color: var(--muted); text-decoration: none; } nav a:hover, nav a[aria-current] { color: var(--fg); }
-main { max-width: 760px; margin: 0 auto; padding: 24px clamp(16px, 4vw, 40px) 64px; }
-h1 { font-size: 28px; line-height: 1.3; margin: 8px 0 16px; text-wrap: balance; }
-h2 { font-size: 19px; margin: 36px 0 8px; padding-top: 8px; border-top: 1px solid var(--line); }
-a { color: var(--accent); } code { font-size: .92em; background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
-.table { overflow-x: auto; } table { border-collapse: collapse; width: 100%; font-size: 15px; background: var(--card); }
-th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; } th { font-weight: 600; }
-ul { padding-left: 22px; } .missing { background: #F6D365; color: #20232B; padding: 0 3px; border-radius: 3px; }
-footer { max-width: 760px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px) 40px; color: var(--muted); font-size: 13px; }
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<header><a class="brand" href="index.html">DrazonChat</a><nav><a href="support.html">도움말과 문의</a><a href="privacy.html" aria-current="page">개인정보 처리방침</a><a href="privacy-en.html" lang="en">English</a></nav></header>
-<main>
+<header class="site-header"><div class="wrap"><a class="brand" href="index.html"><img class="brand-seal" src="seal.png" width="32" height="32" alt=""><span class="brand-name">Drazon<span>Chat</span></span></a><nav class="site-nav"><a href="plans.html">요금제</a><a href="support.html">도움말과 문의</a><a href="privacy.html" aria-current="page">개인정보 처리방침</a></nav><a class="lang-switch" href="privacy-en.html" lang="en" hreflang="en">English</a></div></header>
+<main id="main">
 <h1>DrazonChat 개인정보 처리방침</h1>
 <p>시행일: 2026-10-15<br>
 운영자: 전요한, 연락처: bouz3337@gmail.com, 지원 창구: <a href="https://discord.gg/Q5yyQab9AM">https://discord.gg/Q5yyQab9AM</a></p>
 <h2>1. 어떤 서비스인가요</h2>
 <p>DrazonChat은 디스코드 서버에서 채팅을 상대 언어로 번역해 주는 봇이에요. 번역을 <strong>직접 켠 사용자</strong>의 메시지만 번역하고, 끄면 바로 멈춰요.</p>
 <h2>2. 저장하는 것과 얼마나 두는지</h2>
-<div class="table"><table><thead><tr><th>무엇</th><th>왜</th><th>얼마나</th></tr></thead><tbody><tr><td>서버별 자동 번역 설정 (켜짐 여부, 내 언어·상대 언어, 말투, 번역 아래에 원문을 함께 보일지, 최근에 쓴 글의 언어 코드 10개). DM과 봇이 없는 서버는 사용자마다 한 벌</td><td>번역을 켠 사람의 메시지만, 정한 언어와 말투로 번역하려고</td><td>삭제 요청, 봇이 그 서버에서 나갈 때, 또는 12개월 동안 쓰지 않으면 삭제 (설정만 있고 번역한 적이 없으면 설정을 마지막으로 바꾼 날부터 12개월)</td></tr><tr><td>번역한 메시지의 원문</td><td>번역 메시지의 🔎 버튼으로 원문 전체를 보여 주려고</td><td>14일 (봇에 저장한 사본이에요. 번역 아래 작은 글씨로 보이는 원문은 4장)</td></tr><tr><td>번역 캐시 (200자 이하 글의 번역문. 누가 보냈는지와 연결되지 않아요)</td><td>같은 문장을 다시 번역하지 않으려고</td><td>30일</td></tr><tr><td>요금제, 월별 사용 건수, 알림 설정, 무료 말투 체험을 시작한 날</td><td>한도를 세고 요금제를 적용하려고</td><td>12개월 동안 쓰지 않으면 삭제</td></tr><tr><td>이번 주기에 보낸 알림 단계, 한도 초과 뒤 하루 추가분 기록</td><td>같은 알림을 두 번 보내지 않고 추가분을 세려고</td><td>주기가 끝난 뒤 400일 안에 정리</td></tr><tr><td>화면 언어 코드 (마지막으로 명령어나 버튼을 누른 디스코드 언어)</td><td>DM 알림을 그 언어로 보내려고</td><td>12개월 동안 쓰지 않으면 삭제</td></tr><tr><td>번역한 날짜 (하루 한 줄)</td><td>서비스를 계속 쓰는지 재려고</td><td>90일</td></tr><tr><td>번역 메시지에 쓰는 프로필 그림 (프로필 사진에 금색 테두리를 얹은 256px 그림)</td><td>번역 메시지를 작성자 모습으로 올리려고</td><td>운영자의 비공개 저장 채널에 1일. 디스코드가 번역 메시지에 보관하는 사본은 그 메시지가 있는 동안 남아요</td></tr></tbody></table></div>
+<div class="table table--stack"><table><thead><tr><th>무엇</th><th>왜</th><th>얼마나</th></tr></thead><tbody><tr><td data-label="무엇">서버별 자동 번역 설정 (켜짐 여부, 내 언어·상대 언어, 말투, 번역 아래에 원문을 함께 보일지, 최근에 쓴 글의 언어 코드 10개). DM과 봇이 없는 서버는 사용자마다 한 벌</td><td data-label="왜">번역을 켠 사람의 메시지만, 정한 언어와 말투로 번역하려고</td><td data-label="얼마나">삭제 요청, 봇이 그 서버에서 나갈 때, 또는 12개월 동안 쓰지 않으면 삭제 (설정만 있고 번역한 적이 없으면 설정을 마지막으로 바꾼 날부터 12개월)</td></tr><tr><td data-label="무엇">번역한 메시지의 원문</td><td data-label="왜">번역 메시지의 🔎 버튼으로 원문 전체를 보여 주려고</td><td data-label="얼마나">14일 (봇에 저장한 사본이에요. 번역 아래 작은 글씨로 보이는 원문은 4장)</td></tr><tr><td data-label="무엇">번역 캐시 (200자 이하 글의 번역문. 누가 보냈는지와 연결되지 않아요)</td><td data-label="왜">같은 문장을 다시 번역하지 않으려고</td><td data-label="얼마나">30일</td></tr><tr><td data-label="무엇">요금제, 월별 사용 건수, 알림 설정, 무료 말투 체험을 시작한 날</td><td data-label="왜">한도를 세고 요금제를 적용하려고</td><td data-label="얼마나">12개월 동안 쓰지 않으면 삭제</td></tr><tr><td data-label="무엇">이번 주기에 보낸 알림 단계, 한도 초과 뒤 하루 추가분 기록</td><td data-label="왜">같은 알림을 두 번 보내지 않고 추가분을 세려고</td><td data-label="얼마나">주기가 끝난 뒤 400일 안에 정리</td></tr><tr><td data-label="무엇">화면 언어 코드 (마지막으로 명령어나 버튼을 누른 디스코드 언어)</td><td data-label="왜">DM 알림을 그 언어로 보내려고</td><td data-label="얼마나">12개월 동안 쓰지 않으면 삭제</td></tr><tr><td data-label="무엇">번역한 날짜 (하루 한 줄)</td><td data-label="왜">서비스를 계속 쓰는지 재려고</td><td data-label="얼마나">90일</td></tr><tr><td data-label="무엇">번역 메시지에 쓰는 프로필 그림 (프로필 사진에 금색 테두리를 얹은 256px 그림)</td><td data-label="왜">번역 메시지를 작성자 모습으로 올리려고</td><td data-label="얼마나">운영자의 비공개 저장 채널에 1일. 디스코드가 번역 메시지에 보관하는 사본은 그 메시지가 있는 동안 남아요</td></tr></tbody></table></div>
 <p>메모리에만 두는 것: 같은 채널의 최근 메시지(본문, 표시 이름, 사용자 ID, 메시지 ID)를 대화 맥락용으로 15분 동안 두고, 봇을 끄면 사라져요. 속도 제한을 위해 사용자 ID와 요청 시각을 1분 동안 둬요. 안내 DM(번역하지 못한 메시지, 한도 소진)을 하루 한 번까지만 보내려고 사용자 ID와 안내 이유를 그날까지 둬요(채널 설정이나 봇 권한 때문에 그 채널에서 번역되지 않는다는 안내는 채널 ID와 함께 30일). 장애처럼 여러 사람에게 한꺼번에 생긴 일인지 보려고 번역하지 못한 메시지의 사용자 ID와 시각도 둬요. 최근 10분 것만 쓰고, 지난 것은 다음에 그런 일이 생기거나 12시간마다 정리할 때 지워요. 이 안내 기록은 데이터를 지우면 바로 빼고, 봇을 끄면 사라져요.</p>
 <h2>3. 번역을 위해 밖으로 보내는 것</h2>
 <p>번역은 Anthropic PBC(미국)의 Claude API로 해요. 보내는 것은 다음과 같아요.</p>
@@ -53,6 +35,6 @@ footer { max-width: 760px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px) 40p
 <h2>8. 바뀌면</h2>
 <p>이 방침이 바뀌면 봇의 도움말 링크와 지원 창구에 알려요. 시행일 위에 바뀐 날짜를 적어요.</p>
 </main>
-<footer>DrazonChat</footer>
+<footer class="site-footer"><div class="wrap"><nav class="footer-nav"><a href="terms.html">이용약관</a><a href="refund.html">환불 정책</a><a href="privacy.html" aria-current="page">개인정보 처리방침</a><a href="support.html">도움말과 문의</a></nav><div class="biz biz--pending"><p>사업자 등록 전 시험 운영 중이라 결제를 받지 않아요.</p><p><span class="biz-label">문의</span><a href="mailto:bouz3337@gmail.com">bouz3337@gmail.com</a></p></div><p class="footer-end"><img src="seal.png" width="20" height="20" alt="">© 2026 DrazonChat</p></div></footer>
 </body>
 </html>

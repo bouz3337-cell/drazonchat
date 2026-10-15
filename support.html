@@ -3,35 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>DrazonChat 도움말과 문의 · DrazonChat</title>
-<style>
-:root { --bg: #FBF8F2; --fg: #20232B; --muted: #5E5A52; --line: #E4DCCB; --accent: #8A6A34; --card: #FFFFFF; }
-@media (prefers-color-scheme: dark) { :root { --bg: #14161D; --fg: #F4EFE6; --muted: #B0ACA3; --line: #2C2F39; --accent: #C9A96E; --card: #1B1E27; } }
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.7 system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo",
-       "Malgun Gothic", "Noto Sans KR", sans-serif; }
-header { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between; padding: 16px clamp(16px, 4vw, 40px);
-         border-bottom: 1px solid var(--line); }
-.brand { color: var(--accent); font-weight: 700; letter-spacing: .02em; text-decoration: none; font-size: 18px; }
-nav { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14px; }
-nav a { color: var(--muted); text-decoration: none; } nav a:hover, nav a[aria-current] { color: var(--fg); }
-main { max-width: 760px; margin: 0 auto; padding: 24px clamp(16px, 4vw, 40px) 64px; }
-h1 { font-size: 28px; line-height: 1.3; margin: 8px 0 16px; text-wrap: balance; }
-h2 { font-size: 19px; margin: 36px 0 8px; padding-top: 8px; border-top: 1px solid var(--line); }
-a { color: var(--accent); } code { font-size: .92em; background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
-.table { overflow-x: auto; } table { border-collapse: collapse; width: 100%; font-size: 15px; background: var(--card); }
-th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; } th { font-weight: 600; }
-ul { padding-left: 22px; } .missing { background: #F6D365; color: #20232B; padding: 0 3px; border-radius: 3px; }
-footer { max-width: 760px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px) 40px; color: var(--muted); font-size: 13px; }
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<header><a class="brand" href="index.html">DrazonChat</a><nav><a href="support.html" aria-current="page">도움말과 문의</a><a href="privacy.html">개인정보 처리방침</a><a href="support-en.html" lang="en">English</a></nav></header>
-<main>
+<header class="site-header"><div class="wrap"><a class="brand" href="index.html"><img class="brand-seal" src="seal.png" width="32" height="32" alt=""><span class="brand-name">Drazon<span>Chat</span></span></a><nav class="site-nav"><a href="plans.html">요금제</a><a href="support.html" aria-current="page">도움말과 문의</a><a href="privacy.html">개인정보 처리방침</a></nav><a class="lang-switch" href="support-en.html" lang="en" hreflang="en">English</a></div></header>
+<main id="main">
 <h1>DrazonChat 도움말과 문의</h1>
 <p>DrazonChat은 디스코드 채팅을 상대 언어로 번역해 주는 봇이에요. 번역을 직접 켠 사람의 메시지만 번역해요.</p>
 <h2>자주 쓰는 명령</h2>
-<div class="table"><table><thead><tr><th>명령</th><th>하는 일</th></tr></thead><tbody><tr><td><code>/번역 켜기</code></td><td>이 서버에서 내 메시지 자동 번역을 켜요. 처음이면 내 언어와 상대 언어를 짐작해 설정 패널을 열어요</td></tr><tr><td><code>/번역 설정</code></td><td>설정 패널: 내 언어, 상대 언어, 말투를 고르고 켜거나 꺼요</td></tr><tr><td><code>/번역 끄기</code></td><td>자동 번역을 꺼요</td></tr><tr><td><code>/번역 사용량</code></td><td>이번 달에 쓴 번역과 남은 번역을 보여 줘요</td></tr><tr><td><code>/번역 데이터삭제</code></td><td>봇에 저장된 내 데이터를 지워요</td></tr><tr><td><code>/번역 도움말</code></td><td>명령 목록과 이 페이지 링크를 보여 줘요</td></tr><tr><td>메시지 우클릭 → 앱 → 번역</td><td>남의 메시지를 내 언어로 읽어요 (나에게만 보여요)</td></tr><tr><td>메시지 우클릭 → 앱 → 내 번역 지우기</td><td>내 글이 번역되어 올라간 메시지를 지워요</td></tr></tbody></table></div>
+<div class="table table--stack"><table><thead><tr><th>명령</th><th>하는 일</th></tr></thead><tbody><tr><td data-label="명령"><code>/번역 켜기</code></td><td data-label="하는 일">이 서버에서 내 메시지 자동 번역을 켜요. 처음이면 내 언어와 상대 언어를 짐작해 설정 패널을 열어요</td></tr><tr><td data-label="명령"><code>/번역 설정</code></td><td data-label="하는 일">설정 패널: 내 언어, 상대 언어, 말투를 고르고 켜거나 꺼요</td></tr><tr><td data-label="명령"><code>/번역 끄기</code></td><td data-label="하는 일">자동 번역을 꺼요</td></tr><tr><td data-label="명령"><code>/번역 사용량</code></td><td data-label="하는 일">이번 달에 쓴 번역과 남은 번역을 보여 줘요</td></tr><tr><td data-label="명령"><code>/번역 데이터삭제</code></td><td data-label="하는 일">봇에 저장된 내 데이터를 지워요</td></tr><tr><td data-label="명령"><code>/번역 도움말</code></td><td data-label="하는 일">명령 목록과 이 페이지 링크를 보여 줘요</td></tr><tr><td data-label="명령">메시지 우클릭 → 앱 → 번역</td><td data-label="하는 일">남의 메시지를 내 언어로 읽어요 (나에게만 보여요)</td></tr><tr><td data-label="명령">메시지 우클릭 → 앱 → 내 번역 지우기</td><td data-label="하는 일">내 글이 번역되어 올라간 메시지를 지워요</td></tr></tbody></table></div>
 <p>디스코드를 다른 언어로 쓰면 명령 이름도 그 언어로 보여요.</p>
 <h2>문의와 문제 신고</h2>
 <ul><li>지원 서버: <a href="https://discord.gg/Q5yyQab9AM">https://discord.gg/Q5yyQab9AM</a></li><li>이메일: bouz3337@gmail.com</li></ul>
@@ -44,6 +26,6 @@ footer { max-width: 760px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px) 40p
 <h2>개인정보</h2>
 <p>저장하는 것과 보관 기간, 번역을 위해 보내는 곳은 <a href="privacy.html">개인정보 처리방침</a>에 있어요.</p>
 </main>
-<footer>DrazonChat</footer>
+<footer class="site-footer"><div class="wrap"><nav class="footer-nav"><a href="terms.html">이용약관</a><a href="refund.html">환불 정책</a><a href="privacy.html">개인정보 처리방침</a><a href="support.html" aria-current="page">도움말과 문의</a></nav><div class="biz biz--pending"><p>사업자 등록 전 시험 운영 중이라 결제를 받지 않아요.</p><p><span class="biz-label">문의</span><a href="mailto:bouz3337@gmail.com">bouz3337@gmail.com</a></p></div><p class="footer-end"><img src="seal.png" width="20" height="20" alt="">© 2026 DrazonChat</p></div></footer>
 </body>
 </html>

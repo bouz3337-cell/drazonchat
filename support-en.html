@@ -3,35 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>DrazonChat help and support · DrazonChat</title>
-<style>
-:root { --bg: #FBF8F2; --fg: #20232B; --muted: #5E5A52; --line: #E4DCCB; --accent: #8A6A34; --card: #FFFFFF; }
-@media (prefers-color-scheme: dark) { :root { --bg: #14161D; --fg: #F4EFE6; --muted: #B0ACA3; --line: #2C2F39; --accent: #C9A96E; --card: #1B1E27; } }
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.7 system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo",
-       "Malgun Gothic", "Noto Sans KR", sans-serif; }
-header { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between; padding: 16px clamp(16px, 4vw, 40px);
-         border-bottom: 1px solid var(--line); }
-.brand { color: var(--accent); font-weight: 700; letter-spacing: .02em; text-decoration: none; font-size: 18px; }
-nav { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14px; }
-nav a { color: var(--muted); text-decoration: none; } nav a:hover, nav a[aria-current] { color: var(--fg); }
-main { max-width: 760px; margin: 0 auto; padding: 24px clamp(16px, 4vw, 40px) 64px; }
-h1 { font-size: 28px; line-height: 1.3; margin: 8px 0 16px; text-wrap: balance; }
-h2 { font-size: 19px; margin: 36px 0 8px; padding-top: 8px; border-top: 1px solid var(--line); }
-a { color: var(--accent); } code { font-size: .92em; background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
-.table { overflow-x: auto; } table { border-collapse: collapse; width: 100%; font-size: 15px; background: var(--card); }
-th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; } th { font-weight: 600; }
-ul { padding-left: 22px; } .missing { background: #F6D365; color: #20232B; padding: 0 3px; border-radius: 3px; }
-footer { max-width: 760px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px) 40px; color: var(--muted); font-size: 13px; }
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<header><a class="brand" href="index.html">DrazonChat</a><nav><a href="support-en.html" aria-current="page">Help and support</a><a href="privacy-en.html">Privacy policy</a><a href="support.html" lang="ko">한국어</a></nav></header>
-<main>
+<header class="site-header"><div class="wrap"><a class="brand" href="index.html"><img class="brand-seal" src="seal.png" width="32" height="32" alt=""><span class="brand-name">Drazon<span>Chat</span></span></a><nav class="site-nav"><a href="plans-en.html">Plans</a><a href="support-en.html" aria-current="page">Help and support</a><a href="privacy-en.html">Privacy policy</a></nav><a class="lang-switch" href="support.html" lang="ko" hreflang="ko">한국어</a></div></header>
+<main id="main">
 <h1>DrazonChat help and support</h1>
 <p>DrazonChat is a Discord bot that translates chat into the other person's language. It only translates messages from people who turned it on themselves.</p>
 <h2>Common commands</h2>
-<div class="table"><table><thead><tr><th>Command</th><th>What it does</th></tr></thead><tbody><tr><td><code>/translate on</code></td><td>Turns on auto-translation of your messages in this server. The first time, it guesses your language and theirs and opens the settings panel</td></tr><tr><td><code>/translate setup</code></td><td>Settings panel: pick your language, their language and the tone, and turn translation on or off</td></tr><tr><td><code>/translate off</code></td><td>Turns auto-translation off</td></tr><tr><td><code>/translate usage</code></td><td>Shows the translations you used this month and how many are left</td></tr><tr><td><code>/translate delete-my-data</code></td><td>Deletes the data the bot stores about you</td></tr><tr><td><code>/translate help</code></td><td>Shows the commands and a link to this page</td></tr><tr><td>Right-click a message → Apps → Translate</td><td>Read someone else's message in your language (only you see it)</td></tr><tr><td>Right-click a message → Apps → Delete my translation</td><td>Deletes a translated message of yours</td></tr></tbody></table></div>
+<div class="table table--stack"><table><thead><tr><th>Command</th><th>What it does</th></tr></thead><tbody><tr><td data-label="Command"><code>/translate on</code></td><td data-label="What it does">Turns on auto-translation of your messages in this server. The first time, it guesses your language and theirs and opens the settings panel</td></tr><tr><td data-label="Command"><code>/translate setup</code></td><td data-label="What it does">Settings panel: pick your language, their language and the tone, and turn translation on or off</td></tr><tr><td data-label="Command"><code>/translate off</code></td><td data-label="What it does">Turns auto-translation off</td></tr><tr><td data-label="Command"><code>/translate usage</code></td><td data-label="What it does">Shows the translations you used this month and how many are left</td></tr><tr><td data-label="Command"><code>/translate delete-my-data</code></td><td data-label="What it does">Deletes the data the bot stores about you</td></tr><tr><td data-label="Command"><code>/translate help</code></td><td data-label="What it does">Shows the commands and a link to this page</td></tr><tr><td data-label="Command">Right-click a message → Apps → Translate</td><td data-label="What it does">Read someone else's message in your language (only you see it)</td></tr><tr><td data-label="Command">Right-click a message → Apps → Delete my translation</td><td data-label="What it does">Deletes a translated message of yours</td></tr></tbody></table></div>
 <p>If your Discord is set to another language, the command names appear in that language.</p>
 <h2>Contact and problem reports</h2>
 <ul><li>Support server: <a href="https://discord.gg/Q5yyQab9AM">https://discord.gg/Q5yyQab9AM</a></li><li>Email: bouz3337@gmail.com</li></ul>
@@ -44,6 +26,6 @@ footer { max-width: 760px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px) 40p
 <h2>Privacy</h2>
 <p>What is stored, for how long, and where messages are sent for translation is in the <a href="privacy-en.html">privacy policy</a>.</p>
 </main>
-<footer>DrazonChat</footer>
+<footer class="site-footer"><div class="wrap"><nav class="footer-nav"><a href="terms-en.html">Terms</a><a href="refund-en.html">Refund policy</a><a href="privacy-en.html">Privacy policy</a><a href="support-en.html" aria-current="page">Help and support</a></nav><div class="biz biz--pending"><p>We're in a test period before business registration and don't take payments.</p><p><span class="biz-label">Contact</span><a href="mailto:bouz3337@gmail.com">bouz3337@gmail.com</a></p></div><p class="footer-end"><img src="seal.png" width="20" height="20" alt="">© 2026 DrazonChat</p></div></footer>
 </body>
 </html>
