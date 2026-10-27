@@ -118,6 +118,34 @@ body.wide { --page-max: 1120px; }    /* 요금제: 카드 넷 */
   }
 }
 
+/* 화면 언어 30개 (2026-10-20): 부분 서체 둘(워드마크 A–Z, 큰 숫자)은 라틴 글자뿐이라 그대로 두고, 본문 고딕은 시스템 서체를 쓴다.
+   라틴(베트남어 등 확장 글자)·그리스·키릴 문자는 위 목록의 Segoe UI·San Francisco·Roboto가 가진다. 한자를 쓰는 일본어·중국어는
+   그 언어의 서체를 한국어 서체보다 앞에 둔다(맑은 고딕의 한자 모양으로 그려지지 않게). 타이·데바나가리도 그 문자의 시스템 서체를
+   앞에 둔다. 서체 파일을 더하지 않는다 (DESIGN.md 3.12 "화면 언어 30개").
+   중국어는 윈도의 Microsoft YaHei·JhengHei(UI가 아닌 쪽)를 Segoe UI보다 앞에 둔다(2026-10-24): 뒤에 두면 굽은 따옴표 “ ”를 Segoe UI가
+   좁은 라틴 모양으로 그렸다. UI 쪽(YaHei UI)도 따옴표가 Segoe UI와 같은 좁은 모양이라 UI가 아닌 쪽이어야 전각 따옴표가 된다.
+   라틴 글자는 Segoe UI를 8.6% 키운 모양이라 중국어 윈도의 여느 화면과 같다. 줄임표 ……는 YaHei에서도 바닥에 붙는 글리프라 그대로다 */
+:lang(ja) {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic",
+               Meiryo, "Noto Sans JP", "Noto Sans CJK JP", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+:lang(zh-CN) {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+               "Noto Sans SC", "Noto Sans CJK SC", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+:lang(zh-TW) {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Microsoft JhengHei", "Segoe UI", "PingFang TC",
+               "Noto Sans TC", "Noto Sans CJK TC", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+:lang(th) {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Leelawadee UI", Leelawadee, Thonburi, "Noto Sans Thai UI", "Noto Sans Thai",
+               Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+:lang(hi) {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Nirmala UI", "Kohinoor Devanagari", "Devanagari Sangam MN",
+               "Noto Sans Devanagari", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 /* ---------- 2. 바탕 ---------- */
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -136,6 +164,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 :lang(ko) { word-break: keep-all; }   /* 한국어는 어절 단위로 줄을 바꾼다 */
+/* 일본어·중국어 줄바꿈 (2026-10-24): 일본어는 엄격한 금칙(줄 첫머리에 장음 ー·작은 가나가 오지 않게)과 제목의 구절 단위 줄바꿈
+   (auto-phrase는 Chromium 119+, 다른 브라우저는 보통 줄바꿈). 중국어 큰 제목은 띄어쓰기·문장부호에서만 바꾼다("用|各自的母语"처럼
+   낱말 가운데서 끊기던 것). 넘칠 때는 body의 overflow-wrap이 그대로 막는다 */
+:lang(ja) { line-break: strict; }
+:lang(ja) :is(h1, h2) { word-break: auto-phrase; }
+:is(:lang(zh-CN), :lang(zh-TW)) h1 { word-break: keep-all; }
+/* lang 속성이 붙은 조각(언어 목록의 언어 이름, 영어로 채운 문구, 다른 언어 페이지의 한글 값)은 그 언어의 서체 목록으로 다시 고른다
+   (--font-sans는 :lang()마다 다르다. 2026-10-20: 한국어 페이지의 "日本語"·"繁體中文"이 맑은 고딕의 한자로 그려졌다) */
+[lang] { font-family: var(--font-sans); }
 
 .wrap, main {
   width: 100%;
@@ -186,6 +223,7 @@ img.icon { width: 20px; height: 20px; vertical-align: -5px; margin: 0 2px; }   /
 
 .site-header { border-bottom: 1px solid var(--line); }
 .site-header .wrap {
+  position: relative;                /* 언어 목록(.lang-list)이 머리 바로 아래에 펼쳐진다 */
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-areas: "brand nav lang";
@@ -224,7 +262,7 @@ img.icon { width: 20px; height: 20px; vertical-align: -5px; margin: 0 2px; }   /
 }
 
 .site-nav { grid-area: nav; display: flex; flex-wrap: wrap; justify-content: flex-end; column-gap: 24px; }
-.site-nav a, .lang-switch {
+.site-nav a, .lang-switch > summary {
   display: inline-block;
   font-size: var(--fs-sm);
   line-height: 1.5;
@@ -234,13 +272,73 @@ img.icon { width: 20px; height: 20px; vertical-align: -5px; margin: 0 2px; }   /
   white-space: nowrap;
 }
 .site-nav a { padding-left: 6px; padding-right: 6px; margin: 0 -6px; }   /* 누를 곳 폭 44px 이상 (2026-10-18 QA), 글자 자리는 그대로 */
-.site-nav a:hover, .lang-switch:hover { color: var(--ink); }
+.site-nav a:hover, .lang-switch > summary:hover { color: var(--ink); }
+/* 도움말의 짧은 이름(nav.support_short): 머리 메뉴 칸이 좁을 때만 ("Справка и поддержка" → "Помощь". 2026-10-24: 긴 언어에서 메뉴가
+   두 줄이 되어 머리가 높아졌다. 휴대폰 360px 66쪽, 760px 66쪽, 본문 폭 720px인 도움말·결제 페이지는 1280px에서도 28쪽).
+   좁을 때 = 880px 아래(소개·요금제의 머리 칸이 800px 아래) 또는 도움말·결제·법률 문서 페이지. 꼬리는 늘 긴 이름 */
+.nav-short { display: none; }
+:is(.doc, .checkout) .site-nav .nav-full { display: none; }
+:is(.doc, .checkout) .site-nav .nav-short { display: inline; }
+@media (max-width: 879px) {
+  .site-nav .nav-full { display: none; }
+  .site-nav .nav-short { display: inline; }
+}
 .site-nav a[aria-current="page"] {
   color: var(--ink);
   text-decoration: underline 1px var(--gold-line);
   text-underline-offset: 8px;
 }
-.lang-switch { grid-area: lang; padding-left: 24px; border-left: 1px solid var(--line); }
+
+/* 언어 고르기 (2026-10-20, 30개 언어): 스크립트 없는 <details>. 요약은 지구 아이콘 + 지금 언어 이름 + 마름모(◇ 닫힘, ◆ 열림. FAQ와 같은 문법),
+   펼치면 머리 바로 아래에 언어 목록 상자(데스크톱 3열, 휴대폰 2열, 칸마다 44px). 그림자 없이 괘선 틀 */
+.lang-switch { grid-area: lang; }
+.lang-switch > summary {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
+  cursor: pointer;
+}
+.lang-switch > summary::-webkit-details-marker { display: none; }
+.lang-switch > summary::after {
+  content: "";
+  flex: none;
+  width: 6px; height: 6px;
+  margin-left: 3px;
+  border: 1.5px solid var(--gold-line);
+  transform: translateY(-1px) rotate(45deg);
+}
+.lang-switch[open] > summary { color: var(--ink); }
+.lang-switch[open] > summary::after { background: var(--gold-line); }
+.lang-switch .globe { width: 16px; height: 16px; flex: none; }
+.lang-list {
+  position: absolute;
+  z-index: 20;
+  top: 100%;
+  right: var(--gutter);
+  width: min(34rem, calc(100% - 2 * var(--gutter)));
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 8px;
+  margin: 0;
+  padding: 8px 12px;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+}
+.lang-list a {
+  display: block;
+  padding: 11px 8px;                 /* 터치 44px */
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--ink);
+  text-decoration: none;
+}
+.lang-list a:hover { text-decoration: underline 1px var(--gold-line); text-underline-offset: .22em; }
+.lang-list a[aria-current] { font-weight: 600; text-decoration: underline 1px var(--gold-line); text-underline-offset: .22em; }
 
 @media (max-width: 719px) {
   .site-header .wrap {
@@ -250,7 +348,14 @@ img.icon { width: 20px; height: 20px; vertical-align: -5px; margin: 0 2px; }   /
     min-height: 0;
   }
   .site-nav { justify-content: flex-start; column-gap: 20px; border-top: 1px solid var(--line); }
-  .lang-switch { padding-left: 0; border-left: 0; }
+  .lang-switch > summary { padding-left: 0; border-left: 0; }
+  .lang-list { left: var(--gutter); width: auto; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* 좁은 휴대폰(480px 아래)은 워드마크 옆에 긴 이름("Português (Brasil)")이 들어가지 않아 가로로 넘쳤다: 지구 아이콘과 마름모만 두고
+   (누를 곳 44px), 언어 이름은 요약의 aria-label("언어: 한국어")이 읽어 준다 */
+@media (max-width: 479px) {
+  .lang-switch .lang-name { display: none; }
+  .lang-switch > summary { min-width: 44px; justify-content: flex-end; }
 }
 
 /* ---------- 4. 본문 글 ---------- */
@@ -293,7 +398,9 @@ code {
   background: var(--sunk);
   border-radius: var(--radius);
   padding: .1em .35em;
+  word-break: keep-all;           /* 한자·가나 하위 명령(/翻译 开启)이 글자 사이에서 끊기지 않게: 명령 안에서는 띄어쓰기에서만 (2026-10-24) */
 }
+.cmd { white-space: nowrap; }     /* 명령의 /와 묶음 이름(/번역)은 한 덩어리: / 뒤에서 줄이 바뀌지 않게 */
 
 .lead { font-size: var(--fs-lead); color: var(--ink-soft); line-height: 1.65; margin: 0 0 28px; }
 
@@ -441,9 +548,11 @@ th {
 .ledger .count small { display: block; font-size: var(--fs-xs); margin-top: 4px; }
 .count-label { display: none; }
 .ledger .figure { grid-column: 2 / 4; margin-top: 24px; }
-/* 영어는 건수 문장이 길어("Paid: all four. Free: the first 14 days") 건수 열을 18rem으로 (데스크톱만. 휴대폰 규칙보다 앞서지 않게 min-width 안에) */
+/* 한국어 밖의 언어는 건수 문장이 길어("Paid: all four. Free: the first 14 days") 건수 열을 18rem으로 (데스크톱만. 휴대폰 규칙보다
+   앞서지 않게 min-width 안에). 2026-10-20 30개 언어: 영어만이던 규칙을 한국어가 아닌 모든 페이지로 (번역 전에는 영어 문구가 보이고, 독일어·
+   프랑스어 등도 영어만큼 길다) */
 @media (min-width: 760px) {
-  :lang(en) .ledger-head, :lang(en) .ledger > li { grid-template-columns: 3.5rem minmax(0, 1fr) 18rem; }
+  html:not(:lang(ko)) .ledger-head, html:not(:lang(ko)) .ledger > li { grid-template-columns: 3.5rem minmax(0, 1fr) 18rem; }
 }
 
 @media (max-width: 759px) {
@@ -653,6 +762,7 @@ th {
   color: var(--figure);
 }
 .price .cur { font-size: calc(var(--fs-price) * .72); margin-right: -3px; }
+.price .cur--code { margin-right: 0; }   /* 글자가 붙은 기호(US$)는 카탈로그의 띄어쓰기 "US$ 9,99"를 그대로 (2026-10-24) */
 
 .plan-blurb { margin: 0; padding: 20px 0 6px; border-top: 1px solid var(--line); font-size: var(--fs-md); line-height: 1.65; }
 .plan-detail { margin: 0 0 8px; font-size: var(--fs-sm); line-height: 1.65; color: var(--ink-soft); font-variant-numeric: lining-nums tabular-nums; }
@@ -795,7 +905,12 @@ th {
 .folio > div:last-child { border-bottom: 0; }
 .folio dt { font-size: var(--fs-sm); color: var(--ink-soft); line-height: 1.75; }
 .folio dd { margin: 0; }
-.folio .price { margin: 0 0 8px; }
+/* 결제 요약의 가격은 가격 뒤에 긴 글(", plus tax for your country", "（お住まいの国の税金は別途）")이 붙는다. 카드처럼 flex 줄이면
+   "/mo"부터 그 글 끝까지가 한 덩이라 좁은 화면에서 숫자 아래로 내려가 줄이 "/mo"로 시작했다(2026-10-24, 24개 언어 360px).
+   여기서는 보통 글줄로 흘리고 가격 표기("$9.99/mo", "월 12,900원")만 카드와 같은 inline-flex 덩이(.price-main)로 묶는다:
+   단위는 숫자에 붙어 있고, 뒤의 글은 그 언어의 자연스러운 자리에서 바뀐다(쉼표·"，" 앞에서는 바뀌지 않고 일본어는 "（" 앞에서) */
+.folio .price { display: block; margin: 0 0 8px; line-height: 1.5; }
+.folio .price-main { display: inline-flex; align-items: baseline; column-gap: 4px; line-height: 1.1; }
 .folio .sub { margin: 4px 0 0; font-size: var(--fs-sm); color: var(--ink-soft); line-height: 1.65; }
 @media (max-width: 479px) {
   .folio > div { grid-template-columns: minmax(0, 1fr); row-gap: 4px; }
@@ -837,6 +952,9 @@ th {
 .check > span { font-size: var(--fs-md); line-height: 1.65; }
 
 .pay-note { margin: 12px 0 0; font-size: var(--fs-sm); color: var(--ink-soft); line-height: 1.65; }
+/* 법률 문서가 없는 언어: 동의 칸 바로 아래에 "약관과 정책은 영어판만" 한 줄 (꼬리의 footer.legal_english와 같은 글, 2026-10-24) */
+.check:has(+ .pay-legal) { margin-bottom: 8px; }
+.pay-legal { margin: 0 0 24px; padding: 0 2px; font-size: var(--fs-sm); color: var(--ink-soft); line-height: 1.65; }
 
 /* ---------- 10. 꼬리 (정책 링크 + 사업자 정보 + 인장) ---------- */
 
@@ -874,6 +992,11 @@ th {
 .biz a { display: inline-block; padding: 11px 0; }   /* 문의 이메일: 누를 곳 높이 44px (2026-10-18 QA: 17px) */
 
 .footer-end { display: flex; align-items: center; gap: 10px; margin: 0; }
+
+/* 데바나가리(힌디어)·타이 문자는 자간을 벌리거나 좁히면 글자 위 이음선과 모음 기호가 떨어진다: 눈썹·꼬리표·표 머리·버튼·제목의 자간을 0으로
+   (대문자 바꾸기는 이 문자에 없어 그대로 둔다. 2026-10-20 30개 언어) */
+:is(:lang(hi), :lang(th)) :is(.eyebrow, .tag, .plan-flag, .count-label, th, .btn, h1, .biz dt),
+:is(:lang(hi), :lang(th)) .table--stack td::before { letter-spacing: 0; }
 
 /* ---------- 11. 고대비 모드: 금박을 글자에 입힌 요소가 투명 글자로 사라지지 않게 ---------- */
 
