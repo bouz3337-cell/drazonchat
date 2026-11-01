@@ -736,7 +736,7 @@ th {
 @media (prefers-reduced-motion: reduce) { .plan-grid { scroll-behavior: auto; } }
 .plan-grid > li::before { content: none; }     /* main ul의 마름모를 카드 목록에는 쓰지 않는다 */
 .plan-grid > li { margin: 0; }
-.plan-grid > .plan { grid-row: span 5; padding: 28px 24px; scroll-snap-align: start; }
+.plan-grid > .plan { grid-row: span 5; scroll-snap-align: start; }
 
 /* 크롬 계열(135+)만: 양옆 금색 화살표와 카드 아래 마름모 점. 화살표 이름은 그 페이지 언어(data-prev·data-next), 점 이름은 요금제 이름 */
 @supports selector(::scroll-button(*)) {
@@ -778,23 +778,70 @@ th {
   .plan-grid > .plan::scroll-marker:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
 }
 
+/* 요금제 한 칸 = 위 한 줄(추천) + 키 카드 + 설명 + 세부 목록 + 버튼 (2026-11-01 시안 A). 칸 자체는 틀이 없고 키 카드가 그림이다 */
 .plan {
   display: flex;
   flex-direction: column;
-  background: var(--surface);
-  border: 1px solid var(--card-line);        /* 틀 한 겹 금선 (디스코드 카드와 같은 문법) */
-  border-radius: var(--radius);
   color: var(--ink);
   scroll-margin-top: 16px;                   /* 바로 가기로 건너뛴 카드가 화면 위에 붙지 않게 */
 }
-/* 줄의 카드끼리 이름·가격·설명·세부·버튼의 기준선을 맞춘다 (subgrid. 사진 줄은 2026-11-01부터 줄 아래에 한 번) */
+/* 줄의 칸끼리 위 한 줄·카드·설명·세부·버튼의 기준선을 맞춘다 (subgrid) */
 @supports (grid-template-rows: subgrid) {
   .plan-grid > .plan { display: grid; grid-template-rows: subgrid; row-gap: 0; }
-  .plan-head { align-self: end; }
 }
-.plan-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; column-gap: 12px; margin-bottom: 10px; }
-.plan-name { font-size: 19px; font-weight: 600; line-height: 1.35; margin: 0; }
-.plan-flag { margin: 0; font-size: var(--fs-xs); font-weight: 600; line-height: 1.35; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.plan-flag { margin: 0 0 10px; min-height: 1.35em; font-size: var(--fs-xs); font-weight: 600; line-height: 1.35;
+             letter-spacing: .08em; text-transform: uppercase; color: var(--gold-line); }
+
+/* 키 카드: 호텔 룸 키 (봇의 카드 D-1과 같은 문법). 차콜 카드에 금선 두 겹, 차례 번호와 인장, 영어 등급(Cinzel)과 그 언어 이름, 가격,
+   맨 아래 워드마크. 두 테마 모두 차콜이고, 추천은 아이보리 카드에 짙은 금 (종이 위에 놓인 키). 글자 대비: 차콜 위 아이보리 15:1·금 7.7:1,
+   아이보리 위 차콜 14:1·짙은 금 #6E5220 6.4:1 */
+.key-card {
+  --kc-bg: #181B24;
+  --kc-ink: #F4EFE6;
+  --kc-soft: #B0ACA3;
+  --kc-gold: #C9A96E;
+  --kc-rule: rgba(201, 169, 110, .38);
+  --kc-mark: #9A8A66;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid var(--kc-gold);
+  border-radius: 14px;
+  background: var(--kc-bg);
+  color: var(--kc-ink);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.key-inner {
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 300px;
+  padding: 20px 20px 16px;
+  border: 1px solid var(--kc-rule);
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+}
+.key-top { display: flex; align-items: center; justify-content: space-between; }
+.key-no { font-family: var(--font-num); font-size: 17px; font-weight: 600; letter-spacing: .14em; color: var(--kc-gold); font-variant-numeric: lining-nums; }
+.key-card .seal { width: 26px; height: 26px; color: var(--kc-gold); }
+.key-card .plan-name { margin: 52px 0 0; display: flex; flex-direction: column; gap: 4px; font-weight: 400; }
+.key-grade { font-family: var(--font-caps); font-size: 24px; font-weight: 500; letter-spacing: .14em; line-height: 1.2; color: var(--kc-ink); }
+.key-local { font-size: var(--fs-md); line-height: 1.4; color: var(--kc-soft); }
+.key-card .price { --fs-price: 38px; margin: auto 0 0; padding-top: 20px; color: var(--kc-soft); }   /* "14,99 $/Monat"도 한 줄에 */
+.key-card .price .amount, .key-card .price .cur { color: var(--kc-ink); }
+.key-brand { margin: 14px 0 0; padding-top: 10px; border-top: 1px solid var(--kc-rule); font-family: var(--font-caps); font-size: 9px;
+             letter-spacing: .3em; line-height: 1.3; color: var(--kc-mark); }
+.plan--recommended .key-card {
+  --kc-bg: #F4EEE2;
+  --kc-ink: #181B24;
+  --kc-soft: #5C5648;
+  --kc-gold: #6E5220;
+  --kc-rule: rgba(110, 82, 32, .45);
+  --kc-mark: #6E5220;
+  border-color: #A0804A;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .28);
+}
+.plan--recommended .key-card .seal { color: #C9A96E; }   /* 인장은 차콜 원판이라 금색 그대로 */
 
 /* 가격: 숫자와 통화 기호만 세리프, "월"·"원"·"/mo"는 카탈로그 그대로 고딕 */
 .price {
@@ -819,8 +866,9 @@ th {
 .price .cur { font-size: calc(var(--fs-price) * .72); margin-right: -3px; }
 .price .cur--code { margin-right: 0; }   /* 글자가 붙은 기호(US$)는 카탈로그의 띄어쓰기 "US$ 9,99"를 그대로 (2026-10-24) */
 
-.plan-blurb { margin: 0; padding: 20px 0 6px; border-top: 1px solid var(--line); font-size: var(--fs-md); line-height: 1.65; }
-.plan-detail { margin: 0 0 8px; font-size: var(--fs-sm); line-height: 1.65; color: var(--ink-soft); font-variant-numeric: lining-nums tabular-nums; }
+.plan-blurb { margin: 0; padding: 20px 0 10px; font-size: var(--fs-md); line-height: 1.65; }
+.plan-detail { margin: 0 0 8px; font-size: var(--fs-sm); color: var(--ink-soft); font-variant-numeric: lining-nums tabular-nums; --lh: 1.75; line-height: 1.75; }
+.plan-detail > li { margin-bottom: .2em; }
 .plan-media { position: relative; margin: 0 0 24px; padding-left: 1.1em; font-size: var(--fs-sm); line-height: 1.65; color: var(--ink-soft); }
 .plan-media::before {
   content: "";
@@ -835,19 +883,7 @@ th {
 .plan-media--once { max-width: 720px; margin: 14px 0 0; }   /* 카드마다 같던 사진 줄을 줄 아래에 한 번 */
 .plan .btn { align-self: end; margin-top: auto; width: 100%; }
 
-/* 추천: 밝은 테마에서는 뒤집은 키 카드(차콜 위 아이보리와 금, 금선 틀, 금박 버튼), 어두운 테마에서는 금선 틀과 금박 버튼. 띠나 배지는 없다 */
-.plan--recommended {
-  --surface: var(--key-bg);
-  --ink: var(--key-ink);
-  --ink-soft: var(--key-soft);
-  --line: var(--key-line);
-  --line-strong: #7C7970;
-  --gold-line: var(--key-gold);
-  --figure: var(--key-ink);
-  --focus: #ECD8A8;              /* 포커스 링은 어두운 카드 안에서도 보이게 */
-  border-color: var(--key-gold);
-}
-.plan--recommended .plan-name, .plan--recommended .plan-flag { color: var(--key-gold); }     /* 차콜 위 7.7:1 */
+/* 추천: 아이보리 키 카드(위), 카드 위 작은 글 "추천", 금박 버튼. 띠나 배지는 없다 */
 .plan--recommended .btn--primary { background: var(--foil); border-color: #A0804A; color: #181B24; }
 .plan--recommended .btn--primary:hover { background: var(--foil-hover); border-color: #B0905A; color: #181B24; }
 
@@ -941,62 +977,62 @@ th {
 }
 .back-link:hover { color: var(--ink); text-decoration: underline 1px var(--gold-line); text-underline-offset: .22em; }
 
-/* 두 칸 (2026-11-01 소유자 "결제페이지 디자인 깔끔하게"): 넓은 화면은 왼쪽 포함된 것·환불 | 오른쪽 주문 카드(주문 내용 + 동의·결제를
-   한 장처럼 이어 붙인다). 휴대폰은 DOM 순서 그대로 주문 내용 → 포함된 것·환불 → 동의·결제 (결제 버튼 전에 환불 안내). order 속성은 쓰지 않는다 */
-.checkout-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-areas: "sum" "main" "pay";
-}
-.checkout-grid > .summary { grid-area: sum; }
-.checkout-grid > .checkout-main { grid-area: main; min-width: 0; }
-.checkout-grid > .pay { grid-area: pay; }
+/* 두 칸 (2026-11-01 소유자 "결제페이지 디자인 깔끔하게", 시안 A): 넓은 화면은 왼쪽 고른 요금제의 키 카드 | 오른쪽 아이보리 주문 카드
+   한 장(주문 내용, 포함된 것, 환불, 동의와 결제). 휴대폰은 DOM 순서 그대로 키 카드 → 주문 카드 (결제 버튼 전에 포함된 것과 환불) */
+.checkout-grid { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: 28px; }
 @media (min-width: 860px) {
-  .checkout-grid {
-    grid-template-columns: minmax(0, 1fr) 360px;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "main sum" "main pay";
-    column-gap: 48px;
-    align-items: start;
-  }
-  .checkout-grid > .summary { margin: 0; border-bottom: 0; border-radius: var(--radius) var(--radius) 0 0; }
-  .checkout-grid > .pay {
-    padding: 4px 24px 24px;
-    background: var(--surface);
-    border: 1px solid var(--card-line);
-    border-top: 0;
-    border-radius: 0 0 var(--radius) var(--radius);
-  }
-  .checkout-grid > .pay .check { background: var(--paper); }
-  .checkout-grid > .checkout-main > .checkout-section:first-child h2 { margin-top: 6px; }
+  .checkout-grid { grid-template-columns: 300px minmax(0, 1fr); column-gap: 56px; align-items: start; }
+}
+.checkout-key .key-card { max-width: 300px; box-shadow: 0 18px 40px rgba(0, 0, 0, .3); }
+.checkout-key .key-inner { min-height: 400px; }
+.checkout-key .key-card .plan-name { margin-top: 84px; }
+.checkout-key .key-grade { font-size: 30px; }
+.checkout-key .key-card .price { --fs-price: 46px; }
+.checkout-key > .sub { max-width: 300px; margin: 14px 0 0; font-size: var(--fs-sm); line-height: 1.7; color: var(--ink-soft); }
+@media (max-width: 859px) {
+  .checkout-key .key-inner { min-height: 260px; }
+  .checkout-key .key-card .plan-name { margin-top: 40px; }
 }
 
+/* 아이보리 주문 카드: 두 테마 모두 종이 카드(어두운 바탕 위에 놓인 명세서). 안의 글과 선은 종이 토큰으로 다시 칠한다 */
 .summary {
-  margin: 0 0 32px;
-  padding: 26px 24px 6px;
+  --surface: #F6F1E7;
+  --sunk: #ECE5D7;
+  --ink: #1D1F26;
+  --ink-soft: #5C5648;
+  --line: #D8CFBE;
+  --line-strong: #857F73;
+  --gold-line: #8A6A2E;
+  --figure: #1D1F26;
+  --link: #1D1F26;
+  --link-underline: #8A6A2E;
+  --focus: #1D1F26;
+  --check: #6E5220;
+  color-scheme: light;           /* 동의 상자 같은 기본 칸을 종이색으로 (어두운 테마에서 검은 상자가 되지 않게) */
+  margin: 0;
+  padding: 28px 32px 30px;
   background: var(--surface);
+  color: var(--ink);
   border: 1px solid var(--card-line);
-  border-radius: var(--radius);
+  border-radius: 4px;
+  box-shadow: 0 12px 30px rgba(60, 45, 20, .14);
 }
-.summary .eyebrow { margin-bottom: 2px; }
+@media (prefers-color-scheme: dark) { .summary { border-color: #A0804A; box-shadow: 0 18px 40px rgba(0, 0, 0, .4); } }
+@media (max-width: 599px) { .summary { padding: 22px 18px 24px; } }
+.summary .eyebrow { margin: 0; padding-bottom: 14px; border-bottom: 2px solid var(--ink); color: var(--ink); }
 
-/* 영수증(폴리오) 행: 이름(작은 글) 위, 값 아래 (주문 카드는 좁아서 한 칸으로 쌓는다, 2026-11-01) */
-.folio { margin: 0; }
-.folio > div {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  row-gap: 4px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
-}
-.folio > div:last-child { border-bottom: 0; }
-.folio dt { font-size: var(--fs-sm); color: var(--ink-soft); line-height: 1.6; }
-.folio dd { margin: 0; }
+/* 영수증(폴리오) 행: 이름(작은 글) 위, 값 아래, 넓으면 두 칸 */
+.folio { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
+@media (max-width: 599px) { .folio { grid-template-columns: minmax(0, 1fr); } }
+.folio > div { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.folio dt { font-size: var(--fs-xs); color: var(--ink-soft); line-height: 1.6; }
+.folio dd { margin: 4px 0 0; }
+.folio-note { margin: 10px 0 0; font-size: var(--fs-sm); color: var(--ink-soft); line-height: 1.65; }
 /* 결제 요약의 가격은 가격 뒤에 긴 글(", plus tax for your country", "（お住まいの国の税金は別途）")이 붙는다. 카드처럼 flex 줄이면
    "/mo"부터 그 글 끝까지가 한 덩이라 좁은 화면에서 숫자 아래로 내려가 줄이 "/mo"로 시작했다(2026-10-24, 24개 언어 360px).
    여기서는 보통 글줄로 흘리고 가격 표기("$9.99/mo", "월 12,900원")만 카드와 같은 inline-flex 덩이(.price-main)로 묶는다:
    단위는 숫자에 붙어 있고, 뒤의 글은 그 언어의 자연스러운 자리에서 바뀐다(쉼표·"，" 앞에서는 바뀌지 않고 일본어는 "（" 앞에서) */
-.folio .price { display: block; margin: 0 0 8px; line-height: 1.5; }
+.folio .price { display: block; margin: 0; line-height: 1.5; }
 .folio .price-main { display: inline-flex; align-items: baseline; column-gap: 4px; line-height: 1.1; }
 .folio .sub { margin: 4px 0 0; font-size: var(--fs-sm); color: var(--ink-soft); line-height: 1.65; }
 
@@ -1010,14 +1046,17 @@ th {
   transform: translateY(-2px) rotate(45deg);
 }
 
-.checkout-section { margin: 0 0 32px; }
-.checkout-section h2 { margin: 0 0 12px; font-size: 17px; }
+.checkout-section { margin: 24px 0 0; }
+.checkout-section h3 { margin: 0 0 8px; font-size: var(--fs-sm); font-weight: 600; color: var(--ink-soft); }
 .checkout-section ul { font-size: var(--fs-md); --lh: 1.7; line-height: 1.7; }
 /* 포함된 것: 한 줄에 하나 (전에는 쉼표로 이은 한 문장), 줄 사이 옅은 괘선 */
 .checkout-section .includes { margin: 0; }
+@media (min-width: 600px) { .checkout-section .includes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; } }
 .checkout-section .includes > li { margin: 0; padding: 9px 0 9px 1.4em; border-bottom: 1px solid var(--line); font-variant-numeric: lining-nums tabular-nums; }
 .checkout-section .includes > li::before { top: calc(9px + var(--lh) * .5em - 3.5px); }
 .checkout-section .includes > li:last-child { border-bottom: 0; }
+.summary .pay { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); }
+.summary .check { background: var(--sunk); border-color: var(--line); }
 .checkout-section .sub { margin: 10px 0 0; font-size: var(--fs-sm); color: var(--ink-soft); line-height: 1.65; }
 
 /* 동의 칸 */
@@ -1103,15 +1142,13 @@ th {
   /* 인쇄는 가로 줄을 풀어 세 칸으로 (넘긴 카드가 잘리지 않게) */
   .plan-grid { grid-auto-flow: row; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: none; overflow: visible; row-gap: 16px; }
   .plan-grid > .plan { grid-row: auto; }
-  .checkout-grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "sum" "main" "pay"; }
+  .checkout-grid { grid-template-columns: minmax(0, 1fr); }
+  .key-card { --kc-bg: #fff; --kc-ink: #000; --kc-soft: #333; --kc-gold: #A0804A; --kc-mark: #555; box-shadow: none; }
+  .summary { box-shadow: none; }
   .plan, .receipt, .ledger > li, .faq details { break-inside: avoid; }
   a { color: inherit; text-decoration: none; }
   main { padding-top: 0; }
-  .plan--recommended {
-    --surface: #fff; --ink: #000; --ink-soft: #333; --line: #bbb; --line-strong: #777; --figure: #000;
-    border: 1px solid #A0804A;
-  }
-  .plan--recommended .plan-name, .plan--recommended .plan-flag { color: #000; }
+  .plan--recommended .plan-flag { color: #000; }
   .plan--recommended .btn--primary { background: none; border: 1px solid #A0804A; color: #000; }
   .plan-jump .jump--recommended { background: none; color: #000; }
 }
