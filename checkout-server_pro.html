@@ -4,12 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#EAE3D5">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0F1117">
 <title>볼룸 요금제 결제 · Cozirom</title>
 <meta name="description" content="볼룸 요금제를 구독하시기 전에 가격과 포함된 것, 환불 조건을 확인하실 수 있습니다.">
-<link rel="stylesheet" href="site.css">
-<link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://cozirom.com/checkout-server_pro.html">
 <link rel="alternate" hreflang="ko" href="https://cozirom.com/checkout-server_pro.html">
 <link rel="alternate" hreflang="en" href="https://cozirom.com/checkout-server_pro-en.html">
 <link rel="alternate" hreflang="bg" href="https://cozirom.com/checkout-server_pro-bg.html">
@@ -41,23 +40,82 @@
 <link rel="alternate" hreflang="zh-CN" href="https://cozirom.com/checkout-server_pro-zh-CN.html">
 <link rel="alternate" hreflang="zh-TW" href="https://cozirom.com/checkout-server_pro-zh-TW.html">
 <link rel="alternate" hreflang="x-default" href="https://cozirom.com/checkout-server_pro-en.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cozirom">
+<meta property="og:title" content="볼룸 요금제 결제 · Cozirom">
+<meta property="og:description" content="볼룸 요금제를 구독하시기 전에 가격과 포함된 것, 환불 조건을 확인하실 수 있습니다.">
+<meta property="og:url" content="https://cozirom.com/checkout-server_pro.html">
+<meta property="og:image" content="https://cozirom.com/assets/og-checkout-server_pro.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="볼룸 요금제 결제">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cozirom","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","inLanguage":"ko","description":"디스코드 채팅을 상대 언어로 번역해 주는 봇입니다. 번역이 내 이름으로 올라가고, 사진 속 글자도 번역합니다.","url":"https://cozirom.com/index.html","publisher":{"@type":"Organization","name":"Cozirom","url":"https://cozirom.com/","email":"bouz3337@gmail.com"},"offers":[{"@type":"Offer","name":"게스트","price":"0","priceCurrency":"KRW"},{"@type":"Offer","name":"스탠다드","price":"3900","priceCurrency":"KRW"},{"@type":"Offer","name":"슈페리어","price":"12900","priceCurrency":"KRW"},{"@type":"Offer","name":"디럭스","price":"19900","priceCurrency":"KRW"},{"@type":"Offer","name":"스위트","price":"49000","priceCurrency":"KRW"},{"@type":"Offer","name":"라운지","price":"16900","priceCurrency":"KRW"},{"@type":"Offer","name":"볼룸","price":"59900","priceCurrency":"KRW"}]}</script>
+<link rel="preload" href="fonts/CoziromSans-535b8e997ade.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/CoziromSerif-448a30bd50b9.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Cozirom Sans";src:url("fonts/CoziromSans-535b8e997ade.woff2") format("woff2");font-weight:45 920;font-display:swap}@font-face{font-family:"Cozirom Sans Fallback";src:local("Malgun Gothic"), local("Apple SD Gothic Neo");size-adjust:83.8%;ascent-override:113.7%;descent-override:28.8%;line-gap-override:0%}@font-face{font-family:"Cozirom Serif";src:url("fonts/CoziromSerif-448a30bd50b9.woff2") format("woff2");font-weight:700;font-display:swap}</style>
+<link rel="stylesheet" href="site.css">
+<link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
-<body class="checkout">
+<body class="checkout-page">
 <a class="skip-link" href="#main">본문으로 건너뛰기</a>
 <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false"><symbol id="seal" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="#181B24"/><circle cx="50" cy="50" r="44.5" fill="none" stroke="currentColor" stroke-width="10"/><path fill="currentColor" transform="translate(28.00 69.40) scale(0.05714 -0.05714)" d="M718 292 720 125Q697 86 659 54.5Q621 23 566.5 4.5Q512 -14 439 -14Q323 -13 235 31Q147 75 98.5 156.5Q50 238 50 351Q50 462 98 543.5Q146 625 234 669.5Q322 714 443 714Q521 714 583 696.5Q645 679 688 655L696 494H687Q662 589 598.5 632.5Q535 676 450 676Q368 676 308.5 636.5Q249 597 216.5 524.5Q184 452 184 353Q184 254 215.5 180.5Q247 107 304.5 66.5Q362 26 439 24Q514 24 569.5 49.5Q625 75 660.5 134Q696 193 710 292Z"/></symbol></svg>
-<header class="site-header"><div class="wrap"><a class="brand" href="index.html" aria-label="Cozirom 홈"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg><span class="brand-name">COZIROM</span></a><nav class="site-nav" aria-label="주요 메뉴"><a href="plans.html">요금제</a><a href="support.html"><span class="nav-full">도움말과 문의</span><span class="nav-short">도움말</span></a><a href="privacy.html">개인정보 처리방침</a></nav><details class="lang-switch"><summary aria-label="언어: 한국어"><svg class="globe" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor"/><path d="M1.5 8h13M8 1.5c-2.4 2.2-2.4 10.8 0 13M8 1.5c2.4 2.2 2.4 10.8 0 13" fill="none" stroke="currentColor"/></svg><span class="lang-name">한국어</span></summary><ul class="lang-list"><li><a href="checkout-server_pro-id.html" lang="id" hreflang="id">Bahasa Indonesia</a></li><li><a href="checkout-server_pro-cs.html" lang="cs" hreflang="cs">Čeština</a></li><li><a href="checkout-server_pro-da.html" lang="da" hreflang="da">Dansk</a></li><li><a href="checkout-server_pro-de.html" lang="de" hreflang="de">Deutsch</a></li><li><a href="checkout-server_pro-en.html" lang="en" hreflang="en">English</a></li><li><a href="checkout-server_pro-es.html" lang="es" hreflang="es">Español</a></li><li><a href="checkout-server_pro-fr.html" lang="fr" hreflang="fr">Français</a></li><li><a href="checkout-server_pro-hr.html" lang="hr" hreflang="hr">Hrvatski</a></li><li><a href="checkout-server_pro-it.html" lang="it" hreflang="it">Italiano</a></li><li><a href="checkout-server_pro-lt.html" lang="lt" hreflang="lt">Lietuvių</a></li><li><a href="checkout-server_pro-hu.html" lang="hu" hreflang="hu">Magyar</a></li><li><a href="checkout-server_pro-nl.html" lang="nl" hreflang="nl">Nederlands</a></li><li><a href="checkout-server_pro-no.html" lang="no" hreflang="no">Norsk</a></li><li><a href="checkout-server_pro-pl.html" lang="pl" hreflang="pl">Polski</a></li><li><a href="checkout-server_pro-pt-BR.html" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a></li><li><a href="checkout-server_pro-ro.html" lang="ro" hreflang="ro">Română</a></li><li><a href="checkout-server_pro-fi.html" lang="fi" hreflang="fi">Suomi</a></li><li><a href="checkout-server_pro-sv-SE.html" lang="sv-SE" hreflang="sv-SE">Svenska</a></li><li><a href="checkout-server_pro-vi.html" lang="vi" hreflang="vi">Tiếng Việt</a></li><li><a href="checkout-server_pro-tr.html" lang="tr" hreflang="tr">Türkçe</a></li><li><a href="checkout-server_pro-el.html" lang="el" hreflang="el">Ελληνικά</a></li><li><a href="checkout-server_pro-bg.html" lang="bg" hreflang="bg">Български</a></li><li><a href="checkout-server_pro-ru.html" lang="ru" hreflang="ru">Русский</a></li><li><a href="checkout-server_pro-uk.html" lang="uk" hreflang="uk">Українська</a></li><li><a href="checkout-server_pro-hi.html" lang="hi" hreflang="hi">हिन्दी</a></li><li><a href="checkout-server_pro-th.html" lang="th" hreflang="th">ไทย</a></li><li><a href="checkout-server_pro-ja.html" lang="ja" hreflang="ja">日本語</a></li><li><a href="checkout-server_pro-zh-CN.html" lang="zh-CN" hreflang="zh-CN">简体中文</a></li><li><a href="checkout-server_pro-zh-TW.html" lang="zh-TW" hreflang="zh-TW">繁體中文</a></li><li><a href="checkout-server_pro.html" lang="ko" hreflang="ko" aria-current="true">한국어</a></li></ul></details></div></header>
-<main id="main">
-<a class="back-link" href="plans.html"><span aria-hidden="true">←</span>요금제로 돌아가기</a>
-<h1>볼룸 요금제 결제</h1>
-<div class="checkout-grid">
-<div class="checkout-key"><div class="key-card"><div class="key-inner"><div class="key-top"><span class="key-no">07</span><svg class="seal" aria-hidden="true"><use href="#seal"/></svg></div><h2 class="plan-name"><span class="key-grade" lang="en">BALLROOM</span><span class="key-local">볼룸</span></h2><p class="price">월 <span class="amount">59,900</span>원</p><p class="key-brand" aria-hidden="true">COZIROM</p></div></div><p class="sub">활발한 100명 커뮤니티, 언어별 채널까지</p></div>
-<section class="summary" aria-labelledby="summary-title"><h2 class="eyebrow" id="summary-title">주문 내용</h2><dl class="folio"><div><dt>요금제</dt><dd><span class="chosen">볼룸</span></dd></div><div><dt>가격</dt><dd><p class="price"><span class="price-main">월 <span class="amount">59,900</span>원</span>, 부가세 포함</p></dd></div></dl><p class="sub folio-note">매달 자동으로 결제되는 구독입니다. 언제든 해지하실 수 있고, 해지하시면 다음 결제부터 멈춥니다.</p>
-<section class="checkout-section" aria-labelledby="includes-title"><h3 id="includes-title">포함된 것</h3><ul class="includes"><li>서버 전체 월 67,500건(한 분당 700건까지), 언어 6개까지</li><li>서버 용어집 단어 1,000개</li></ul><p class="sub">사진 글자 번역 한 장 보통 약 9건, 사진에 덮어쓰기 보통 약 19건(정밀 약 40건), 음성 메시지 소리 1초에 1건도 이 한도에서 씁니다</p></section>
-<section class="checkout-section" aria-labelledby="refund-title"><h3 id="refund-title">환불</h3><ul><li>결제하신 날부터 7일 안에는 쓰지 않으신 부분을 돌려받으실 수 있습니다(하나도 쓰지 않으셨으면 전액).</li><li>사용한 부분은 청약철회가 제한되며, 무료 요금제로 먼저 써 보실 수 있습니다.</li></ul></section>
-<div class="pay"><label class="check" for="agree"><input type="checkbox" id="agree" name="agree" required><span><a href="terms.html">이용약관</a>과 <a href="refund.html">환불 정책</a>을 읽고 동의합니다.</span></label><button class="btn btn--primary btn--block" type="button" disabled aria-describedby="pay-note">결제 준비 중</button><p class="pay-note" id="pay-note">시험 운영 중이라 아직 결제를 받지 않습니다. 결제가 열리면 이 버튼으로 결제하실 수 있습니다.</p></div>
-</section>
-</div>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html" aria-label="Cozirom 홈"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg><span class="brand-name">COZIROM</span></a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="plans.html">요금제</a>
+      <a href="support.html"><span class="nav-full">도움말과 문의</span><span class="nav-short">도움말</span></a>
+      <a href="privacy.html">개인정보 처리방침</a>
+    </nav>
+    <details class="lang-switch"><summary aria-label="언어: 한국어"><svg class="globe" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor"/><path d="M1.5 8h13M8 1.5c-2.4 2.2-2.4 10.8 0 13M8 1.5c2.4 2.2 2.4 10.8 0 13" fill="none" stroke="currentColor"/></svg><span class="lang-name">한국어</span></summary><ul class="lang-list"><li><a href="checkout-server_pro-id.html" lang="id" hreflang="id">Bahasa Indonesia</a></li><li><a href="checkout-server_pro-cs.html" lang="cs" hreflang="cs">Čeština</a></li><li><a href="checkout-server_pro-da.html" lang="da" hreflang="da">Dansk</a></li><li><a href="checkout-server_pro-de.html" lang="de" hreflang="de">Deutsch</a></li><li><a href="checkout-server_pro-en.html" lang="en" hreflang="en">English</a></li><li><a href="checkout-server_pro-es.html" lang="es" hreflang="es">Español</a></li><li><a href="checkout-server_pro-fr.html" lang="fr" hreflang="fr">Français</a></li><li><a href="checkout-server_pro-hr.html" lang="hr" hreflang="hr">Hrvatski</a></li><li><a href="checkout-server_pro-it.html" lang="it" hreflang="it">Italiano</a></li><li><a href="checkout-server_pro-lt.html" lang="lt" hreflang="lt">Lietuvių</a></li><li><a href="checkout-server_pro-hu.html" lang="hu" hreflang="hu">Magyar</a></li><li><a href="checkout-server_pro-nl.html" lang="nl" hreflang="nl">Nederlands</a></li><li><a href="checkout-server_pro-no.html" lang="no" hreflang="no">Norsk</a></li><li><a href="checkout-server_pro-pl.html" lang="pl" hreflang="pl">Polski</a></li><li><a href="checkout-server_pro-pt-BR.html" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a></li><li><a href="checkout-server_pro-ro.html" lang="ro" hreflang="ro">Română</a></li><li><a href="checkout-server_pro-fi.html" lang="fi" hreflang="fi">Suomi</a></li><li><a href="checkout-server_pro-sv-SE.html" lang="sv-SE" hreflang="sv-SE">Svenska</a></li><li><a href="checkout-server_pro-vi.html" lang="vi" hreflang="vi">Tiếng Việt</a></li><li><a href="checkout-server_pro-tr.html" lang="tr" hreflang="tr">Türkçe</a></li><li><a href="checkout-server_pro-el.html" lang="el" hreflang="el">Ελληνικά</a></li><li><a href="checkout-server_pro-bg.html" lang="bg" hreflang="bg">Български</a></li><li><a href="checkout-server_pro-ru.html" lang="ru" hreflang="ru">Русский</a></li><li><a href="checkout-server_pro-uk.html" lang="uk" hreflang="uk">Українська</a></li><li><a href="checkout-server_pro-hi.html" lang="hi" hreflang="hi">हिन्दी</a></li><li><a href="checkout-server_pro-th.html" lang="th" hreflang="th">ไทย</a></li><li><a href="checkout-server_pro-ja.html" lang="ja" hreflang="ja">日本語</a></li><li><a href="checkout-server_pro-zh-CN.html" lang="zh-CN" hreflang="zh-CN">简体中文</a></li><li><a href="checkout-server_pro-zh-TW.html" lang="zh-TW" hreflang="zh-TW">繁體中文</a></li><li><a href="checkout-server_pro.html" lang="ko" hreflang="ko" aria-current="true">한국어</a></li></ul></details>
+    <details class="menu"><summary aria-label="메뉴"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></summary><nav class="menu-nav" aria-label="메뉴">
+      <a href="plans.html">요금제</a>
+      <a href="support.html">도움말과 문의</a>
+      <a href="privacy.html">개인정보 처리방침</a>
+    </nav></details>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <a class="back-link" href="plans.html"><span aria-hidden="true">←</span>요금제로 돌아가기</a>
+  <div class="page-head">
+    <p class="eyebrow">결제</p>
+    <h1 class="title">볼룸 요금제 결제</h1>
+  </div>
+  <div class="checkout grid">
+    <div class="col-4 checkout-key">
+      <div class="key-card key-card--light"><div class="key-inner"><div class="key-top"><span class="key-no">07</span><svg class="seal" aria-hidden="true"><use href="#seal"/></svg></div><h2 class="plan-name"><span class="key-grade" lang="en">BALLROOM</span><span class="key-local">볼룸</span></h2><p class="price">월 <span class="amount">59,900</span>원</p><p class="key-brand" aria-hidden="true">COZIROM</p></div></div>
+      <p class="caption">활발한 100명 커뮤니티, 언어별 채널까지</p>
+    </div>
+    <section class="col-8 folio summary" aria-labelledby="summary-title">
+      <div class="folio-head"><p class="eyebrow" id="summary-title">주문 내용</p><p class="small">부가세 포함</p></div>
+      <dl class="rows"><div><dt>요금제</dt><dd><span class="chosen">볼룸</span></dd></div><div><dt>가격</dt><dd><p class="price"><span class="price-main">월 <span class="amount">59,900</span>원</span>, 부가세 포함</p></dd></div></dl>
+      <p class="note">매달 자동으로 결제되는 구독입니다. 언제든 해지하실 수 있고, 해지하시면 다음 결제부터 멈춥니다.</p>
+      <section aria-labelledby="includes-title"><h3 id="includes-title">포함된 것</h3><ul class="diamonds includes includes--2"><li>서버 전체 월 67,500건(한 분당 700건까지), 언어 6개까지</li><li>서버 용어집 단어 1,000개</li></ul><p class="note">사진 글자 번역 한 장 보통 약 9건, 사진에 덮어쓰기 보통 약 19건(정밀 약 40건), 음성 메시지 소리 1초에 1건도 이 한도에서 씁니다</p></section>
+      <section aria-labelledby="refund-title"><h3 id="refund-title">환불</h3><ul class="diamonds includes"><li>결제하신 날부터 7일 안에는 쓰지 않으신 부분을 돌려받으실 수 있습니다(하나도 쓰지 않으셨으면 전액).</li><li>사용한 부분은 청약철회가 제한되며, 무료 요금제로 먼저 써 보실 수 있습니다.</li></ul></section>
+      <div class="pay"><label class="check" for="agree"><input type="checkbox" id="agree" name="agree" required><span><a href="terms.html">이용약관</a>과 <a href="refund.html">환불 정책</a>을 읽고 동의합니다.</span></label><button class="btn btn--primary btn--block" type="button" disabled aria-describedby="pay-note">결제 준비 중</button><p class="pay-note" id="pay-note">시험 운영 중이라 아직 결제를 받지 않습니다. 결제가 열리면 이 버튼으로 결제하실 수 있습니다.</p></div>
+    </section>
+  </div>
 </main>
-<footer class="site-footer"><div class="wrap"><nav class="footer-nav" aria-label="정책과 도움말"><a href="terms.html">이용약관</a><a href="refund.html">환불 정책</a><a href="privacy.html">개인정보 처리방침</a><a href="support.html">도움말과 문의</a></nav><p class="footer-note">번역은 AI(Anthropic의 Claude)가 합니다. 틀릴 수 있으니 중요한 내용은 원문도 함께 확인해 주십시오.</p><div class="biz biz--pending"><p>사업자 등록 전 시험 운영 중이라 결제를 받지 않습니다.</p><p><span class="biz-label">문의</span><a href="mailto:bouz3337@gmail.com">bouz3337@gmail.com</a></p></div><p class="footer-end"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg>© 2026 Cozirom</p></div></footer>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col--brand">
+        <a class="footer-brand" href="index.html"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg><span class="brand-name">COZIROM</span></a>
+        <p class="footer-tag">디스코드 채팅을 상대 언어로 번역해 주는 봇입니다.</p>
+        <p class="footer-note">번역은 AI(Anthropic의 Claude)가 합니다. 틀릴 수 있으니 중요한 내용은 원문도 함께 확인해 주십시오.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-guide"><h2 id="f-guide">안내</h2><ul><li><a href="plans.html">요금제</a></li><li><a href="support.html">도움말과 문의</a></li></ul></nav>
+      <nav class="footer-col" aria-labelledby="f-policy"><h2 id="f-policy">정책</h2><ul><li><a href="terms.html">이용약관</a></li><li><a href="refund.html">환불 정책</a></li><li><a href="privacy.html">개인정보 처리방침</a></li></ul></nav>
+      <div class="footer-col"><h2>문의</h2><p><a class="footer-mail" href="mailto:bouz3337@gmail.com">bouz3337@gmail.com</a></p><p class="small">사업자 등록 전 시험 운영 중이라 결제를 받지 않습니다.</p></div>
+    </div>
+    <p class="footer-end"><span>© 2026 Cozirom</span><span>한국어</span></p>
+  </div>
+</footer>
 </body>
 </html>

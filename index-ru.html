@@ -4,12 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#EAE3D5">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0F1117">
 <title>Cozirom · Бот для перевода чата в Discord</title>
 <meta name="description" content="Бот для Discord, который переводит чат на язык собеседника. Переводы появляются под вашим именем, а текст на изображениях тоже переводится.">
-<link rel="stylesheet" href="site.css">
-<link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://cozirom.com/index-ru.html">
 <link rel="alternate" hreflang="ko" href="https://cozirom.com/index.html">
 <link rel="alternate" hreflang="en" href="https://cozirom.com/index-en.html">
 <link rel="alternate" hreflang="bg" href="https://cozirom.com/index-bg.html">
@@ -41,17 +40,119 @@
 <link rel="alternate" hreflang="zh-CN" href="https://cozirom.com/index-zh-CN.html">
 <link rel="alternate" hreflang="zh-TW" href="https://cozirom.com/index-zh-TW.html">
 <link rel="alternate" hreflang="x-default" href="https://cozirom.com/index-en.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cozirom">
+<meta property="og:title" content="Cozirom · Бот для перевода чата в Discord">
+<meta property="og:description" content="Бот для Discord, который переводит чат на язык собеседника. Переводы появляются под вашим именем, а текст на изображениях тоже переводится.">
+<meta property="og:url" content="https://cozirom.com/index-ru.html">
+<meta property="og:image" content="https://cozirom.com/assets/og-index-ru.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Общайтесь в Discord — каждый на своём языке">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cozirom","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","inLanguage":"ru","description":"Бот для Discord, который переводит чат на язык собеседника. Переводы появляются под вашим именем, а текст на изображениях тоже переводится.","url":"https://cozirom.com/index-ru.html","publisher":{"@type":"Organization","name":"Cozirom","url":"https://cozirom.com/","email":"bouz3337@gmail.com"},"offers":[{"@type":"Offer","name":"Guest","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Superior","price":"9.99","priceCurrency":"USD"},{"@type":"Offer","name":"Deluxe","price":"14.99","priceCurrency":"USD"},{"@type":"Offer","name":"Suite","price":"36.99","priceCurrency":"USD"},{"@type":"Offer","name":"Lounge","price":"11.99","priceCurrency":"USD"},{"@type":"Offer","name":"Ballroom","price":"44.99","priceCurrency":"USD"}]}</script>
+<link rel="preload" href="fonts/CoziromSans-31e6a862d8ae.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/CoziromSerif-1b71af0b027b.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Cozirom Sans";src:url("fonts/CoziromSans-31e6a862d8ae.woff2") format("woff2");font-weight:45 920;font-display:swap}@font-face{font-family:"Cozirom Sans Fallback";src:local("Arial"), local("Helvetica Neue");size-adjust:99.8%;ascent-override:95.4%;descent-override:24.2%;line-gap-override:0%}@font-face{font-family:"Cozirom Serif";src:url("fonts/CoziromSerif-1b71af0b027b.woff2") format("woff2");font-weight:700;font-display:swap}</style>
+<link rel="stylesheet" href="site.css">
+<link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body class="home">
 <a class="skip-link" href="#main">Перейти к содержимому</a>
 <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false"><symbol id="seal" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="#181B24"/><circle cx="50" cy="50" r="44.5" fill="none" stroke="currentColor" stroke-width="10"/><path fill="currentColor" transform="translate(28.00 69.40) scale(0.05714 -0.05714)" d="M718 292 720 125Q697 86 659 54.5Q621 23 566.5 4.5Q512 -14 439 -14Q323 -13 235 31Q147 75 98.5 156.5Q50 238 50 351Q50 462 98 543.5Q146 625 234 669.5Q322 714 443 714Q521 714 583 696.5Q645 679 688 655L696 494H687Q662 589 598.5 632.5Q535 676 450 676Q368 676 308.5 636.5Q249 597 216.5 524.5Q184 452 184 353Q184 254 215.5 180.5Q247 107 304.5 66.5Q362 26 439 24Q514 24 569.5 49.5Q625 75 660.5 134Q696 193 710 292Z"/></symbol></svg>
-<header class="site-header"><div class="wrap"><a class="brand" href="index-ru.html" aria-label="Главная страница Cozirom"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg><span class="brand-name">COZIROM</span></a><nav class="site-nav" aria-label="Главное меню"><a href="plans-ru.html">Тарифы</a><a href="support-ru.html"><span class="nav-full">Справка и поддержка</span><span class="nav-short">Помощь</span></a><a href="privacy-en.html" hreflang="en">Конфиденциальность</a></nav><details class="lang-switch"><summary aria-label="Язык: Русский"><svg class="globe" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor"/><path d="M1.5 8h13M8 1.5c-2.4 2.2-2.4 10.8 0 13M8 1.5c2.4 2.2 2.4 10.8 0 13" fill="none" stroke="currentColor"/></svg><span class="lang-name">Русский</span></summary><ul class="lang-list"><li><a href="index-id.html" lang="id" hreflang="id">Bahasa Indonesia</a></li><li><a href="index-cs.html" lang="cs" hreflang="cs">Čeština</a></li><li><a href="index-da.html" lang="da" hreflang="da">Dansk</a></li><li><a href="index-de.html" lang="de" hreflang="de">Deutsch</a></li><li><a href="index-en.html" lang="en" hreflang="en">English</a></li><li><a href="index-es.html" lang="es" hreflang="es">Español</a></li><li><a href="index-fr.html" lang="fr" hreflang="fr">Français</a></li><li><a href="index-hr.html" lang="hr" hreflang="hr">Hrvatski</a></li><li><a href="index-it.html" lang="it" hreflang="it">Italiano</a></li><li><a href="index-lt.html" lang="lt" hreflang="lt">Lietuvių</a></li><li><a href="index-hu.html" lang="hu" hreflang="hu">Magyar</a></li><li><a href="index-nl.html" lang="nl" hreflang="nl">Nederlands</a></li><li><a href="index-no.html" lang="no" hreflang="no">Norsk</a></li><li><a href="index-pl.html" lang="pl" hreflang="pl">Polski</a></li><li><a href="index-pt-BR.html" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a></li><li><a href="index-ro.html" lang="ro" hreflang="ro">Română</a></li><li><a href="index-fi.html" lang="fi" hreflang="fi">Suomi</a></li><li><a href="index-sv-SE.html" lang="sv-SE" hreflang="sv-SE">Svenska</a></li><li><a href="index-vi.html" lang="vi" hreflang="vi">Tiếng Việt</a></li><li><a href="index-tr.html" lang="tr" hreflang="tr">Türkçe</a></li><li><a href="index-el.html" lang="el" hreflang="el">Ελληνικά</a></li><li><a href="index-bg.html" lang="bg" hreflang="bg">Български</a></li><li><a href="index-ru.html" lang="ru" hreflang="ru" aria-current="true">Русский</a></li><li><a href="index-uk.html" lang="uk" hreflang="uk">Українська</a></li><li><a href="index-hi.html" lang="hi" hreflang="hi">हिन्दी</a></li><li><a href="index-th.html" lang="th" hreflang="th">ไทย</a></li><li><a href="index-ja.html" lang="ja" hreflang="ja">日本語</a></li><li><a href="index-zh-CN.html" lang="zh-CN" hreflang="zh-CN">简体中文</a></li><li><a href="index-zh-TW.html" lang="zh-TW" hreflang="zh-TW">繁體中文</a></li><li><a href="index.html" lang="ko" hreflang="ko">한국어</a></li></ul></details></div></header>
-<main id="main">
-<section class="hero" aria-labelledby="hero-title"><h1 id="hero-title">Общайтесь в Discord — каждый на своём языке</h1><p class="lead">Cozirom — это бот для Discord, который переводит чат на язык собеседника. Достаточно включить его, и ваши сообщения будут публиковаться в переводе под вашим именем и с вашим аватаром. Текст на изображениях он тоже переводит.</p><p class="cta"><a class="btn btn--primary" href="#start">С чего начать</a><a class="btn" href="plans-ru.html">Посмотреть тарифы</a></p><p class="fineprint">Переводы выполняет ИИ (Claude от Anthropic). Возможны ошибки, поэтому важное сверяйте с оригиналом.</p></section>
-<section class="section" aria-labelledby="can-title"><div class="ledger-head"><h2 id="can-title">Что умеет бот</h2><p class="eyebrow r">В переводах</p></div><ol class="ledger"><li><span class="no" aria-hidden="true">01</span><div><h3>Автоперевод</h3><p>Достаточно один раз ввести <code><span class="cmd">/перевод</span> вкл</code>, и ваши сообщения на этом сервере будут публиковаться на языке собеседника под вашим именем и с вашим аватаром. Оригинал остаётся под переводом мелким шрифтом, а кнопка <img class="icon" src="assets/button_original.png" width="20" height="20" alt="Кнопка просмотра оригинала"> показывает его полностью.</p></div><p class="count"><span class="count-label">Переводы</span><span class="fig">1</span> за сообщение</p></li><li><span class="no" aria-hidden="true">02</span><div><h3>Текст на изображениях</h3><p>Меню, экраны игр, мемы: если на изображении есть текст, бот его прочитает и переведёт. Нажмите значок <img class="icon" src="assets/button_read.png" width="20" height="20" alt="Значок «Перевести текст»"> под изображениями тех, кто включил перевод, или воспользуйтесь переводом по правому клику. Результат видит только тот, кто его запросил, а изображения без текста не учитываются.</p></div><p class="count"><span class="count-label">Переводы</span>Обычно около <span class="fig">9</span> за изображение</p></li><li><span class="no" aria-hidden="true">03</span><div><h3>Перевод на изображении</h3><p>Нажмите значок <img class="icon" src="assets/button_overlay.png" width="20" height="20" alt="Значок «Наложить перевод»">, и вы получите копию изображения, где исходный текст стёрт, а на его месте нарисован перевод. Шрифт можно выбрать (обычный, комикс, рукописный или жирный заголовок) и менять без расхода переводов. Лучше всего это работает с горизонтальным текстом, например на скриншотах, мемах и экранах игр, а результат видит только тот, кто нажал.</p></div><p class="count"><span class="count-label">Переводы</span>Обычно около <span class="fig">19</span> за изображение</p><figure class="figure figure--overlay"><div class="figure-pair"><img src="assets/overlay_before.png" width="720" height="520" alt="До: исходный кадр комикса с двумя речевыми пузырями на японском" loading="lazy"><svg class="arrow" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M3 14h20M16 7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><img src="assets/overlay_after.png" width="720" height="520" alt="После: тот же кадр, где текст в пузырях стёрт и нарисован перевод на корейский" loading="lazy"></div><figcaption>Пример: исходное изображение (речевые пузыри на японском) и то же изображение, где текст стёрт, а перевод на корейский нарисован шрифтом «Комикс».</figcaption></figure></li><li><span class="no" aria-hidden="true">04</span><div><h3>Голосовые сообщения</h3><p>Нажмите правой кнопкой на голосовое сообщение, отправленное из мобильного приложения, и вы получите расшифровку сказанного и её перевод. Расшифровываются сообщения длиной до 3 минут, а сообщения без речи не учитываются.</p></div><p class="count"><span class="count-label">Переводы</span><span class="fig">1</span> за секунду плюс перевод<small>10-секундное сообщение — обычно 11</small></p></li><li><span class="no" aria-hidden="true">05</span><div><h3>Четыре тона</h3><p>Сленг, непринуждённый, дружелюбный или официальный: тон выбирается для каждого сервера. С друзьями на ты, на новом месте на вы. На тарифе Guest (бесплатном) все четыре тона доступны первые 14 дней, а потом остаётся дружелюбный.</p></div><p class="count"><span class="count-label">Переводы</span>Платные: все четыре. Free: первые <span class="fig">14</span> дней</p></li><li><span class="no" aria-hidden="true">06</span><div><h3>31 язык</h3><p>Для перевода доступен 31 язык. Экраны бота и названия команд показываются на 30 языках Discord, так что собеседник настраивает бота на своём языке.</p></div><p class="count"><span class="count-label">Переводы</span><span class="fig">31</span> для перевода, <span class="fig">30</span> для интерфейса</p></li></ol></section>
-<section class="section" id="start" aria-labelledby="start-title"><h2 id="start-title">Как начать</h2><ol class="steps"><li><span class="no" aria-hidden="true">1</span><p>Администратор сервера добавляет бота на сервер. Ссылку-приглашение можно запросить через <a href="https://discord.gg/96Jw2CYTpd">сервер поддержки</a>.</p></li><li><span class="no" aria-hidden="true">2</span><p>Каждый, кто хочет, чтобы его сообщения переводились, вводит <code><span class="cmd">/перевод</span> вкл</code> на этом сервере. Бот угадает ваш язык и язык собеседника и откроет панель настроек. Если он ошибся, измените выбор в выпадающих меню.</p></li><li><span class="no" aria-hidden="true">3</span><p>Пишите как обычно, и перевод появится под вашим именем. Начните с тарифа Guest (бесплатного), а если понадобится больше, выберите другой на <a href="plans-ru.html">странице тарифов</a>.</p></li></ol></section>
-<section class="section" aria-labelledby="privacy-title"><div class="aside-row"><h2 class="eyebrow" id="privacy-title">Конфиденциальность</h2><div><p>Сообщения для перевода и изображения отправляются только в Anthropic (США), а звук голосовых сообщений — только в Google (США). Бот хранит оригинал опубликованного перевода 14 дней, а кэш переводов — 30 дней и не сохраняет изображения, звук и полученный из них текст. Содержимое чатов никогда не попадает в логи, а команда <code><span class="cmd">/перевод</span> удалить-данные</code> в любой момент удаляет ваши данные.</p><p><a class="link-block" href="privacy-en.html" hreflang="en">Полный текст политики конфиденциальности</a></p></div></div></section>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index-ru.html" aria-label="Главная страница Cozirom"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg><span class="brand-name">COZIROM</span></a>
+    <nav class="site-nav" aria-label="Главное меню">
+      <a href="plans-ru.html">Тарифы</a>
+      <a href="support-ru.html"><span class="nav-full">Справка и поддержка</span><span class="nav-short">Помощь</span></a>
+      <a href="privacy-en.html" hreflang="en">Конфиденциальность</a>
+    </nav>
+    <details class="lang-switch"><summary aria-label="Язык: Русский"><svg class="globe" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor"/><path d="M1.5 8h13M8 1.5c-2.4 2.2-2.4 10.8 0 13M8 1.5c2.4 2.2 2.4 10.8 0 13" fill="none" stroke="currentColor"/></svg><span class="lang-name">Русский</span></summary><ul class="lang-list"><li><a href="index-id.html" lang="id" hreflang="id">Bahasa Indonesia</a></li><li><a href="index-cs.html" lang="cs" hreflang="cs">Čeština</a></li><li><a href="index-da.html" lang="da" hreflang="da">Dansk</a></li><li><a href="index-de.html" lang="de" hreflang="de">Deutsch</a></li><li><a href="index-en.html" lang="en" hreflang="en">English</a></li><li><a href="index-es.html" lang="es" hreflang="es">Español</a></li><li><a href="index-fr.html" lang="fr" hreflang="fr">Français</a></li><li><a href="index-hr.html" lang="hr" hreflang="hr">Hrvatski</a></li><li><a href="index-it.html" lang="it" hreflang="it">Italiano</a></li><li><a href="index-lt.html" lang="lt" hreflang="lt">Lietuvių</a></li><li><a href="index-hu.html" lang="hu" hreflang="hu">Magyar</a></li><li><a href="index-nl.html" lang="nl" hreflang="nl">Nederlands</a></li><li><a href="index-no.html" lang="no" hreflang="no">Norsk</a></li><li><a href="index-pl.html" lang="pl" hreflang="pl">Polski</a></li><li><a href="index-pt-BR.html" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a></li><li><a href="index-ro.html" lang="ro" hreflang="ro">Română</a></li><li><a href="index-fi.html" lang="fi" hreflang="fi">Suomi</a></li><li><a href="index-sv-SE.html" lang="sv-SE" hreflang="sv-SE">Svenska</a></li><li><a href="index-vi.html" lang="vi" hreflang="vi">Tiếng Việt</a></li><li><a href="index-tr.html" lang="tr" hreflang="tr">Türkçe</a></li><li><a href="index-el.html" lang="el" hreflang="el">Ελληνικά</a></li><li><a href="index-bg.html" lang="bg" hreflang="bg">Български</a></li><li><a href="index-ru.html" lang="ru" hreflang="ru" aria-current="true">Русский</a></li><li><a href="index-uk.html" lang="uk" hreflang="uk">Українська</a></li><li><a href="index-hi.html" lang="hi" hreflang="hi">हिन्दी</a></li><li><a href="index-th.html" lang="th" hreflang="th">ไทย</a></li><li><a href="index-ja.html" lang="ja" hreflang="ja">日本語</a></li><li><a href="index-zh-CN.html" lang="zh-CN" hreflang="zh-CN">简体中文</a></li><li><a href="index-zh-TW.html" lang="zh-TW" hreflang="zh-TW">繁體中文</a></li><li><a href="index.html" lang="ko" hreflang="ko">한국어</a></li></ul></details>
+    <details class="menu"><summary aria-label="Меню"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></summary><nav class="menu-nav" aria-label="Меню">
+      <a href="plans-ru.html">Тарифы</a>
+      <a href="support-ru.html">Справка и поддержка</a>
+      <a href="privacy-en.html" hreflang="en">Конфиденциальность</a>
+    </nav></details>
+  </div>
+</header>
+
+<main id="main" class="container">
+
+  <section class="hero grid" aria-labelledby="hero-title">
+    <div class="col-7">
+      <p class="eyebrow">Бот для перевода чата в Discord</p>
+      <h1 class="display" id="hero-title">Общайтесь в Discord — каждый на своём языке</h1>
+      <p class="lead">Cozirom — это бот для Discord, который переводит чат на язык собеседника. Достаточно включить его, и ваши сообщения будут публиковаться в переводе под вашим именем и с вашим аватаром. Текст на изображениях он тоже переводит.</p>
+      <p class="btn-row"><a class="btn btn--primary" href="#start">С чего начать</a><a class="btn" href="plans-ru.html">Посмотреть тарифы</a></p>
+      <p class="fineprint">Переводы выполняет ИИ (Claude от Anthropic). Возможны ошибки, поэтому важное сверяйте с оригиналом.</p>
+    </div>
+    <figure class="col-5 hero-card">
+      <div class="key-card key-card--hero" aria-hidden="true"><div class="key-inner"><div class="key-top"><span class="key-no">03</span><svg class="seal" aria-hidden="true"><use href="#seal"/></svg></div><p class="plan-name"><span class="key-grade" lang="en">SUPERIOR</span></p><p class="price"><span class="cur">$</span><span class="amount">9,99</span>/мес.</p><p class="key-brand" aria-hidden="true">COZIROM</p></div></div>
+      <figcaption class="caption">Тарифы делятся на уровни, как ключи от гостиничных номеров. Начать можно с тарифа Guest (бесплатного).</figcaption>
+    </figure>
+  </section>
+
+  <section class="section" aria-labelledby="can-title">
+    <div class="section-head">
+      <p class="eyebrow">Что умеет бот</p>
+      <h2 class="title" id="can-title">Один бот переводит текст, изображения и голос</h2>
+      <p class="lead">Лимиты тарифов считаются в переводах. Одно сообщение, переведённое на один язык, — это 1 перевод.</p>
+    </div>
+    <div class="folio">
+      <div class="folio-head"><p class="eyebrow">6 функций</p><p class="small">В переводах</p></div>
+      <ol class="ledger">
+        <li><span class="no" aria-hidden="true">01</span><div><h3>Автоперевод</h3><p>Достаточно один раз ввести <code><span class="cmd">/перевод</span> вкл</code>, и ваши сообщения на этом сервере будут публиковаться на языке собеседника под вашим именем и с вашим аватаром. Оригинал остаётся под переводом мелким шрифтом, а кнопка <img class="icon" src="assets/button_original.png" width="20" height="20" alt="Кнопка просмотра оригинала"> показывает его полностью.</p></div><p class="count"><span class="count-label">Переводы</span><span class="fig">1</span> за сообщение</p></li>
+        <li><span class="no" aria-hidden="true">02</span><div><h3>Текст на изображениях</h3><p>Меню, экраны игр, мемы: если на изображении есть текст, бот его прочитает и переведёт. Нажмите значок <img class="icon" src="assets/button_read.png" width="20" height="20" alt="Значок «Перевести текст»"> под изображениями тех, кто включил перевод, или воспользуйтесь переводом по правому клику. Результат видит только тот, кто его запросил, а изображения без текста не учитываются.</p></div><p class="count"><span class="count-label">Переводы</span>Обычно около <span class="fig">9</span> за изображение</p></li>
+        <li><span class="no" aria-hidden="true">03</span><div><h3>Перевод на изображении</h3><p>По значку <img class="icon" src="assets/button_overlay.png" width="20" height="20" alt="Значок «Наложить перевод»"> вы получите копию изображения, где исходный текст стёрт, а на его месте нарисован перевод. Сначала выбран шрифт «Как в оригинале», близкий к исходным буквам, а переключаться между наборами шрифтов (до 10), такими как «С засечками», «Рукописный» и «Комикс», можно без расхода переводов. Лучше всего это работает на горизонтальном тексте, например на скриншотах, мемах, экранах игр и меню, а результат видит только тот, кто нажал.</p></div><p class="count"><span class="count-label">Переводы</span>Обычно около <span class="fig">19</span> за изображение</p>
+          <figure class="figure figure--overlay"><div class="figure-pair"><picture><source srcset="assets/overlay_before.webp" type="image/webp"><img src="assets/overlay_before.png" width="720" height="520" alt="До: фотография меню ресторана на японском языке" loading="lazy" decoding="async"></picture><svg class="arrow" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M3 14h20M16 7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><picture><source srcset="assets/overlay_after-ru.webp" type="image/webp"><img src="assets/overlay_after-ru.png" width="720" height="520" alt="После: та же фотография, где японский текст меню стёрт, а на его месте нарисован перевод на русский язык" loading="lazy" decoding="async"></picture></div><figcaption>Пример: исходная фотография (меню на японском языке) и та же фотография, где текст стёрт, а на его месте шрифтом «С засечками» нарисован перевод на русский язык.</figcaption></figure></li>
+        <li><span class="no" aria-hidden="true">04</span><div><h3>Голосовые сообщения</h3><p>Нажмите правой кнопкой на голосовое сообщение, отправленное из мобильного приложения, и вы получите расшифровку сказанного и её перевод. Расшифровываются сообщения длиной до 3 минут, а сообщения без речи не учитываются.</p></div><p class="count"><span class="count-label">Переводы</span><span class="fig">1</span> за секунду плюс перевод<small>10-секундное сообщение — обычно 11</small></p></li>
+        <li><span class="no" aria-hidden="true">05</span><div><h3>Четыре тона</h3><p>Сленг, непринуждённый, дружелюбный или официальный: тон выбирается для каждого сервера. С друзьями на ты, на новом месте на вы. На тарифе Guest (бесплатном) все четыре тона доступны первые 14 дней, а потом остаётся дружелюбный.</p></div><p class="count"><span class="count-label">Переводы</span>Платные: все четыре. Free: первые <span class="fig">14</span> дней</p></li>
+        <li><span class="no" aria-hidden="true">06</span><div><h3>31 язык</h3><p>Для перевода доступен 31 язык. Экраны бота и названия команд показываются на 30 языках Discord, так что собеседник настраивает бота на своём языке.</p></div><p class="count"><span class="count-label">Переводы</span><span class="fig">31</span> для перевода, <span class="fig">30</span> для интерфейса</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="start" aria-labelledby="start-title">
+    <div class="section-head">
+      <p class="eyebrow">Как начать</p>
+      <h2 class="title" id="start-title">Три шага, и перевод появится под вашим именем</h2>
+    </div>
+    <ol class="steps">
+      <li><span class="no" aria-hidden="true">1</span><h3>Добавьте бота на сервер</h3><p>Администратор сервера добавляет бота на сервер. Ссылку-приглашение можно запросить через <a href="https://discord.gg/96Jw2CYTpd">сервер поддержки</a>.</p></li>
+      <li><span class="no" aria-hidden="true">2</span><h3>Включите перевод</h3><p>Каждый, кто хочет, чтобы его сообщения переводились, вводит <code><span class="cmd">/перевод</span> вкл</code> на этом сервере. Бот угадает ваш язык и язык собеседника и откроет панель настроек. Если он ошибся, измените выбор в выпадающих меню.</p></li>
+      <li><span class="no" aria-hidden="true">3</span><h3>Пишите как обычно</h3><p>Пишите как обычно, и перевод появится под вашим именем. Начните с тарифа Guest (бесплатного), а если понадобится больше, выберите другой на <a href="plans-ru.html">странице тарифов</a>.</p></li>
+    </ol>
+  </section>
+
+  <section class="section" aria-labelledby="privacy-title">
+    <div class="folio folio--slim grid privacy-box">
+      <div class="col-8">
+        <h2 class="eyebrow" id="privacy-title">Конфиденциальность</h2>
+        <p class="small">Сообщения для перевода и изображения отправляются только в Anthropic (США), а звук голосовых сообщений — только в Google (США). Бот хранит оригинал опубликованного перевода 14 дней, а кэш переводов — 30 дней и не сохраняет изображения, звук и полученный из них текст. Содержимое чатов никогда не попадает в логи, а команда <code><span class="cmd">/перевод</span> удалить-данные</code> в любой момент удаляет ваши данные.</p>
+      </div>
+      <p class="col-4 privacy-link"><a class="btn" href="privacy-en.html" hreflang="en">Полный текст политики конфиденциальности</a></p>
+    </div>
+  </section>
 </main>
-<footer class="site-footer"><div class="wrap"><nav class="footer-nav" aria-label="Документы и справка"><a href="terms-en.html" hreflang="en">Условия использования</a><a href="refund-en.html" hreflang="en">Правила возврата средств</a><a href="privacy-en.html" hreflang="en">Конфиденциальность</a><a href="support-ru.html">Справка и поддержка</a></nav><p class="footer-note">Условия использования, правила возврата средств и политика конфиденциальности доступны только на английском языке.</p><div class="biz biz--pending"><p>Идёт тестовый период до регистрации бизнеса, оплата не принимается.</p><p><span class="biz-label">Контакты</span><a href="mailto:bouz3337@gmail.com">bouz3337@gmail.com</a></p></div><p class="footer-end"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg>© 2026 Cozirom</p></div></footer>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col--brand">
+        <a class="footer-brand" href="index-ru.html"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg><span class="brand-name">COZIROM</span></a>
+        <p class="footer-tag">Бот, который переводит чат в Discord на язык собеседника.</p>
+        <p class="footer-note">Условия использования, правила возврата средств и политика конфиденциальности доступны только на английском языке.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="f-guide"><h2 id="f-guide">Информация</h2><ul><li><a href="plans-ru.html">Тарифы</a></li><li><a href="support-ru.html">Справка и поддержка</a></li></ul></nav>
+      <nav class="footer-col" aria-labelledby="f-policy"><h2 id="f-policy">Документы</h2><ul><li><a href="terms-en.html" hreflang="en">Условия использования</a></li><li><a href="refund-en.html" hreflang="en">Правила возврата средств</a></li><li><a href="privacy-en.html" hreflang="en">Конфиденциальность</a></li></ul></nav>
+      <div class="footer-col"><h2>Контакты</h2><p><a class="footer-mail" href="mailto:bouz3337@gmail.com">bouz3337@gmail.com</a></p><p class="small">Идёт тестовый период до регистрации бизнеса, оплата не принимается.</p></div>
+    </div>
+    <p class="footer-end"><span>© 2026 Cozirom</span><span>Русский</span></p>
+  </div>
+</footer>
 </body>
 </html>
