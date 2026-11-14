@@ -1,5 +1,6 @@
 /* Cozirom 웹사이트 — v2 (DESIGN.md 3.0·3.12, Fable 2026-11-14 기준 쪽 넷 → 단계 5에서 21쪽 × 30개 언어로. tools/build_site.py가 복사한다)
-   · 면 셋: 종이(밝은 리넨 #EAE3D5 / 어두운 #0F1117) 위에 키 카드(차콜)와 명세서(아이보리). 그림자는 이 둘에만. 테마는 OS를 따른다.
+   · 면 셋: 종이(밝은 리넨 #EAE3D5 / 어두운 호두색 #1E1A15) 위에 키 카드(차콜, 두 테마 같음)와 명세서(밝은 테마 아이보리 / 어두운 테마 가죽 폴더 #292419).
+     그림자는 이 둘에만. 테마는 OS를 따른다. 어두운 테마는 2026-11-14 저녁 소유자 A안(따뜻한 종이 + 어두운 명세서. 푸른 검정 #0F1117은 뺐다).
    · 글자: 유동 크기 8단계(390→1280px), 역할마다 줄 간격·자간, 본문 폭 42rem. 큰 제목은 명조(소유자 ④ B).
    · 서체: 같은 폴더의 부분 서체(OFL). 본문 Cozirom Sans(Pretendard Variable의 수정본)와 제목 Cozirom Serif(Noto Serif의 수정본)는
      쪽·언어마다 그 쪽의 글자만 남긴 파일이라 그 선언이 그 쪽 <head>에 있다(build_site.page_fonts). 여기에는 모든 쪽이 같이 쓰는 둘만.
@@ -31,15 +32,15 @@
     color-scheme: light dark;
 
     /* 종이: 밝은 값, 어두운 값 — 한 줄에. 테마 블록을 두 번 쓰지 않는다 */
-    --paper:        light-dark(#EAE3D5, #0F1117);
-    --paper-deep:   light-dark(#E0D8C8, #0A0C11);
-    --surface:      light-dark(#F6F1E7, #181B24);
-    --sunk:         light-dark(#E0D8C8, #222633);
-    --ink:          light-dark(#181B24, #F4EFE6);
-    --ink-soft:     light-dark(#5C574E, #B0ACA3);
-    --ink-faint:    light-dark(#857F73, #7C7970);
-    --line:         light-dark(#CFC4AF, #343947);
-    --line-strong:  light-dark(#857F73, #7C7970);
+    --paper:        light-dark(#EAE3D5, #1E1A15);
+    --paper-deep:   light-dark(#E0D8C8, #161310);
+    --surface:      light-dark(#F6F1E7, #272219);
+    --sunk:         light-dark(#E0D8C8, #322C24);
+    --ink:          light-dark(#181B24, #EFE8DA);
+    --ink-soft:     light-dark(#5C574E, #B8AF9F);
+    --ink-faint:    light-dark(#857F73, #8E8679);
+    --line:         light-dark(#CFC4AF, #3B342B);
+    --line-strong:  light-dark(#857F73, #7E7667);
     --gold:         light-dark(#8A6A2E, #C9A96E);
     --gold-deep:    light-dark(#6E5220, #A0804A);
     --gold-text:    light-dark(#6E5220, #C9A96E);   /* 금빛 글자(요금제 눈썹): 밝은 종이에서는 짙은 금 5.7:1, 어두운 종이에서는 금 */
@@ -52,14 +53,14 @@
     --btn-bg-hover: light-dark(#30343F, #ECD8A8);
     --btn-border:   light-dark(#181B24, #A0804A);
     --focus:        light-dark(#181B24, #ECD8A8);
-    --shadow-object: light-dark(0 12px 30px rgba(60, 45, 20, .14), 0 18px 40px rgba(0, 0, 0, .4));
-    --shadow-key:    light-dark(0 14px 34px rgba(0, 0, 0, .28), 0 18px 40px rgba(0, 0, 0, .3));
+    --shadow-object: light-dark(0 12px 30px rgba(60, 45, 20, .14), 0 18px 40px rgba(0, 0, 0, .45));
+    --shadow-key:    light-dark(0 14px 34px rgba(0, 0, 0, .28), 0 18px 44px rgba(0, 0, 0, .55));
     --status-info:  light-dark(#8A6A2E, #C9A96E);
     --status-warn:  #BE6E2D;
     --status-alert: #C65464;
     --status-warn-text:  light-dark(#8A4E1A, #DEA068);
     --status-alert-text: light-dark(#9A3A4A, #E07888);
-    --header-bg:    light-dark(rgba(234, 227, 213, .86), rgba(15, 17, 23, .82));
+    --header-bg:    light-dark(rgba(234, 227, 213, .86), rgba(30, 26, 21, .84));
 
     /* 키 카드 (두 테마 같음) */
     --kc-bg: #181B24; --kc-ink: #F4EFE6; --kc-soft: #B0ACA3; --kc-gold: #C9A96E;
@@ -317,11 +318,14 @@
 
   /* ---- 명세서 (물건 2) ---- */
   .folio {
-    --surface: #F6F1E7; --sunk: #ECE5D7; --ink: #1D1F26; --ink-soft: #5C5648; --ink-faint: #857F73; --line: #D8CFBE; --line-strong: #857F73;
-    --gold: #8A6A2E; --gold-deep: #6E5220; --link: #1D1F26; --link-underline: rgba(138, 106, 46, .7); --focus: #1D1F26;
-    --btn-bg: #1D1F26; --btn-fg: #F6F1E7; --btn-bg-hover: #30343F; --btn-border: #1D1F26;
-    --status-info: #8A6A2E; --status-warn-text: #8A4E1A; --status-alert-text: #9A3A4A;
-    color-scheme: light; container-type: inline-size;
+    /* 밝은 테마 아이보리 종이 / 어두운 테마 가죽 폴더 (2026-11-14 저녁 소유자 A: 검정 종이 위의 아이보리는 눈부신 흰 덩어리였다) */
+    --surface: light-dark(#F6F1E7, #292419); --sunk: light-dark(#ECE5D7, #342E25); --ink: light-dark(#1D1F26, #EFE8DA); --ink-soft: light-dark(#5C5648, #B8AF9F);
+    --ink-faint: light-dark(#857F73, #958D7E); --line: light-dark(#D8CFBE, #443C31); --line-strong: light-dark(#857F73, #7E7667);
+    --gold: light-dark(#8A6A2E, #C9A96E); --gold-deep: light-dark(#6E5220, #A0804A); --link: light-dark(#1D1F26, #C9A96E);
+    --link-underline: light-dark(rgba(138, 106, 46, .7), rgba(201, 169, 110, .55)); --focus: light-dark(#1D1F26, #ECD8A8);
+    --btn-bg: light-dark(#1D1F26, #C9A96E); --btn-fg: light-dark(#F6F1E7, #181B24); --btn-bg-hover: light-dark(#30343F, #ECD8A8); --btn-border: light-dark(#1D1F26, #A0804A);
+    --status-info: light-dark(#8A6A2E, #C9A96E); --status-warn-text: light-dark(#8A4E1A, #DEA068); --status-alert-text: light-dark(#9A3A4A, #E07888);
+    container-type: inline-size;
     padding: var(--folio-pad);
     background: var(--surface); color: var(--ink);
     border: 1px solid var(--card-line); border-radius: 4px;
