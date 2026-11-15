@@ -568,6 +568,9 @@
   /* 없는 주소(404.html, 2026-11-15): 눈썹 404 + 제목 → 명세서 한 장(본문 폭)에 한국어 글 + 주 버튼, 괘선 아래 영어 글 + 윤곽 버튼 */
   .page-head + .notfound { margin-block-start: var(--block); }
   .notfound { max-inline-size: var(--prose); }
+  /* 가운데 배치 (2026-11-16 소유자 "중앙 배치로"): 눈썹·제목과 명세서를 틀 가운데로, 글도 가운데 정렬 */
+  .notfound-head, .notfound { margin-inline: auto; text-align: center; }
+  .notfound-head .eyebrow { justify-content: center; }
   .notfound-en { margin-block-start: var(--s-6); padding-block-start: var(--s-5); border-block-start: 1px solid var(--line); }
   .notfound-en .title { font-size: var(--fs-3); margin-block-end: var(--s-3); }
 
