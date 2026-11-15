@@ -565,6 +565,12 @@
     .table--stack td::before { content: attr(data-label); display: block; font-size: var(--fs--2); color: var(--ink-soft); }
   }
 
+  /* 없는 주소(404.html, 2026-11-15): 눈썹 404 + 제목 → 명세서 한 장(본문 폭)에 한국어 글 + 주 버튼, 괘선 아래 영어 글 + 윤곽 버튼 */
+  .page-head + .notfound { margin-block-start: var(--block); }
+  .notfound { max-inline-size: var(--prose); }
+  .notfound-en { margin-block-start: var(--s-6); padding-block-start: var(--s-5); border-block-start: 1px solid var(--line); }
+  .notfound-en .title { font-size: var(--fs-3); margin-block-end: var(--s-3); }
+
   /* 데바나가리(힌디어)·타이 문자는 자간을 벌리거나 좁히면 글자 위 이음선과 모음 기호가 떨어진다: 눈썹·꼬리표·표 머리·버튼·제목의 자간을 0으로
      (대문자 바꾸기는 이 문자에 없어 그대로 둔다. 2026-10-20 30개 언어) */
   :is(:lang(hi), :lang(th)) :is(.eyebrow, .tag, .plan-flag, .count-label, th, .btn, h1, h2, h3, .biz dt, .footer-col h2),
