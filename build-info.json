@@ -1,13 +1,13 @@
 {
  "_": "python tools/build_site.py가 만든다 (손으로 고치지 않는다). python tools/build_site.py --check 폴더가 지금 원본과 견준다.",
- "fingerprint": "6dab698f0b8d4c9d0667f41df211cc49a16bad24d838a1491e8eeb8d54b0dcee",
+ "fingerprint": "81b52d5ba112670289f5c6f9089139e68cf9196cc9dff7c62b9ef71ff23415f5",
  "info": {
-  "commit": "40261be8baca814d6b36ad00d38b3da39f621bd3",
+  "commit": "0d2129862973436f47c2e1f87eb2555765a88247",
   "dirty": false,
   "pages": 277
  },
  "inputs": {
-  "catalog": "83ff2f5e0f48440f",
+  "catalog": "35530a05d192afdc",
   "catalog_keys": [
    "button.overlay",
    "button.read_images",
@@ -181,7 +181,7 @@
    "tools/build_fonts.py": "ea7b7329ccf37e6a",
    "tools/build_site.py": "85aafd1ee3382756",
    "usage_card.py": "a4f7c336d0067cd9",
-   "usage_view.py": "088d983639749753"
+   "usage_view.py": "c309c6e1e9981633"
   },
   "packages": {
    "Babel": "2.18.0",
