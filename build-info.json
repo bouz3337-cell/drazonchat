@@ -1,8 +1,8 @@
 {
  "_": "python tools/build_site.py가 만든다 (손으로 고치지 않는다). python tools/build_site.py --check 폴더가 지금 원본과 견준다.",
- "fingerprint": "8545c5e8591213ee2aa615fc9071e6c89016e1f104e9a4497c4beb6b01f4fc38",
+ "fingerprint": "e77cbed2aa96940ab0e5e2c648e86d5b594d443937be1b6b1f27ceb3efd4b1c5",
  "info": {
-  "commit": "8eccb04f2aee66b40ecec35eb757027223b4f07e",
+  "commit": "ef888c3d39cb97d2b21103e5f4ce657698ebcc91",
   "dirty": false,
   "pages": 277
  },
@@ -134,7 +134,7 @@
    "docs/privacy_policy_draft.ko.md": "1ed04624b8d4abab",
    "docs/refund_policy_draft.en.md": "5de19d3abf81794e",
    "docs/refund_policy_draft.ko.md": "95f947dad93efdea",
-   "docs/site.css": "4cbdba91218db2bc",
+   "docs/site.css": "9e933a1a0f4f2ee9",
    "docs/terms_draft.en.md": "9772eaa0ec65a92b",
    "docs/terms_draft.ko.md": "b262ba5a5087132e",
    "fonts/card/DrazonCard-Caps.ttf": "cd59a4f0205a2e70",
@@ -166,22 +166,22 @@
    "plans.py": "9c1cd8a1a2abcece",
    "system:arial.ttf": "edfbd22a3d088fc2",
    "system:malgun.ttf": "7a183cf1c6c56b96",
-   "templates/site/base.html": "6ab1fd9aae84e523",
+   "templates/site/base.html": "87b882e3a694a51d",
    "templates/site/checkout.html": "cc0beb72fd9d9175",
    "templates/site/doc.html": "3201be24542513c0",
    "templates/site/folio.html": "67272b88a88de1cb",
    "templates/site/footer.html": "35347c731988cfca",
    "templates/site/header.html": "0db0f94f0fca399b",
    "templates/site/index.html": "badeecc5569c076d",
-   "templates/site/key_card.html": "1208a82dbc7958c7",
+   "templates/site/key_card.html": "527eb5b1f8e81776",
    "templates/site/ledger.html": "095196fd3eeae187",
    "templates/site/notfound.html": "7eaf7d2761fef502",
    "templates/site/plan.html": "0e9614d61f35c3f0",
    "templates/site/plans.html": "9a5ac4d590b685dd",
    "tools/build_fonts.py": "ea7b7329ccf37e6a",
-   "tools/build_site.py": "e4981d715823be32",
+   "tools/build_site.py": "75e09c823e0fb1dd",
    "usage_card.py": "a4f7c336d0067cd9",
-   "usage_view.py": "5cf129971cdc852a"
+   "usage_view.py": "379f09a1f00af9bf"
   },
   "packages": {
    "Babel": "2.18.0",
