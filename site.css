@@ -1,7 +1,8 @@
 /* Cozirom 웹사이트 — v2 (DESIGN.md 3.0·3.12, Fable 2026-11-14 기준 쪽 넷 → 단계 5에서 21쪽 × 30개 언어로. tools/build_site.py가 복사한다)
    · 면 셋: 종이(밝은 아이보리 #F5F1E8 / 어두운 호두색 #1E1A15) 위에 키 카드(청록 벨벳 + 황동 테두리, 두 테마 같음)와 명세서(밝은 테마
-     아이보리 / 어두운 테마 가죽 폴더 #292419). 그림자는 이 둘에만. 테마는 OS를 따른다. 어두운 테마는 2026-11-14 저녁 소유자 A안(따뜻한 종이 +
-     어두운 명세서. 푸른 검정 #0F1117은 뺐다). 색은 2026-11-16 소유자 선택 "A 청록 벨벳과 황동"(전 리넨 #EAE3D5 + 차콜 카드·버튼).
+     아이보리 / 어두운 테마 호두 가죽 #2E2219 + 옅은 결, 두 테마 모두 황동 테두리 + 안쪽 괘선). 그림자는 이 둘에만. 테마는 OS를 따른다.
+     어두운 테마는 2026-11-14 저녁 소유자 A안(따뜻한 종이 + 어두운 명세서. 푸른 검정 #0F1117은 뺐다). 색은 2026-11-16 소유자 선택 "A 청록
+     벨벳과 황동"(전 리넨 #EAE3D5 + 차콜 카드·버튼), 명세서 재질은 같은 날 "V2 호두 가죽 + 청록 그림"(전 올리브빛 가죽 #292419).
    · 글자: 유동 크기 8단계(390→1280px), 역할마다 줄 간격·자간, 본문 폭 42rem. 큰 제목은 명조(소유자 ④ B).
    · 서체: 같은 폴더의 부분 서체(OFL). 본문 Cozirom Sans(Pretendard Variable의 수정본)와 제목 Cozirom Serif(Noto Serif의 수정본)는
      쪽·언어마다 그 쪽의 글자만 남긴 파일이라 그 선언이 그 쪽 <head>에 있다(build_site.page_fonts). 여기에는 모든 쪽이 같이 쓰는 둘만.
@@ -50,8 +51,8 @@
     --gold:         light-dark(#9E7A3A, #CFB176);   /* 황동: 선·마름모·고리·테두리 (그래픽 3:1) */
     --gold-deep:    light-dark(#765A24, #A98A4F);
     --gold-text:    light-dark(#765A24, #CFB176);   /* 금빛 글자(요금제 눈썹): 밝은 종이에서는 짙은 금, 어두운 종이에서는 황동 */
-    --card-line:    light-dark(#B99A60, #7E6A44);   /* 명세서 테두리 */
-    --brand-text:   light-dark(#134A54, #CFB176);   /* 브랜드 색 글자: 워드마크, 장부 번호 (어두운 종이에서는 청록 대신 황동) */
+    --card-line:    light-dark(#B99A60, #8C7A55);   /* 명세서 테두리 (황동. 어두운 값은 보조 버튼 테두리와 같다) */
+    --brand-text:   light-dark(#134A54, #CFB176);   /* 브랜드 색 글자: 워드마크 (어두운 종이에서는 청록 대신 황동) */
     --link:         light-dark(#134A54, #CFB176);
     --link-underline: light-dark(rgba(158, 122, 58, .6), rgba(207, 177, 118, .55));
     /* 주 버튼: 청록 면 + 아이보리 글자, 어두운 테마는 황동 테두리 (면만으로는 호두색 종이와 2.6:1이라 테두리가 경계를 맡는다) */
@@ -65,7 +66,7 @@
     --btn2-border:  light-dark(#9E7A3A, #8C7A55);
     --btn2-hover:   light-dark(#134A54, #CFB176);
     --focus:        light-dark(#134A54, #E2CC98);
-    /* 시작하는 법의 번호: 청록 원 + 황동 고리, 세 원을 가는 황동 선이 잇는다 */
+    /* 인장 번호: 청록 원 + 틈 + 황동 고리. 시작하는 법의 번호(세 원을 가는 황동 선이 잇는다), 장부 번호 01~06과 전후 그림 사이의 화살표 */
     --step-bg:      light-dark(#134A54, #1A5560);
     --step-fg:      #FBF7EE;
     --step-ring:    light-dark(#9E7A3A, #CFB176);
@@ -79,6 +80,7 @@
     --status-alert-text: light-dark(#9A3A4A, #E07888);
     --header-bg:    light-dark(rgba(245, 241, 232, .86), rgba(30, 26, 21, .84));
     --seal-disc:    var(--brand);   /* 인장 원판 (<symbol id="seal">의 .seal-disc). 키 카드 안에서는 카드 색 */
+    --grain:        none;           /* 명세서 가죽의 결: 어두운 테마에서만 (아래 블록, assets/leather-grain.svg) */
 
     /* 키 카드 (두 테마 같음): 청록 벨벳 두 색 기울기 + 왼쪽 위 은은한 빛(--kc-sheen), 황동 테두리. 가운데 빈 칸에 아르데코 부채 하나
        (--kc-fill: assets/의 SVG를 마스크로, 색은 --kc-gold. build_site.write_key_patterns). 작은 카드(안쪽 12.5rem 이하)는 단순한 무늬 */
@@ -129,12 +131,13 @@
     --radius: 3px;
     --radius-card: 14px;
   }
-  /* 어두운 테마에서만 다른 값 가운데 색이 아닌 것(그림자). 색은 모두 위의 light-dark() 한 줄이다. 호두색 종이가 카드보다 어두워
-     그림자는 검게 짙게 (테두리 구실) */
+  /* 어두운 테마에서만 다른 값 가운데 색이 아닌 것(그림자, 가죽의 결). 색은 모두 위의 light-dark() 한 줄이다. 호두색 종이가 카드보다
+     어두워 그림자는 검게 짙게 (테두리 구실). 명세서 그림자에는 위 가장자리 안쪽 2px 흰 빛 3% (가죽 모서리) */
   @media (prefers-color-scheme: dark) {
     :root {
-      --shadow-object: 0 18px 40px rgba(0, 0, 0, .45);
+      --shadow-object: 0 22px 48px rgba(0, 0, 0, .5), inset 0 2px 0 rgba(255, 255, 255, .03);
       --shadow-key:    0 22px 50px rgba(0, 0, 0, .6);
+      --grain:         url("assets/leather-grain.svg");   /* 220px 타일, 검정 점 5.5% (build_site.leather_grain_svg) */
     }
   }
   /* 화면 언어 30개: 한자·가나·타이·데바나가리는 Pretendard에 없어 그 언어 쪽은 시스템 서체로 그린다 (부분 서체를 싣지 않는다).
@@ -355,53 +358,77 @@
 
   /* ---- 명세서 (물건 2) ---- */
   .folio {
-    /* 밝은 테마 아이보리 종이 / 어두운 테마 가죽 폴더 (2026-11-14 저녁 소유자 A: 검정 종이 위의 아이보리는 눈부신 흰 덩어리였다).
-       잉크·링크·버튼·금은 종이(:root)와 같은 값이라 물려받고, 종이와 다른 것만 여기에 둔다 (2026-11-16 색 A: 주 버튼이 두 테마 모두 청록이라
-       명세서 안팎이 같다) */
-    --surface: light-dark(#FFFDF8, #292419); --sunk: light-dark(#F1ECE1, #342E25); --ink-faint: light-dark(#758286, #958D7E);
-    --line: light-dark(#E2DBCD, #443C31); --gold-deep: light-dark(#765A24, #CFB176);
+    /* 밝은 테마 아이보리 종이 / 어두운 테마 호두 가죽 (2026-11-14 저녁 소유자 A: 검정 종이 위의 아이보리는 눈부신 흰 덩어리였다. 2026-11-16
+       소유자 V2 "호두 가죽 + 청록 그림": 올리브빛 #292419를 붉은 기가 도는 호두 가죽 #2E2219로, 아주 옅은 결과 왼쪽 위 빛은 아래 어두운
+       테마 블록). 두 테마 모두 황동 테두리(--card-line) + 8px 안쪽 괘선(키 카드의 안쪽 테두리와 같은 말). 사이트의 모든 명세서와 결제 서버
+       (pay.css)가 같은 재질이다. 잉크·링크·버튼·금은 종이(:root)와 같은 값이라 물려받고, 종이와 다른 것만 여기에 둔다 */
+    --surface: light-dark(#FFFDF8, #2E2219); --sunk: light-dark(#F1ECE1, #221A13); --ink-soft: light-dark(#4A5C61, #BDB3A2);
+    --ink-faint: light-dark(#758286, #958D7E); --line: light-dark(#E2DBCD, rgba(207, 177, 118, .2)); --gold-deep: light-dark(#765A24, #CFB176);
     --link-underline: light-dark(rgba(158, 122, 58, .7), rgba(207, 177, 118, .55));
+    --folio-rule: light-dark(#142A2F, #CFB176);                                     /* 머리줄: 밝은 테마 잉크 2px, 어두운 테마 황동 이중 괘선 */
+    --folio-inner: light-dark(rgba(158, 122, 58, .38), rgba(207, 177, 118, .28));   /* 안쪽 괘선 */
     container-type: inline-size;
     padding: var(--folio-pad);
     background: var(--surface); color: var(--ink);
     border: 1px solid var(--card-line); border-radius: 4px;
+    outline: 1px solid var(--folio-inner); outline-offset: -8px;
     box-shadow: var(--shadow-object);
   }
-  .folio-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; column-gap: var(--s-4); row-gap: var(--s-1); padding-block-end: var(--s-4); border-block-end: 2px solid var(--ink); }   /* 좁은 화면에서 오른쪽 작은 글이 길면 다음 줄로 */
+  .folio-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; column-gap: var(--s-4); row-gap: var(--s-1); padding-block-end: var(--s-4); border-block-end: 2px solid var(--folio-rule); }   /* 좁은 화면에서 오른쪽 작은 글이 길면 다음 줄로 */
   .folio-head .eyebrow { margin: 0; color: var(--ink); }
   .folio-head .small { color: var(--ink-soft); }
   .folio--slim { padding: var(--s-5) var(--s-6); box-shadow: none; }
+  /* 어두운 가죽: 왼쪽 위 은은한 빛 + 결(--grain), 머리줄은 메뉴 카드와 같은 황동 이중 괘선(2px + 3px 틈 + 1px) */
+  @media (prefers-color-scheme: dark) {
+    .folio { background: radial-gradient(90% 55% at 12% 0%, rgba(255, 228, 190, .05), transparent 70%), var(--grain), var(--surface); }
+    .folio-head { position: relative; margin-block-end: 6px; }
+    .folio-head::after { content: ""; position: absolute; inset-inline: 0; inset-block-end: -6px; block-size: 1px; background: var(--folio-rule); }
+  }
 
-  /* 장부: 번호 · 이름과 한 문단 · 오른쪽 건수 */
-  .ledger { list-style: none; margin: 0; padding: 0; }
-  .ledger > li { display: grid; grid-template-columns: 4rem minmax(0, 1fr) 15rem; column-gap: var(--gap); padding-block: var(--s-6); border-block-end: 1px solid var(--line); }
+  /* 장부 (소개 "할 수 있는 것", 2026-11-16 소유자 V2): 청록 인장 번호 · 이름과 한 문단 · 오른쪽 건수. 제목에서 건수까지 메뉴 카드처럼 황동
+     점선(제목의 ::after가 오른쪽 끝까지 가고, 건수 글 상자가 바탕과 같은 조각으로 그 위를 가린다). 03행 아래 전후 그림 */
+  .ledger {
+    --ledger-fig: light-dark(#134A54, #E2CC98);                                       /* 건수의 큰 숫자 */
+    --ledger-leader: light-dark(rgba(158, 122, 58, .62), rgba(207, 177, 118, .55));   /* 점선 (뜻 없음) */
+    --ledger-frame: light-dark(#B99A60, rgba(207, 177, 118, .65));                    /* 전후 그림의 황동 실선 */
+    list-style: none; margin: 0; padding: 0;
+  }
+  .ledger > li { display: grid; grid-template-columns: 4rem minmax(0, 1fr) 15rem; align-items: baseline; column-gap: var(--gap); padding-block: var(--s-6); border-block-end: 1px solid var(--line); }
   .ledger > li:last-child { border-block-end: 0; padding-block-end: var(--s-2); }
-  .ledger .no { font-size: var(--fs-3); padding-block-start: .2em; color: var(--brand-text); }   /* 명세서의 01~06: 밝은 테마 청록, 어두운 테마 황동 (4.5:1 이상) */
-  .ledger h3 { margin-block-end: var(--s-2); }
+  /* 번호: 시작하는 법과 같은 인장 (청록 원 + 투명한 틈 + 황동 고리). outline-offset이라 틈에 가죽 결이 그대로 비친다 */
+  .ledger .no { display: grid; place-items: center; align-self: start; inline-size: 3.25rem; block-size: 3.25rem; margin: -.55rem 0 0 4px; padding: .06em 0 0; border-radius: 50%; background: var(--step-bg); color: var(--step-fg); font-size: 1.5rem; letter-spacing: .02em; outline: 1px solid var(--step-ring); outline-offset: 3px; }
+  .ledger h3 { display: flex; align-items: baseline; column-gap: .875rem; margin-block-end: var(--s-2); }
+  .ledger h3::after { content: ""; flex: 1 1 2rem; min-inline-size: 2rem; margin-inline-end: calc(-1 * (var(--gap) + 15rem)); border-block-end: 2px dotted var(--ledger-leader); transform: translateY(-.32em); }
   .ledger p { max-inline-size: 35em; }
-  .ledger .count { text-align: end; color: var(--ink-soft); font-size: var(--fs--1); line-height: 1.5; padding-block-start: .3em; }
-  .ledger .count .fig { margin-inline: .05em; }
+  .ledger .count { position: relative; z-index: 1; justify-self: end; inline-size: fit-content; max-inline-size: 15rem; padding: 0 0 0 .75rem; text-align: end; color: var(--ink-soft); background: var(--grain), var(--surface); font-size: var(--fs--1); line-height: 1.5; }
+  .ledger .count .fig { margin-inline: .05em; color: var(--ledger-fig); }
   .ledger .count small { display: block; font-size: var(--fs--2); margin-block-start: .25em; }
   .ledger .count-label { display: none; }
   .ledger figure { grid-column: 2 / -1; margin: var(--s-5) 0 0; }
   .ledger .icon { inline-size: 20px; block-size: 20px; display: inline; vertical-align: -4px; }
-  @container (max-width: 44em) {
-    .ledger > li { grid-template-columns: 3rem minmax(0, 1fr); }
-    .ledger .count { grid-column: 2; text-align: start; margin-block-start: var(--s-3); padding-block-start: var(--s-3); border-block-start: 1px dashed var(--line); }
+  @container (max-width: 44em) {   /* 건수는 글 아래 점선 위로 (점선 지시선은 뺀다) */
+    .ledger > li { grid-template-columns: 4rem minmax(0, 1fr); align-items: start; }
+    .ledger .no { margin-block-start: -.35rem; }
+    .ledger h3::after { content: none; }
+    .ledger .count { grid-column: 2; justify-self: stretch; inline-size: auto; max-inline-size: none; text-align: start; margin-block-start: var(--s-3); padding: var(--s-3) 0 0; border-block-start: 1px dashed var(--line); background: none; }
     .ledger .count-label { display: inline; margin-inline-end: .75em; }
     .ledger figure { grid-column: 1 / -1; }
   }
-  @container (max-width: 30em) {   /* 휴대폰: 번호를 제목 위에 두어 글 폭을 다 쓴다 */
-    .ledger > li { grid-template-columns: minmax(0, 1fr); row-gap: 0; }
-    .ledger .no { font-size: var(--fs-2); padding: 0; margin-block-end: var(--s-2); }
-    .ledger .count { grid-column: 1; }
+  @container (max-width: 30em) {   /* 휴대폰: 인장과 제목을 한 줄에, 글은 폭 전부 */
+    .ledger > li { grid-template-columns: auto minmax(0, 1fr); column-gap: var(--s-4); row-gap: 0; }
+    .ledger > li > div { display: contents; }
+    .ledger .no { grid-column: 1; grid-row: 1; inline-size: 2.75rem; block-size: 2.75rem; margin: 4px 0 0 4px; font-size: 1.3125rem; }
+    .ledger h3 { grid-column: 2; grid-row: 1; align-self: center; margin: 4px 0 0; }
+    .ledger > li > div > p, .ledger .count, .ledger figure { grid-column: 1 / -1; }
+    .ledger > li > div > p { margin-block-start: var(--s-3); }
   }
-  .figure-pair { display: grid; grid-template-columns: 1fr 28px 1fr; align-items: center; gap: var(--s-4); }
+  /* 전후 그림: 테두리 대신 인장과 같은 "틈 + 황동 실선", 가운데 화살표도 작은 인장 */
+  .figure-pair { display: grid; grid-template-columns: minmax(0, 1fr) 2.5rem minmax(0, 1fr); align-items: center; gap: var(--s-4) var(--s-5); }
   .figure-pair picture { display: block; }
-  .figure-pair img { inline-size: 100%; block-size: auto; border: 1px solid var(--line); border-radius: var(--radius); }
-  .figure-pair .arrow { inline-size: 28px; block-size: 28px; color: var(--gold); }
+  .figure-pair img { inline-size: 100%; block-size: auto; border-radius: 2px; outline: 1px solid var(--ledger-frame); outline-offset: 4px; }
+  .figure-pair .arrow { inline-size: 2.5rem; block-size: 2.5rem; padding: .55rem; border-radius: 50%; background: var(--step-bg); color: var(--step-fg); outline: 1px solid var(--step-ring); outline-offset: 3px; }
   figcaption { margin-block-start: var(--s-3); font-size: var(--fs--2); line-height: var(--lh-caption); color: var(--ink-soft); }
-  @container (max-width: 36em) { .figure-pair { grid-template-columns: 1fr; } .figure-pair .arrow { transform: rotate(90deg); justify-self: center; } }
+  @container (max-width: 36em) { .figure-pair { grid-template-columns: minmax(0, 1fr); } .figure-pair .arrow { transform: rotate(90deg); justify-self: center; } }
 
   /* 시작하는 법: 종이 위 세 칸. 번호는 인장 같은 원(청록 면 + 종이 틈 + 황동 고리), 큰 화면에서는 세 원을 가는 황동 선 하나가 잇는다 */
   .steps { position: relative; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); counter-reset: step; }
