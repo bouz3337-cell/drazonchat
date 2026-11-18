@@ -1,8 +1,8 @@
 {
  "_": "python tools/build_site.py가 만든다 (손으로 고치지 않는다). python tools/build_site.py --check 폴더가 지금 원본과 견준다.",
- "fingerprint": "0900212427ba87bf5c72cda48ae1270023d0723aa8dddedfd7319bb58cfe965e",
+ "fingerprint": "7d8c03ed981558f3663e4a94dc5f6ba3be0edc5313c0d597dd67f58bb3b3cdb3",
  "info": {
-  "commit": "0add6b5fdbaaeefdab37567909704cf7e5db5f24",
+  "commit": "07d0b458ff6e85e5a072e2b09ae5fe3521d903a0",
   "dirty": false,
   "pages": 277
  },
@@ -131,8 +131,8 @@
    "assets/site/overlay_before-ja.webp": "a52cf0dbf9fff713",
    "assets/site/overlay_before.png": "24664215f4b3da3a",
    "assets/site/overlay_before.webp": "f70ac7eaf080734e",
-   "docs/privacy_policy_draft.en.md": "2d39dccb40287fbf",
-   "docs/privacy_policy_draft.ko.md": "609fe01edda3c498",
+   "docs/privacy_policy_draft.en.md": "b9c351cb2224bd1d",
+   "docs/privacy_policy_draft.ko.md": "4d3e63bbc2992b71",
    "docs/refund_policy_draft.en.md": "3d1d56ceb4ecc7fe",
    "docs/refund_policy_draft.ko.md": "4558030fae7b40ba",
    "docs/site.css": "688ee67f2f0fc3d1",
@@ -164,7 +164,7 @@
    "fonts/web/OFL-NotoSerifCJK.txt": "64538aaa923b7e75",
    "fonts/web/OFL-Pretendard.txt": "8a2aba6114145294",
    "i18n.py": "19c33dfa4218eee9",
-   "plans.py": "4d452d1064a14c04",
+   "plans.py": "6789d585d90733bf",
    "system:arial.ttf": "edfbd22a3d088fc2",
    "system:malgun.ttf": "7a183cf1c6c56b96",
    "templates/site/base.html": "87b882e3a694a51d",
@@ -180,9 +180,9 @@
    "templates/site/plan.html": "0e9614d61f35c3f0",
    "templates/site/plans.html": "9a5ac4d590b685dd",
    "tools/build_fonts.py": "ea7b7329ccf37e6a",
-   "tools/build_site.py": "85aafd1ee3382756",
+   "tools/build_site.py": "7ba501ba02fa7e4e",
    "usage_card.py": "a4f7c336d0067cd9",
-   "usage_view.py": "f397b61f927f7ef4"
+   "usage_view.py": "8b3c27dff7f8ee05"
   },
   "packages": {
    "Babel": "2.18.0",
@@ -195,6 +195,7 @@
   "settings": {
    "business": false,
    "checkout_live": false,
+   "files_live": false,
    "full_urls": true,
    "glossary_live": true,
    "invite": true,
