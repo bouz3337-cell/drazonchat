@@ -2,7 +2,7 @@
  "_": "python tools/build_site.py가 만든다 (손으로 고치지 않는다). python tools/build_site.py --check 폴더가 지금 원본과 견준다.",
  "fingerprint": "774aa289781c285b8088493fc89a36d1a00414037902dc4b37e8cf2237ac180f",
  "info": {
-  "commit": "985286475178040a1cf90b7e96f5c4ced69c0355",
+  "commit": "3fa449b0ff6b5aab01e5fb81f2d30dd9441da18e",
   "dirty": false,
   "pages": 277
  },
