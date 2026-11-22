@@ -1,8 +1,8 @@
 {
  "_": "python tools/build_site.py가 만든다 (손으로 고치지 않는다). python tools/build_site.py --check 폴더가 지금 원본과 견준다.",
- "fingerprint": "413fdf3c1a21dfae2433b9a2f426b6416d4ea255dfaf644ed8de5b5e9a156a0c",
+ "fingerprint": "2afae621ddf46531692f8f3effe94464aad4063ce7a3a295d969baf04ed76ec7",
  "info": {
-  "commit": "7f01cf29daafe8f776678e03bd30fb262166617d",
+  "commit": "84b689cbbdffcd1803b91317e95b601e5cd0c673",
   "dirty": false,
   "pages": 277
  },
@@ -131,8 +131,8 @@
    "assets/site/overlay_before-ja.webp": "a52cf0dbf9fff713",
    "assets/site/overlay_before.png": "24664215f4b3da3a",
    "assets/site/overlay_before.webp": "f70ac7eaf080734e",
-   "docs/privacy_policy_draft.en.md": "c22f205334fe15da",
-   "docs/privacy_policy_draft.ko.md": "2a2748bbf81aebef",
+   "docs/privacy_policy_draft.en.md": "830eaf2f32ca0ba2",
+   "docs/privacy_policy_draft.ko.md": "18d49adc4dffdc57",
    "docs/refund_policy_draft.en.md": "3d1d56ceb4ecc7fe",
    "docs/refund_policy_draft.ko.md": "4558030fae7b40ba",
    "docs/site.css": "688ee67f2f0fc3d1",
@@ -164,7 +164,7 @@
    "fonts/web/OFL-NotoSerifCJK.txt": "64538aaa923b7e75",
    "fonts/web/OFL-Pretendard.txt": "8a2aba6114145294",
    "i18n.py": "ae0a3363a6c5d174",
-   "plans.py": "5220e689bf574e7b",
+   "plans.py": "ffeb38b1565c542b",
    "system:arial.ttf": "edfbd22a3d088fc2",
    "system:malgun.ttf": "7a183cf1c6c56b96",
    "templates/site/base.html": "87b882e3a694a51d",
@@ -182,7 +182,7 @@
    "tools/build_fonts.py": "ea7b7329ccf37e6a",
    "tools/build_site.py": "52eb7f503c9d3fbe",
    "usage_card.py": "102c819def023ebc",
-   "usage_view.py": "30383fe9dea94de8"
+   "usage_view.py": "a39cf5de6e39064b"
   },
   "packages": {
    "Babel": "2.18.0",
