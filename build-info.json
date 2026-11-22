@@ -1,8 +1,8 @@
 {
  "_": "python tools/build_site.py가 만든다 (손으로 고치지 않는다). python tools/build_site.py --check 폴더가 지금 원본과 견준다.",
- "fingerprint": "c028ef2758236add22e09a22dd215381dff10e6efa9368ceb5f93624a914dd56",
+ "fingerprint": "35334010f37757574b6b715e3108be6a4c0bd03d6f17c551df93f595d8a7838a",
  "info": {
-  "commit": "5d85d4ad352f4d8712fac5012f15fb594cd8ae33",
+  "commit": "f672aa7897a54c948e3bf07ba555027eaec464bb",
   "dirty": false,
   "pages": 277
  },
@@ -163,8 +163,8 @@
    "fonts/web/OFL-NotoSerif.txt": "bf51547e7634b219",
    "fonts/web/OFL-NotoSerifCJK.txt": "64538aaa923b7e75",
    "fonts/web/OFL-Pretendard.txt": "8a2aba6114145294",
-   "i18n.py": "19c33dfa4218eee9",
-   "plans.py": "5884fa89ed4d092f",
+   "i18n.py": "e8295aed0bd61961",
+   "plans.py": "5220e689bf574e7b",
    "system:arial.ttf": "edfbd22a3d088fc2",
    "system:malgun.ttf": "7a183cf1c6c56b96",
    "templates/site/base.html": "87b882e3a694a51d",
@@ -180,9 +180,9 @@
    "templates/site/plan.html": "0e9614d61f35c3f0",
    "templates/site/plans.html": "9a5ac4d590b685dd",
    "tools/build_fonts.py": "ea7b7329ccf37e6a",
-   "tools/build_site.py": "2b7d0832b5d6d2e6",
+   "tools/build_site.py": "a6cd9d037e8b6c28",
    "usage_card.py": "102c819def023ebc",
-   "usage_view.py": "7f869cdb204926f9"
+   "usage_view.py": "edd70daedf1ca55f"
   },
   "packages": {
    "Babel": "2.18.0",
