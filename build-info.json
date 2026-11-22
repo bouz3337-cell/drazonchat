@@ -1,13 +1,13 @@
 {
  "_": "python tools/build_site.py가 만든다 (손으로 고치지 않는다). python tools/build_site.py --check 폴더가 지금 원본과 견준다.",
- "fingerprint": "8abcccd19342df89e7136ef138aa114dbfcde03197e7304838933d92bdc4b505",
+ "fingerprint": "413fdf3c1a21dfae2433b9a2f426b6416d4ea255dfaf644ed8de5b5e9a156a0c",
  "info": {
-  "commit": "a650e5c38f2656480fbfb0f0e5c58c38bd17e841",
+  "commit": "7f01cf29daafe8f776678e03bd30fb262166617d",
   "dirty": false,
   "pages": 277
  },
  "inputs": {
-  "catalog": "53b79ee78b71d1e5",
+  "catalog": "c9239a14c56e551c",
   "catalog_keys": [
    "button.overlay",
    "button.read_images",
@@ -163,7 +163,7 @@
    "fonts/web/OFL-NotoSerif.txt": "bf51547e7634b219",
    "fonts/web/OFL-NotoSerifCJK.txt": "64538aaa923b7e75",
    "fonts/web/OFL-Pretendard.txt": "8a2aba6114145294",
-   "i18n.py": "e8295aed0bd61961",
+   "i18n.py": "ae0a3363a6c5d174",
    "plans.py": "5220e689bf574e7b",
    "system:arial.ttf": "edfbd22a3d088fc2",
    "system:malgun.ttf": "7a183cf1c6c56b96",
@@ -182,7 +182,7 @@
    "tools/build_fonts.py": "ea7b7329ccf37e6a",
    "tools/build_site.py": "52eb7f503c9d3fbe",
    "usage_card.py": "102c819def023ebc",
-   "usage_view.py": "edd70daedf1ca55f"
+   "usage_view.py": "30383fe9dea94de8"
   },
   "packages": {
    "Babel": "2.18.0",
