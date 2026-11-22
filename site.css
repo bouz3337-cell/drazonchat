@@ -519,6 +519,7 @@
 
   /* 안내 둘 칸 */
   .notes-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s-8); row-gap: var(--s-5); margin-block-start: var(--s-5); }
+  .plan-shared { margin-block-start: var(--s-5); }   /* 카드 아래 한 줄: 크롬 확장도 같은 건수 (2026-11-23) */
   .plan-media { margin-block-start: var(--s-5); }   /* 카드마다 같던 사진(·음성) 줄은 안내 명세서 아래에 한 번 */
   .notes-grid .diamonds > li { font-size: var(--fs--1); line-height: var(--lh-tight); }
   .notes-grid .diamonds > li::before { inset-block-start: calc(var(--lh-tight) * .5em - 4px); }
