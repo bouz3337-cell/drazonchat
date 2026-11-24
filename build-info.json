@@ -1,8 +1,8 @@
 {
  "_": "python tools/build_site.py가 만든다 (손으로 고치지 않는다). python tools/build_site.py --check 폴더가 지금 원본과 견준다.",
- "fingerprint": "884d6683c8578f1bfd7aab65b3267af65123b466d2efe16daa4f42fe62116c29",
+ "fingerprint": "ea78a59b55c3531ad7f1cae2213db311f3663f396dc0f8041eed82cf00b1064c",
  "info": {
-  "commit": "c4e28fc029250aff3d5bf71f58a48a9e1400a278",
+  "commit": "2ca06f7cc134e5968e993e30657ddc2510535e8a",
   "dirty": false,
   "pages": 277
  },
@@ -132,8 +132,8 @@
    "assets/site/overlay_before-ja.webp": "a52cf0dbf9fff713",
    "assets/site/overlay_before.png": "24664215f4b3da3a",
    "assets/site/overlay_before.webp": "f70ac7eaf080734e",
-   "docs/privacy_policy_draft.en.md": "b709a6312fe60b96",
-   "docs/privacy_policy_draft.ko.md": "7575f8eb3f51c1c3",
+   "docs/privacy_policy_draft.en.md": "21a24a969445dd65",
+   "docs/privacy_policy_draft.ko.md": "1fe8067650962e48",
    "docs/refund_policy_draft.en.md": "3d1d56ceb4ecc7fe",
    "docs/refund_policy_draft.ko.md": "4558030fae7b40ba",
    "docs/site.css": "e2f032c523089b25",
@@ -183,7 +183,7 @@
    "tools/build_fonts.py": "ea7b7329ccf37e6a",
    "tools/build_site.py": "c99caa7d1cb645ae",
    "usage_card.py": "102c819def023ebc",
-   "usage_view.py": "b5c9f2d5104bd262"
+   "usage_view.py": "f407653319db57a0"
   },
   "packages": {
    "Babel": "2.18.0",
