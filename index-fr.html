@@ -7,7 +7,7 @@
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F1E8">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1E1A15">
 <title>Cozirom · Bot de traduction de chat pour Discord</title>
-<meta name="description" content="Un bot Discord qui traduit la discussion dans la langue de votre interlocuteur. Les traductions s&#39;affichent sous votre nom, et le texte des images est traduit aussi.">
+<meta name="description" content="Un bot Discord qui republie vos messages dans la langue de votre interlocuteur, sur le ton qui convient, sous votre propre nom. Il traduit aussi le texte des images.">
 <link rel="canonical" href="https://cozirom.com/index-fr.html">
 <link rel="alternate" hreflang="ko" href="https://cozirom.com/index.html">
 <link rel="alternate" hreflang="en" href="https://cozirom.com/index-en.html">
@@ -43,18 +43,18 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cozirom">
 <meta property="og:title" content="Cozirom · Bot de traduction de chat pour Discord">
-<meta property="og:description" content="Un bot Discord qui traduit la discussion dans la langue de votre interlocuteur. Les traductions s&#39;affichent sous votre nom, et le texte des images est traduit aussi.">
+<meta property="og:description" content="Un bot Discord qui republie vos messages dans la langue de votre interlocuteur, sur le ton qui convient, sous votre propre nom. Il traduit aussi le texte des images.">
 <meta property="og:url" content="https://cozirom.com/index-fr.html">
 <meta property="og:image" content="https://cozirom.com/assets/og-index-fr.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Discutez sur Discord, chacun dans sa langue">
+<meta property="og:image:alt" content="Bot de traduction de chat pour Discord">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cozirom","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","inLanguage":"fr","description":"Un bot Discord qui traduit la discussion dans la langue de votre interlocuteur. Les traductions s'affichent sous votre nom, et le texte des images est traduit aussi.","url":"https://cozirom.com/index-fr.html","publisher":{"@type":"Organization","name":"Cozirom","url":"https://cozirom.com/","email":"bouz3337@gmail.com"},"offers":[{"@type":"Offer","name":"Guest","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Superior","price":"9.99","priceCurrency":"USD"},{"@type":"Offer","name":"Deluxe","price":"14.99","priceCurrency":"USD"},{"@type":"Offer","name":"Suite","price":"36.99","priceCurrency":"USD"},{"@type":"Offer","name":"Lounge","price":"11.99","priceCurrency":"USD"},{"@type":"Offer","name":"Ballroom","price":"44.99","priceCurrency":"USD"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cozirom","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","inLanguage":"fr","description":"Un bot Discord qui republie vos messages dans la langue de votre interlocuteur, sur le ton qui convient, sous votre propre nom. Il traduit aussi le texte des images.","url":"https://cozirom.com/index-fr.html","publisher":{"@type":"Organization","name":"Cozirom","url":"https://cozirom.com/","email":"bouz3337@gmail.com"},"offers":[{"@type":"Offer","name":"Guest","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Superior","price":"9.99","priceCurrency":"USD"},{"@type":"Offer","name":"Deluxe","price":"14.99","priceCurrency":"USD"},{"@type":"Offer","name":"Suite","price":"36.99","priceCurrency":"USD"},{"@type":"Offer","name":"Lounge","price":"11.99","priceCurrency":"USD"},{"@type":"Offer","name":"Ballroom","price":"44.99","priceCurrency":"USD"}]}</script>
 <link rel="preload" href="fonts/CoziromSans-a638a4f86020.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/CoziromSerif-1d808bc53dfb.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:"Cozirom Sans";src:url("fonts/CoziromSans-a638a4f86020.woff2") format("woff2");font-weight:45 920;font-display:swap}@font-face{font-family:"Cozirom Sans Fallback";src:local("Arial"), local("Helvetica Neue");size-adjust:99.6%;ascent-override:95.6%;descent-override:24.2%;line-gap-override:0%}@font-face{font-family:"Cozirom Serif";src:url("fonts/CoziromSerif-1d808bc53dfb.woff2") format("woff2");font-weight:700;font-display:swap}</style>
+<link rel="preload" href="fonts/CoziromSerif-aa04a2fb3911.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Cozirom Sans";src:url("fonts/CoziromSans-a638a4f86020.woff2") format("woff2");font-weight:45 920;font-display:swap}@font-face{font-family:"Cozirom Sans Fallback";src:local("Arial"), local("Helvetica Neue");size-adjust:99.6%;ascent-override:95.6%;descent-override:24.2%;line-gap-override:0%}@font-face{font-family:"Cozirom Serif";src:url("fonts/CoziromSerif-aa04a2fb3911.woff2") format("woff2");font-weight:700;font-display:swap}</style>
 <link rel="stylesheet" href="site.css">
 <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -85,14 +85,14 @@
   <section class="hero grid" aria-labelledby="hero-title">
     <div class="col-7">
       <p class="eyebrow">Bot de traduction de chat pour Discord</p>
-      <h1 class="display" id="hero-title">Discutez sur Discord, chacun dans sa langue</h1>
-      <p class="lead">Cozirom est un bot Discord qui traduit la discussion dans la langue de votre interlocuteur. Une fois que vous l'avez activé, vos messages sont publiés traduits sous votre propre nom et avec votre photo de profil, et le texte des images est traduit aussi.</p>
+      <h1 class="display" id="hero-title">Chacun sa langue, l'esprit tranquille</h1>
+      <p class="lead">Cozirom est un bot Discord qui republie ce que vous écrivez dans la langue de votre interlocuteur, sur le ton qui convient, sous votre propre nom et avec votre photo de profil. Il traduit aussi le texte des images.</p>
       <p class="btn-row"><a class="btn btn--primary" href="https://discord.com/oauth2/authorize?client_id=1558929598677524560&amp;scope=bot+applications.commands&amp;permissions=344134642688">Ajouter à Discord</a><a class="btn" href="plans-fr.html">Voir les formules</a></p>
       <p class="fineprint">Une IA (Claude d'Anthropic) fait les traductions.</p>
     </div>
     <figure class="col-5 hero-card">
       <div class="key-card key-card--hero" aria-hidden="true"><div class="key-inner"><div class="key-top"><span class="key-no">03</span><svg class="seal" aria-hidden="true"><use href="#seal"/></svg></div><p class="plan-name"><span class="key-grade" lang="en">SUPERIOR</span></p><p class="price"><span class="amount">9,99</span> <span class="cur">$</span>/mois</p><p class="key-brand" aria-hidden="true">COZIROM</p></div></div>
-      <figcaption class="caption">Les formules ont des niveaux, comme les clés de chambre d'hôtel. Vous pouvez commencer avec Guest (gratuite).</figcaption>
+      <figcaption class="caption">Les formules portent des noms de chambres d'hôtel. La formule Guest est gratuite.</figcaption>
     </figure>
   </section>
 
@@ -103,15 +103,17 @@
       <p class="lead">Les limites des formules se comptent en traductions. Un message traduit dans une langue compte pour 1.</p>
     </div>
     <div class="folio">
-      <div class="folio-head"><p class="eyebrow">6 fonctions</p><p class="small">En traductions</p></div>
+      <div class="folio-head"><p class="eyebrow">8 fonctions</p><p class="small">En traductions</p></div>
       <ol class="ledger">
         <li><span class="no" aria-hidden="true">01</span><div><h3>Traduction automatique</h3><p>Lancez <code><span class="cmd">/traduire</span> activer</code> une seule fois, et vos messages sur ce serveur sont publiés dans l'autre langue, sous votre nom et avec votre photo de profil. L'original reste en petits caractères sous la traduction, et le bouton <img class="icon" src="assets/button_original.png" width="20" height="20" alt="Bouton Voir l&#x27;original"> affiche l'original complet.</p></div><p class="count"><span class="count-label">Traductions</span><span class="fig">1</span> par message</p></li>
         <li><span class="no" aria-hidden="true">02</span><div><h3>Traduire le texte des images</h3><p>Menus de restaurant, écrans de jeu, mèmes : si une image contient du texte, il est lu et traduit. Lancez la traduction avec l'icône <img class="icon" src="assets/button_read.png" width="20" height="20" alt="Icône Traduire le texte"> sous les images des personnes qui ont activé la traduction, ou par clic droit. Seule la personne qui l'a demandée voit le résultat, et les images sans texte ne sont pas comptées.</p></div><p class="count"><span class="count-label">Traductions</span>Environ <span class="fig">9</span> par image</p></li>
         <li><span class="no" aria-hidden="true">03</span><div><h3>Placer sur l'image (traduction dessinée)</h3><p>L'icône <img class="icon" src="assets/button_overlay.png" width="20" height="20" alt="Icône Placer sur l&#x27;image"> vous donne une copie de l'image où le texte d'origine est effacé et la traduction dessinée à sa place. Au départ, la police est « Comme l&#x27;original », proche du lettrage d'origine, et vous pouvez en changer sans frais parmi jusqu'à 15 jeux de polices, comme « À empattements », « Manuscrite » et « BD ». Cela fonctionne le mieux sur du texte horizontal, comme les captures d'écran, les mèmes, les écrans de jeu et les menus, et seule la personne qui a appuyé voit le résultat.</p></div><p class="count"><span class="count-label">Traductions</span>Environ <span class="fig">19</span> par image</p>
           <figure class="figure figure--overlay"><div class="figure-pair"><picture><source srcset="assets/overlay_before.webp" type="image/webp"><img src="assets/overlay_before.png" width="720" height="520" alt="Avant : photo d&#x27;un menu de restaurant écrit en japonais" loading="lazy" decoding="async"></picture><svg class="arrow" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M3 14h20M16 7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><picture><source srcset="assets/overlay_after-fr.webp" type="image/webp"><img src="assets/overlay_after-fr.png" width="720" height="520" alt="Après : la même photo, où le japonais du menu est effacé et la traduction française dessinée à sa place" loading="lazy" decoding="async"></picture></div><figcaption>Exemple : la photo d'origine (un menu en japonais), puis la même photo, où le texte est effacé et la traduction française dessinée à sa place avec la police « À empattements ».</figcaption></figure></li>
         <li><span class="no" aria-hidden="true">04</span><div><h3>Messages vocaux</h3><p>Avec une formule payante, faites un clic droit sur un message vocal dans un salon soumis à une limite d'âge pour obtenir ce qui a été dit et sa traduction. Les messages jusqu'à 3 minutes sont transcrits, et un message sans parole n'est pas compté.</p></div><p class="count"><span class="count-label">Traductions</span><span class="fig">1</span> par seconde, plus la traduction<small>Un message de 10 secondes : généralement 11</small></p></li>
-        <li><span class="no" aria-hidden="true">05</span><div><h3>Quatre tons</h3><p>Argot, Décontracté, Amical ou Formel, au choix pour chaque serveur. Le tutoiement entre amis, le vouvoiement sur un nouveau serveur. Avec la formule Guest (gratuite), vous avez les quatre pendant les 14 premiers jours, puis le ton amical.</p></div><p class="count"><span class="count-label">Traductions</span>Payant : les quatre. Free : les <span class="fig">14</span> premiers jours</p></li>
+        <li><span class="no" aria-hidden="true">05</span><div><h3>Quatre tons</h3><p>Argot, Décontracté, Amical ou Formel, au choix pour chaque serveur. Le tutoiement entre amis, le vouvoiement dans un lieu nouveau. Avec la formule Guest, vous avez les quatre pendant les 14 premiers jours, puis le ton amical.</p></div><p class="count"><span class="count-label">Traductions</span>Payant : les quatre. Free : les <span class="fig">14</span> premiers jours</p></li>
         <li><span class="no" aria-hidden="true">06</span><div><h3>31 langues</h3><p>La traduction couvre 31 langues. L'interface et les noms de commandes du bot existent dans 30 langues de Discord, donc votre interlocuteur le configure dans sa propre langue.</p></div><p class="count"><span class="count-label">Traductions</span><span class="fig">31</span> traduites, <span class="fig">30</span> pour l'interface</p></li>
+        <li><span class="no" aria-hidden="true">07</span><div><h3>Salles de traduction</h3><p>Ouvrez une salle de traduction privée avec les personnes de votre choix. Les salles commencent avec la formule Superior, et les personnes invitées n'ont pas besoin de formule.</p></div><p class="count"><span class="count-label">Traductions</span><span class="fig">1</span> par message</p></li>
+        <li><span class="no" aria-hidden="true">08</span><div><h3>Expliquer le sens</h3><p>Explique ce qu'un message veut vraiment dire et comment vous pourriez répondre, pour vous seul. Disponible à partir de la formule Superior.</p></div><p class="count"><span class="count-label">Traductions</span>Nombre mensuel, hors traductions</p></li>
       </ol>
     </div>
   </section>
@@ -123,8 +125,8 @@
     </div>
     <ol class="steps">
       <li><span class="no" aria-hidden="true">1</span><h3>Ajouter le bot au serveur</h3><p>Un administrateur du serveur ajoute le bot avec le bouton ci-dessous. Vous pouvez aussi obtenir le lien d'invitation sur <a href="https://discord.gg/96Jw2CYTpd">le serveur d'assistance</a>.</p><p><a class="btn" href="https://discord.com/oauth2/authorize?client_id=1558929598677524560&amp;scope=bot+applications.commands&amp;permissions=344134642688">Inviter le bot</a></p></li>
-      <li><span class="no" aria-hidden="true">2</span><h3>Activer la traduction</h3><p>Chaque personne qui veut être traduite lance <code><span class="cmd">/traduire</span> activer</code> sur ce serveur. Le bot devine votre langue et celle de votre interlocuteur, puis ouvre le panneau de réglages. Corrigez-les dans les menus déroulants si elles ne sont pas justes.</p></li>
-      <li><span class="no" aria-hidden="true">3</span><h3>Écrire comme d'habitude</h3><p>Écrivez comme d'habitude : la traduction s'affiche sous votre nom. Commencez avec la formule Guest (gratuite) et changez de formule sur <a href="plans-fr.html">la page des formules</a> quand il vous en faut plus.</p></li>
+      <li><span class="no" aria-hidden="true">2</span><h3>Activer la traduction</h3><p>Chaque personne qui veut être traduite lance <code><span class="cmd">/traduire</span> activer</code> sur ce serveur. Dès que des traductions apparaissent, les autres peuvent commencer avec le bouton bleu en forme de bulle en dessous. Vos langues sont devinées pour vous, et vous pouvez les changer dans les réglages.</p></li>
+      <li><span class="no" aria-hidden="true">3</span><h3>Écrire comme d'habitude</h3><p>Écrivez comme d'habitude : la traduction s'affiche sous votre nom. Commencez avec la formule gratuite Guest et changez de formule sur <a href="plans-fr.html">la page des formules</a> quand il vous en faut plus.</p></li>
     </ol>
   </section>
 
@@ -144,7 +146,7 @@
     <div class="footer-grid">
       <div class="footer-col footer-col--brand">
         <a class="footer-brand" href="index-fr.html"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg><span class="brand-name">COZIROM</span></a>
-        <p class="footer-tag">Un bot qui traduit les discussions Discord dans la langue de votre interlocuteur.</p>
+        <p class="footer-tag">Chacun sa langue, l'esprit tranquille.</p>
         <p class="footer-note">Nos conditions d'utilisation, notre politique de remboursement et notre politique de confidentialité ne sont disponibles qu'en anglais.</p>
       </div>
       <nav class="footer-col" aria-labelledby="f-guide"><h2 id="f-guide">Guide</h2><ul><li><a href="plans-fr.html">Formules</a></li><li><a href="support-fr.html">Aide et assistance</a></li></ul></nav>

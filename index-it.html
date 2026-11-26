@@ -7,7 +7,7 @@
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F1E8">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1E1A15">
 <title>Cozirom · Bot di traduzione per chat su Discord</title>
-<meta name="description" content="Un bot per Discord che traduce la chat nella lingua dell&#39;altra persona. Le traduzioni compaiono con il tuo nome, e anche il testo nelle immagini viene tradotto.">
+<meta name="description" content="Un bot per Discord che ripubblica ciò che scrivi nella lingua dell&#39;altra persona, con il tono giusto e con il tuo nome. Traduce anche il testo nelle immagini.">
 <link rel="canonical" href="https://cozirom.com/index-it.html">
 <link rel="alternate" hreflang="ko" href="https://cozirom.com/index.html">
 <link rel="alternate" hreflang="en" href="https://cozirom.com/index-en.html">
@@ -43,18 +43,18 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cozirom">
 <meta property="og:title" content="Cozirom · Bot di traduzione per chat su Discord">
-<meta property="og:description" content="Un bot per Discord che traduce la chat nella lingua dell&#39;altra persona. Le traduzioni compaiono con il tuo nome, e anche il testo nelle immagini viene tradotto.">
+<meta property="og:description" content="Un bot per Discord che ripubblica ciò che scrivi nella lingua dell&#39;altra persona, con il tono giusto e con il tuo nome. Traduce anche il testo nelle immagini.">
 <meta property="og:url" content="https://cozirom.com/index-it.html">
 <meta property="og:image" content="https://cozirom.com/assets/og-index-it.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Chatta su Discord, ognuno nella sua lingua">
+<meta property="og:image:alt" content="Bot di traduzione per chat su Discord">
 <meta property="og:locale" content="it_IT">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cozirom","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","inLanguage":"it","description":"Un bot per Discord che traduce la chat nella lingua dell'altra persona. Le traduzioni compaiono con il tuo nome, e anche il testo nelle immagini viene tradotto.","url":"https://cozirom.com/index-it.html","publisher":{"@type":"Organization","name":"Cozirom","url":"https://cozirom.com/","email":"bouz3337@gmail.com"},"offers":[{"@type":"Offer","name":"Guest","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Superior","price":"9.99","priceCurrency":"USD"},{"@type":"Offer","name":"Deluxe","price":"14.99","priceCurrency":"USD"},{"@type":"Offer","name":"Suite","price":"36.99","priceCurrency":"USD"},{"@type":"Offer","name":"Lounge","price":"11.99","priceCurrency":"USD"},{"@type":"Offer","name":"Ballroom","price":"44.99","priceCurrency":"USD"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cozirom","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","inLanguage":"it","description":"Un bot per Discord che ripubblica ciò che scrivi nella lingua dell'altra persona, con il tono giusto e con il tuo nome. Traduce anche il testo nelle immagini.","url":"https://cozirom.com/index-it.html","publisher":{"@type":"Organization","name":"Cozirom","url":"https://cozirom.com/","email":"bouz3337@gmail.com"},"offers":[{"@type":"Offer","name":"Guest","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Superior","price":"9.99","priceCurrency":"USD"},{"@type":"Offer","name":"Deluxe","price":"14.99","priceCurrency":"USD"},{"@type":"Offer","name":"Suite","price":"36.99","priceCurrency":"USD"},{"@type":"Offer","name":"Lounge","price":"11.99","priceCurrency":"USD"},{"@type":"Offer","name":"Ballroom","price":"44.99","priceCurrency":"USD"}]}</script>
 <link rel="preload" href="fonts/CoziromSans-45be19f70e1d.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/CoziromSerif-337cd0945529.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:"Cozirom Sans";src:url("fonts/CoziromSans-45be19f70e1d.woff2") format("woff2");font-weight:45 920;font-display:swap}@font-face{font-family:"Cozirom Sans Fallback";src:local("Arial"), local("Helvetica Neue");size-adjust:99.3%;ascent-override:95.9%;descent-override:24.3%;line-gap-override:0%}@font-face{font-family:"Cozirom Serif";src:url("fonts/CoziromSerif-337cd0945529.woff2") format("woff2");font-weight:700;font-display:swap}</style>
+<link rel="preload" href="fonts/CoziromSerif-da407e22c1aa.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Cozirom Sans";src:url("fonts/CoziromSans-45be19f70e1d.woff2") format("woff2");font-weight:45 920;font-display:swap}@font-face{font-family:"Cozirom Sans Fallback";src:local("Arial"), local("Helvetica Neue");size-adjust:99.3%;ascent-override:95.9%;descent-override:24.3%;line-gap-override:0%}@font-face{font-family:"Cozirom Serif";src:url("fonts/CoziromSerif-da407e22c1aa.woff2") format("woff2");font-weight:700;font-display:swap}</style>
 <link rel="stylesheet" href="site.css">
 <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -85,14 +85,14 @@
   <section class="hero grid" aria-labelledby="hero-title">
     <div class="col-7">
       <p class="eyebrow">Bot di traduzione per chat su Discord</p>
-      <h1 class="display" id="hero-title">Chatta su Discord, ognuno nella sua lingua</h1>
-      <p class="lead">Cozirom è un bot per Discord che traduce la chat nella lingua dell'altra persona. Una volta attivato, i tuoi messaggi vengono pubblicati tradotti con il tuo nome e la tua immagine del profilo, e anche il testo nelle immagini viene tradotto.</p>
+      <h1 class="display" id="hero-title">Lingue diverse, tutti a proprio agio</h1>
+      <p class="lead">Cozirom è un bot per Discord che ripubblica ciò che scrivi nella lingua dell'altra persona, con il tono giusto, con il tuo nome e la tua immagine del profilo. Traduce anche il testo nelle immagini.</p>
       <p class="btn-row"><a class="btn btn--primary" href="https://discord.com/oauth2/authorize?client_id=1558929598677524560&amp;scope=bot+applications.commands&amp;permissions=344134642688">Aggiungi a Discord</a><a class="btn" href="plans-it.html">Vedi i piani</a></p>
       <p class="fineprint">Le traduzioni sono fatte da un'IA (Claude di Anthropic).</p>
     </div>
     <figure class="col-5 hero-card">
       <div class="key-card key-card--hero" aria-hidden="true"><div class="key-inner"><div class="key-top"><span class="key-no">03</span><svg class="seal" aria-hidden="true"><use href="#seal"/></svg></div><p class="plan-name"><span class="key-grade" lang="en">SUPERIOR</span></p><p class="price"><span class="amount">9,99</span> <span class="cur">$</span>/mese</p><p class="key-brand" aria-hidden="true">COZIROM</p></div></div>
-      <figcaption class="caption">I piani hanno delle categorie, come le chiavi delle camere d'albergo. Puoi iniziare con Guest (gratuito).</figcaption>
+      <figcaption class="caption">I piani hanno i nomi delle camere d'albergo. Il piano Guest è gratuito.</figcaption>
     </figure>
   </section>
 
@@ -103,15 +103,17 @@
       <p class="lead">I limiti dei piani si contano in traduzioni. Un messaggio tradotto in una lingua vale 1.</p>
     </div>
     <div class="folio">
-      <div class="folio-head"><p class="eyebrow">6 funzioni</p><p class="small">In traduzioni</p></div>
+      <div class="folio-head"><p class="eyebrow">8 funzioni</p><p class="small">In traduzioni</p></div>
       <ol class="ledger">
         <li><span class="no" aria-hidden="true">01</span><div><h3>Traduzione automatica</h3><p>Usa <code><span class="cmd">/traduci</span> attiva</code> una volta sola e i tuoi messaggi in quel server vengono pubblicati nell'altra lingua, con il tuo nome e la tua immagine del profilo. L'originale resta sotto la traduzione in caratteri piccoli, e il pulsante <img class="icon" src="assets/button_original.png" width="20" height="20" alt="Pulsante Vedi originale"> mostra l'originale completo.</p></div><p class="count"><span class="count-label">Traduzioni</span><span class="fig">1</span> per messaggio</p></li>
         <li><span class="no" aria-hidden="true">02</span><div><h3>Traduzione del testo nelle immagini</h3><p>Menu dei ristoranti, schermate di gioco, meme: se un'immagine contiene testo, viene letto e tradotto. Si apre dall'icona <img class="icon" src="assets/button_read.png" width="20" height="20" alt="Icona Traduci il testo"> sotto le immagini di chi ha attivato la traduzione, oppure con il clic destro. Il risultato lo vede solo chi l'ha chiesto, e le immagini senza testo non vengono contate.</p></div><p class="count"><span class="count-label">Traduzioni</span>Circa <span class="fig">9</span> per immagine</p></li>
         <li><span class="no" aria-hidden="true">03</span><div><h3>Sovrapponi (traduzione disegnata sull'immagine)</h3><p>Con l'icona <img class="icon" src="assets/button_overlay.png" width="20" height="20" alt="Icona Sovrapponi"> ricevi una copia dell'immagine con il testo originale cancellato e la traduzione disegnata al suo posto. All'inizio il carattere è «Come l&#x27;originale», simile alle lettere originali, e puoi scegliere senza costi tra un massimo di 15 set di caratteri, come «Con grazie», «Scritto a mano» e «Fumetto». Funziona meglio con il testo orizzontale, come screenshot, meme, schermate di gioco e menu, e il risultato lo vede solo chi ha premuto.</p></div><p class="count"><span class="count-label">Traduzioni</span>Circa <span class="fig">19</span> per immagine</p>
           <figure class="figure figure--overlay"><div class="figure-pair"><picture><source srcset="assets/overlay_before.webp" type="image/webp"><img src="assets/overlay_before.png" width="720" height="520" alt="Prima: foto di un menu di ristorante scritto in giapponese" loading="lazy" decoding="async"></picture><svg class="arrow" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M3 14h20M16 7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><picture><source srcset="assets/overlay_after-it.webp" type="image/webp"><img src="assets/overlay_after-it.png" width="720" height="520" alt="Dopo: la stessa foto con il giapponese del menu cancellato e la traduzione italiana disegnata al suo posto" loading="lazy" decoding="async"></picture></div><figcaption>Esempio: la foto originale (un menu in giapponese) e la stessa foto con il testo cancellato e la traduzione italiana disegnata al suo posto con il carattere «Con grazie».</figcaption></figure></li>
         <li><span class="no" aria-hidden="true">04</span><div><h3>Messaggi vocali</h3><p>Con un piano a pagamento, fai clic destro su un messaggio vocale in un canale con restrizioni di età e ottieni ciò che è stato detto con la sua traduzione. Vengono trascritti i messaggi fino a 3 minuti, e i messaggi senza parlato non contano.</p></div><p class="count"><span class="count-label">Traduzioni</span><span class="fig">1</span> al secondo, più la traduzione<small>Un messaggio di 10 secondi vale di solito 11</small></p></li>
-        <li><span class="no" aria-hidden="true">05</span><div><h3>Quattro toni</h3><p>Slang, Informale, Amichevole o Formale, da scegliere per ogni server. Del tu con gli amici, del lei in un posto nuovo. Con il piano Guest (gratuito) hai tutti e quattro per i primi 14 giorni, poi il tono amichevole.</p></div><p class="count"><span class="count-label">Traduzioni</span>A pagamento: tutti. Free: i primi <span class="fig">14</span> giorni</p></li>
+        <li><span class="no" aria-hidden="true">05</span><div><h3>Quattro toni</h3><p>Slang, Informale, Cortese o Formale, da scegliere per ogni server. Del tu con gli amici, del lei in un posto nuovo. Con il piano Guest hai tutti e quattro per i primi 14 giorni, poi il tono Cortese.</p></div><p class="count"><span class="count-label">Traduzioni</span>A pagamento: tutti. Free: i primi <span class="fig">14</span> giorni</p></li>
         <li><span class="no" aria-hidden="true">06</span><div><h3>31 lingue</h3><p>Le lingue di traduzione sono 31. L'interfaccia e i nomi dei comandi del bot sono disponibili in 30 lingue di Discord, così anche l'altra persona lo configura nella propria lingua.</p></div><p class="count"><span class="count-label">Traduzioni</span><span class="fig">31</span> per tradurre, <span class="fig">30</span> per l'interfaccia</p></li>
+        <li><span class="no" aria-hidden="true">07</span><div><h3>Stanze di traduzione</h3><p>Apri una stanza di traduzione privata con le persone che scegli. Le stanze partono dal piano Superior, e chi inviti non ha bisogno di un piano.</p></div><p class="count"><span class="count-label">Traduzioni</span><span class="fig">1</span> per messaggio</p></li>
+        <li><span class="no" aria-hidden="true">08</span><div><h3>Spiega il significato</h3><p>Spiega cosa intende davvero un messaggio e come potresti rispondere, solo per te. Disponibile dal piano Superior.</p></div><p class="count"><span class="count-label">Traduzioni</span>Usi mensili, a parte le traduzioni</p></li>
       </ol>
     </div>
   </section>
@@ -123,8 +125,8 @@
     </div>
     <ol class="steps">
       <li><span class="no" aria-hidden="true">1</span><h3>Aggiungi il bot al server</h3><p>Un amministratore del server aggiunge il bot con il pulsante qui sotto. Il link di invito si può avere anche tramite <a href="https://discord.gg/96Jw2CYTpd">il server di assistenza</a>.</p><p><a class="btn" href="https://discord.com/oauth2/authorize?client_id=1558929598677524560&amp;scope=bot+applications.commands&amp;permissions=344134642688">Invita il bot</a></p></li>
-      <li><span class="no" aria-hidden="true">2</span><h3>Attiva la traduzione</h3><p>Chi vuole essere tradotto usa <code><span class="cmd">/traduci</span> attiva</code> in quel server. Il bot indovina la tua lingua e quella dell'altra persona e apre il pannello delle impostazioni. Se non sono giuste, cambiale nei menu a tendina.</p></li>
-      <li><span class="no" aria-hidden="true">3</span><h3>Scrivi come sempre</h3><p>Scrivi come sempre e la traduzione compare con il tuo nome. Inizia con il piano Guest (gratuito) e cambia piano nella <a href="plans-it.html">pagina dei piani</a> quando ti serve di più.</p></li>
+      <li><span class="no" aria-hidden="true">2</span><h3>Attiva la traduzione</h3><p>Chi vuole essere tradotto usa <code><span class="cmd">/traduci</span> attiva</code> in quel server. Quando compaiono le traduzioni, gli altri possono iniziare con il pulsante a fumetto blu sotto di esse. Le lingue vengono indovinate per te e puoi cambiarle nelle impostazioni.</p></li>
+      <li><span class="no" aria-hidden="true">3</span><h3>Scrivi come sempre</h3><p>Scrivi come sempre e la traduzione compare con il tuo nome. Inizia con il piano gratuito Guest e cambia piano nella <a href="plans-it.html">pagina dei piani</a> quando ti serve di più.</p></li>
     </ol>
   </section>
 
@@ -144,7 +146,7 @@
     <div class="footer-grid">
       <div class="footer-col footer-col--brand">
         <a class="footer-brand" href="index-it.html"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg><span class="brand-name">COZIROM</span></a>
-        <p class="footer-tag">Un bot che traduce la chat di Discord nella lingua dell'altra persona.</p>
+        <p class="footer-tag">Lingue diverse, tutti a proprio agio.</p>
         <p class="footer-note">I nostri termini di servizio, la politica di rimborso e l'informativa sulla privacy sono disponibili solo in inglese.</p>
       </div>
       <nav class="footer-col" aria-labelledby="f-guide"><h2 id="f-guide">Guida</h2><ul><li><a href="plans-it.html">Piani</a></li><li><a href="support-it.html">Aiuto e assistenza</a></li></ul></nav>

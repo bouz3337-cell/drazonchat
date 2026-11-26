@@ -7,7 +7,7 @@
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F1E8">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1E1A15">
 <title>Cozirom · Bot pro překlad chatu na Discordu</title>
-<meta name="description" content="Bot pro Discord, který překládá chat do jazyka protějšku. Překlady se zobrazují pod tvým jménem a přeloží i text na obrázcích.">
+<meta name="description" content="Bot pro Discord, který zveřejní, co napíšeš, v jazyce protějšku, ve vhodném tónu a pod tvým vlastním jménem. Přeloží i text na obrázcích.">
 <link rel="canonical" href="https://cozirom.com/index-cs.html">
 <link rel="alternate" hreflang="ko" href="https://cozirom.com/index.html">
 <link rel="alternate" hreflang="en" href="https://cozirom.com/index-en.html">
@@ -43,18 +43,18 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cozirom">
 <meta property="og:title" content="Cozirom · Bot pro překlad chatu na Discordu">
-<meta property="og:description" content="Bot pro Discord, který překládá chat do jazyka protějšku. Překlady se zobrazují pod tvým jménem a přeloží i text na obrázcích.">
+<meta property="og:description" content="Bot pro Discord, který zveřejní, co napíšeš, v jazyce protějšku, ve vhodném tónu a pod tvým vlastním jménem. Přeloží i text na obrázcích.">
 <meta property="og:url" content="https://cozirom.com/index-cs.html">
 <meta property="og:image" content="https://cozirom.com/assets/og-index-cs.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Na Discordu každý píše svým jazykem">
+<meta property="og:image:alt" content="Bot pro překlad chatu na Discordu">
 <meta property="og:locale" content="cs_CZ">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cozirom","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","inLanguage":"cs","description":"Bot pro Discord, který překládá chat do jazyka protějšku. Překlady se zobrazují pod tvým jménem a přeloží i text na obrázcích.","url":"https://cozirom.com/index-cs.html","publisher":{"@type":"Organization","name":"Cozirom","url":"https://cozirom.com/","email":"bouz3337@gmail.com"},"offers":[{"@type":"Offer","name":"Guest","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Superior","price":"9.99","priceCurrency":"USD"},{"@type":"Offer","name":"Deluxe","price":"14.99","priceCurrency":"USD"},{"@type":"Offer","name":"Suite","price":"36.99","priceCurrency":"USD"},{"@type":"Offer","name":"Lounge","price":"11.99","priceCurrency":"USD"},{"@type":"Offer","name":"Ballroom","price":"44.99","priceCurrency":"USD"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cozirom","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","inLanguage":"cs","description":"Bot pro Discord, který zveřejní, co napíšeš, v jazyce protějšku, ve vhodném tónu a pod tvým vlastním jménem. Přeloží i text na obrázcích.","url":"https://cozirom.com/index-cs.html","publisher":{"@type":"Organization","name":"Cozirom","url":"https://cozirom.com/","email":"bouz3337@gmail.com"},"offers":[{"@type":"Offer","name":"Guest","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Superior","price":"9.99","priceCurrency":"USD"},{"@type":"Offer","name":"Deluxe","price":"14.99","priceCurrency":"USD"},{"@type":"Offer","name":"Suite","price":"36.99","priceCurrency":"USD"},{"@type":"Offer","name":"Lounge","price":"11.99","priceCurrency":"USD"},{"@type":"Offer","name":"Ballroom","price":"44.99","priceCurrency":"USD"}]}</script>
 <link rel="preload" href="fonts/CoziromSans-1da387816da8.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/CoziromSerif-3019ab609ccc.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:"Cozirom Sans";src:url("fonts/CoziromSans-1da387816da8.woff2") format("woff2");font-weight:45 920;font-display:swap}@font-face{font-family:"Cozirom Sans Fallback";src:local("Arial"), local("Helvetica Neue");size-adjust:99.3%;ascent-override:95.9%;descent-override:24.3%;line-gap-override:0%}@font-face{font-family:"Cozirom Serif";src:url("fonts/CoziromSerif-3019ab609ccc.woff2") format("woff2");font-weight:700;font-display:swap}</style>
+<link rel="preload" href="fonts/CoziromSerif-420f17e8c6c2.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Cozirom Sans";src:url("fonts/CoziromSans-1da387816da8.woff2") format("woff2");font-weight:45 920;font-display:swap}@font-face{font-family:"Cozirom Sans Fallback";src:local("Arial"), local("Helvetica Neue");size-adjust:99.3%;ascent-override:95.9%;descent-override:24.3%;line-gap-override:0%}@font-face{font-family:"Cozirom Serif";src:url("fonts/CoziromSerif-420f17e8c6c2.woff2") format("woff2");font-weight:700;font-display:swap}</style>
 <link rel="stylesheet" href="site.css">
 <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -85,14 +85,14 @@
   <section class="hero grid" aria-labelledby="hero-title">
     <div class="col-7">
       <p class="eyebrow">Bot pro překlad chatu na Discordu</p>
-      <h1 class="display" id="hero-title">Na Discordu každý píše svým jazykem</h1>
-      <p class="lead">Cozirom je bot pro Discord, který překládá chat do jazyka protějšku. Jakmile si ho zapneš, tvoje zprávy se budou zveřejňovat přeložené pod tvým jménem a profilovou fotkou a přeloží se i text na obrázcích.</p>
+      <h1 class="display" id="hero-title">Každý svým jazykem, bez starostí</h1>
+      <p class="lead">Cozirom je bot pro Discord, který zveřejní, co napíšeš, v jazyce protějšku, ve vhodném tónu a pod tvým vlastním jménem a profilovou fotkou. Přeloží i text na obrázcích.</p>
       <p class="btn-row"><a class="btn btn--primary" href="https://discord.com/oauth2/authorize?client_id=1558929598677524560&amp;scope=bot+applications.commands&amp;permissions=344134642688">Přidat na Discord</a><a class="btn" href="plans-cs.html">Zobrazit tarify</a></p>
       <p class="fineprint">Překlady dělá AI (Claude od Anthropic).</p>
     </div>
     <figure class="col-5 hero-card">
       <div class="key-card key-card--hero" aria-hidden="true"><div class="key-inner"><div class="key-top"><span class="key-no">03</span><svg class="seal" aria-hidden="true"><use href="#seal"/></svg></div><p class="plan-name"><span class="key-grade" lang="en">SUPERIOR</span></p><p class="price"><span class="amount">9,99</span> <span class="cur">$</span>/měs.</p><p class="key-brand" aria-hidden="true">COZIROM</p></div></div>
-      <figcaption class="caption">Tarify mají různé úrovně, podobně jako klíče od hotelových pokojů. Začít můžeš s tarifem Guest (zdarma).</figcaption>
+      <figcaption class="caption">Tarify se jmenují jako hotelové pokoje. Tarif Guest je zdarma.</figcaption>
     </figure>
   </section>
 
@@ -103,15 +103,17 @@
       <p class="lead">Limity tarifů se počítají v překladech. Jedna zpráva přeložená do jednoho jazyka je 1 překlad.</p>
     </div>
     <div class="folio">
-      <div class="folio-head"><p class="eyebrow">6 funkcí</p><p class="small">Kolik překladů</p></div>
+      <div class="folio-head"><p class="eyebrow">8 funkcí</p><p class="small">Kolik překladů</p></div>
       <ol class="ledger">
         <li><span class="no" aria-hidden="true">01</span><div><h3>Automatický překlad</h3><p>Stačí jednou zadat <code><span class="cmd">/preklad</span> zapnout</code> a tvoje zprávy na tomhle serveru se budou zveřejňovat v jazyce protějšku pod tvým jménem a profilovou fotkou. Originál zůstane pod překladem malým písmem a tlačítko <img class="icon" src="assets/button_original.png" width="20" height="20" alt="Tlačítko pro zobrazení originálu"> ukáže celý originál.</p></div><p class="count"><span class="count-label">Překlady</span><span class="fig">1</span> za zprávu</p></li>
         <li><span class="no" aria-hidden="true">02</span><div><h3>Překlad textu na obrázcích</h3><p>Menu, herní obrazovky, memy: když je na obrázku text, bot ho přečte a přeloží. Výsledek otevřeš ikonou <img class="icon" src="assets/button_read.png" width="20" height="20" alt="Ikona „Přeložit text“"> pod obrázky lidí se zapnutým překladem nebo překladem přes pravé tlačítko. Vidí ho jen ten, kdo o něj požádal, a obrázky bez textu se nepočítají.</p></div><p class="count"><span class="count-label">Překlady</span>Obvykle kolem <span class="fig">9</span> za obrázek</p></li>
         <li><span class="no" aria-hidden="true">03</span><div><h3>Vložit překlad do obrázku</h3><p>Ikonou <img class="icon" src="assets/button_overlay.png" width="20" height="20" alt="Ikona „Vložit překlad“"> dostaneš kopii obrázku, na které je původní text vymazaný a na jeho místě je vepsaný překlad. Na začátku je zvolená možnost „Podle originálu“, tedy písmo blízké původnímu, a můžeš vybírat až z 15 sad písem, například „Patkové“, „Ručně psané“ nebo „Komiks“, aniž by to stálo překlady. Nejlépe to funguje u vodorovného textu, třeba na snímcích obrazovky, memech, herních obrazovkách a jídelních lístcích, a výsledek vidí jen ten, kdo ikonu stiskl.</p></div><p class="count"><span class="count-label">Překlady</span>Obvykle kolem <span class="fig">19</span> za obrázek</p>
           <figure class="figure figure--overlay"><div class="figure-pair"><picture><source srcset="assets/overlay_before.webp" type="image/webp"><img src="assets/overlay_before.png" width="720" height="520" alt="Před: fotka restauračního jídelního lístku v japonštině" loading="lazy" decoding="async"></picture><svg class="arrow" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M3 14h20M16 7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><picture><source srcset="assets/overlay_after-cs.webp" type="image/webp"><img src="assets/overlay_after-cs.png" width="720" height="520" alt="Po: tatáž fotka, na které je japonský text jídelního lístku vymazaný a na jeho místě je vepsaný český překlad" loading="lazy" decoding="async"></picture></div><figcaption>Ukázka: původní fotka (japonský jídelní lístek) a tatáž fotka, na které je text vymazaný a na jeho místě je písmem „Patkové“ vepsaný český překlad.</figcaption></figure></li>
         <li><span class="no" aria-hidden="true">04</span><div><h3>Hlasové zprávy</h3><p>S placeným tarifem klikni pravým tlačítkem na hlasovou zprávu v kanálu s věkovým omezením a uvidíš přepis toho, co zaznělo, i jeho překlad. Přepisují se zprávy do 3 minut a zprávy bez řeči se nepočítají.</p></div><p class="count"><span class="count-label">Překlady</span><span class="fig">1</span> za sekundu plus překlad<small>10sekundová zpráva obvykle stojí 11</small></p></li>
-        <li><span class="no" aria-hidden="true">05</span><div><h3>Čtyři tóny</h3><p>Slang, neformální, přátelský nebo formální: tón si vybereš pro každý server. S přáteli tykání, na novém místě vykání. V tarifu Guest (zdarma) máš prvních 14 dní všechny čtyři, potom přátelský tón.</p></div><p class="count"><span class="count-label">Překlady</span>Placené: všechny čtyři. Free: prvních <span class="fig">14</span> dní</p></li>
+        <li><span class="no" aria-hidden="true">05</span><div><h3>Čtyři tóny</h3><p>Slang, neformální, zdvořilý nebo formální: tón si vybereš pro každý server. S přáteli tykání, na novém místě vykání. V tarifu Guest máš prvních 14 dní všechny čtyři, potom zdvořilý tón.</p></div><p class="count"><span class="count-label">Překlady</span>Placené: všechny čtyři. Free: prvních <span class="fig">14</span> dní</p></li>
         <li><span class="no" aria-hidden="true">06</span><div><h3>31 jazyků</h3><p>Bot překládá 31 jazyků. Obrazovky bota a názvy příkazů se zobrazují v 30 jazycích Discordu, takže si protějšek všechno nastaví ve svém jazyce.</p></div><p class="count"><span class="count-label">Překlady</span><span class="fig">31</span> pro překlad, <span class="fig">30</span> v rozhraní</p></li>
+        <li><span class="no" aria-hidden="true">07</span><div><h3>Překladové místnosti</h3><p>Otevři soukromou překladovou místnost s lidmi, které si vybereš. Místnosti jsou dostupné od tarifu Superior a pozvaní lidé tarif nepotřebují.</p></div><p class="count"><span class="count-label">Překlady</span><span class="fig">1</span> za zprávu</p></li>
+        <li><span class="no" aria-hidden="true">08</span><div><h3>Vysvětlit význam</h3><p>Vysvětlí, co zpráva doopravdy znamená, a nabídne možné odpovědi, jen pro tebe. Dostupné od tarifu Superior.</p></div><p class="count"><span class="count-label">Překlady</span>Měsíční počet použití, mimo překlady</p></li>
       </ol>
     </div>
   </section>
@@ -123,8 +125,8 @@
     </div>
     <ol class="steps">
       <li><span class="no" aria-hidden="true">1</span><h3>Přidej bota na server</h3><p>Správce serveru přidá bota na server tlačítkem níže. Odkaz s pozvánkou získáš i přes <a href="https://discord.gg/96Jw2CYTpd">server podpory</a>.</p><p><a class="btn" href="https://discord.com/oauth2/authorize?client_id=1558929598677524560&amp;scope=bot+applications.commands&amp;permissions=344134642688">Pozvat bota</a></p></li>
-      <li><span class="no" aria-hidden="true">2</span><h3>Zapni překlad</h3><p>Každý, kdo chce, aby se jeho zprávy překládaly, zadá na tom serveru <code><span class="cmd">/preklad</span> zapnout</code>. Bot odhadne tvůj jazyk i jazyk protějšku a otevře panel nastavení. Když se odhad netrefí, změň ho v rozbalovacích nabídkách.</p></li>
-      <li><span class="no" aria-hidden="true">3</span><h3>Piš jako obvykle</h3><p>Piš jako obvykle a překlad se objeví pod tvým jménem. Začni s tarifem Guest (zdarma), a když budeš potřebovat víc, změň tarif na <a href="plans-cs.html">stránce s tarify</a>.</p></li>
+      <li><span class="no" aria-hidden="true">2</span><h3>Zapni překlad</h3><p>Kdo chce, aby se jeho zprávy překládaly, zadá na tom serveru <code><span class="cmd">/preklad</span> zapnout</code>. Jakmile se objeví překlady, ostatní můžou začít modrým tlačítkem s bublinou pod nimi. Jazyky odhadneme za tebe a v nastavení je můžeš změnit.</p></li>
+      <li><span class="no" aria-hidden="true">3</span><h3>Piš jako obvykle</h3><p>Piš jako obvykle a překlad se objeví pod tvým jménem. Začni s tarifem Guest zdarma, a když budeš potřebovat víc, změň tarif na <a href="plans-cs.html">stránce s tarify</a>.</p></li>
     </ol>
   </section>
 
@@ -144,7 +146,7 @@
     <div class="footer-grid">
       <div class="footer-col footer-col--brand">
         <a class="footer-brand" href="index-cs.html"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg><span class="brand-name">COZIROM</span></a>
-        <p class="footer-tag">Bot, který překládá chat na Discordu do jazyka protějšku.</p>
+        <p class="footer-tag">Každý svým jazykem, bez starostí.</p>
         <p class="footer-note">Podmínky používání, zásady vrácení peněz a zásady ochrany osobních údajů jsou k dispozici pouze v angličtině.</p>
       </div>
       <nav class="footer-col" aria-labelledby="f-guide"><h2 id="f-guide">Informace</h2><ul><li><a href="plans-cs.html">Tarify</a></li><li><a href="support-cs.html">Nápověda a podpora</a></li></ul></nav>

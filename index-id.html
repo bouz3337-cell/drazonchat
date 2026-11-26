@@ -7,7 +7,7 @@
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F1E8">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1E1A15">
 <title>Cozirom · Bot penerjemah chat Discord</title>
-<meta name="description" content="Bot Discord yang menerjemahkan chat ke bahasa lawan bicara. Terjemahan muncul atas namamu, dan teks di gambar juga ikut diterjemahkan.">
+<meta name="description" content="Bot Discord yang memposting ulang tulisanmu dalam bahasa lawan bicara, dengan nada yang pas, atas namamu sendiri. Teks di gambar juga ikut diterjemahkan.">
 <link rel="canonical" href="https://cozirom.com/index-id.html">
 <link rel="alternate" hreflang="ko" href="https://cozirom.com/index.html">
 <link rel="alternate" hreflang="en" href="https://cozirom.com/index-en.html">
@@ -43,18 +43,18 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cozirom">
 <meta property="og:title" content="Cozirom · Bot penerjemah chat Discord">
-<meta property="og:description" content="Bot Discord yang menerjemahkan chat ke bahasa lawan bicara. Terjemahan muncul atas namamu, dan teks di gambar juga ikut diterjemahkan.">
+<meta property="og:description" content="Bot Discord yang memposting ulang tulisanmu dalam bahasa lawan bicara, dengan nada yang pas, atas namamu sendiri. Teks di gambar juga ikut diterjemahkan.">
 <meta property="og:url" content="https://cozirom.com/index-id.html">
 <meta property="og:image" content="https://cozirom.com/assets/og-index-id.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Ngobrol di Discord pakai bahasa ibumu sendiri">
+<meta property="og:image:alt" content="Bot penerjemah chat Discord">
 <meta property="og:locale" content="id_ID">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cozirom","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","inLanguage":"id","description":"Bot Discord yang menerjemahkan chat ke bahasa lawan bicara. Terjemahan muncul atas namamu, dan teks di gambar juga ikut diterjemahkan.","url":"https://cozirom.com/index-id.html","publisher":{"@type":"Organization","name":"Cozirom","url":"https://cozirom.com/","email":"bouz3337@gmail.com"},"offers":[{"@type":"Offer","name":"Guest","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Superior","price":"9.99","priceCurrency":"USD"},{"@type":"Offer","name":"Deluxe","price":"14.99","priceCurrency":"USD"},{"@type":"Offer","name":"Suite","price":"36.99","priceCurrency":"USD"},{"@type":"Offer","name":"Lounge","price":"11.99","priceCurrency":"USD"},{"@type":"Offer","name":"Ballroom","price":"44.99","priceCurrency":"USD"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cozirom","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","inLanguage":"id","description":"Bot Discord yang memposting ulang tulisanmu dalam bahasa lawan bicara, dengan nada yang pas, atas namamu sendiri. Teks di gambar juga ikut diterjemahkan.","url":"https://cozirom.com/index-id.html","publisher":{"@type":"Organization","name":"Cozirom","url":"https://cozirom.com/","email":"bouz3337@gmail.com"},"offers":[{"@type":"Offer","name":"Guest","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Superior","price":"9.99","priceCurrency":"USD"},{"@type":"Offer","name":"Deluxe","price":"14.99","priceCurrency":"USD"},{"@type":"Offer","name":"Suite","price":"36.99","priceCurrency":"USD"},{"@type":"Offer","name":"Lounge","price":"11.99","priceCurrency":"USD"},{"@type":"Offer","name":"Ballroom","price":"44.99","priceCurrency":"USD"}]}</script>
 <link rel="preload" href="fonts/CoziromSans-4ac3a1fe5570.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/CoziromSerif-dc511d93f656.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:"Cozirom Sans";src:url("fonts/CoziromSans-4ac3a1fe5570.woff2") format("woff2");font-weight:45 920;font-display:swap}@font-face{font-family:"Cozirom Sans Fallback";src:local("Arial"), local("Helvetica Neue");size-adjust:99.0%;ascent-override:96.1%;descent-override:24.4%;line-gap-override:0%}@font-face{font-family:"Cozirom Serif";src:url("fonts/CoziromSerif-dc511d93f656.woff2") format("woff2");font-weight:700;font-display:swap}</style>
+<link rel="preload" href="fonts/CoziromSerif-4173588c7749.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Cozirom Sans";src:url("fonts/CoziromSans-4ac3a1fe5570.woff2") format("woff2");font-weight:45 920;font-display:swap}@font-face{font-family:"Cozirom Sans Fallback";src:local("Arial"), local("Helvetica Neue");size-adjust:99.0%;ascent-override:96.2%;descent-override:24.4%;line-gap-override:0%}@font-face{font-family:"Cozirom Serif";src:url("fonts/CoziromSerif-4173588c7749.woff2") format("woff2");font-weight:700;font-display:swap}</style>
 <link rel="stylesheet" href="site.css">
 <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -85,14 +85,14 @@
   <section class="hero grid" aria-labelledby="hero-title">
     <div class="col-7">
       <p class="eyebrow">Bot penerjemah chat Discord</p>
-      <h1 class="display" id="hero-title">Ngobrol di Discord pakai bahasa ibumu sendiri</h1>
-      <p class="lead">Cozirom adalah bot Discord yang menerjemahkan chat ke bahasa lawan bicara. Setelah kamu menyalakannya, pesanmu diposting dalam bentuk terjemahan dengan nama dan foto profilmu sendiri, dan teks di gambar juga ikut diterjemahkan.</p>
+      <h1 class="display" id="hero-title">Beda bahasa, tetap nyaman</h1>
+      <p class="lead">Cozirom adalah bot Discord yang memposting ulang tulisanmu dalam bahasa lawan bicara, dengan nada yang pas, atas nama dan foto profilmu sendiri. Teks di gambar juga ikut diterjemahkan.</p>
       <p class="btn-row"><a class="btn btn--primary" href="https://discord.com/oauth2/authorize?client_id=1558929598677524560&amp;scope=bot+applications.commands&amp;permissions=344134642688">Tambahkan ke Discord</a><a class="btn" href="plans-id.html">Lihat paket</a></p>
       <p class="fineprint">Terjemahan dibuat oleh AI (Claude dari Anthropic).</p>
     </div>
     <figure class="col-5 hero-card">
       <div class="key-card key-card--hero" aria-hidden="true"><div class="key-inner"><div class="key-top"><span class="key-no">03</span><svg class="seal" aria-hidden="true"><use href="#seal"/></svg></div><p class="plan-name"><span class="key-grade" lang="en">SUPERIOR</span></p><p class="price"><span class="cur">$</span><span class="amount">9,99</span>/bln</p><p class="key-brand" aria-hidden="true">COZIROM</p></div></div>
-      <figcaption class="caption">Paket punya tingkatan seperti kunci kamar hotel. Kamu bisa mulai dari Guest (gratis).</figcaption>
+      <figcaption class="caption">Paket dinamai seperti kamar hotel. Paket Guest gratis.</figcaption>
     </figure>
   </section>
 
@@ -103,15 +103,17 @@
       <p class="lead">Batas paket dihitung dalam terjemahan. Satu pesan yang diterjemahkan ke satu bahasa dihitung 1 terjemahan.</p>
     </div>
     <div class="folio">
-      <div class="folio-head"><p class="eyebrow">6 fitur</p><p class="small">Dalam terjemahan</p></div>
+      <div class="folio-head"><p class="eyebrow">8 fitur</p><p class="small">Dalam terjemahan</p></div>
       <ol class="ledger">
         <li><span class="no" aria-hidden="true">01</span><div><h3>Terjemahan otomatis</h3><p>Jalankan <code><span class="cmd">/terjemah</span> nyalakan</code> sekali, dan pesanmu di server itu akan diposting dalam bahasa lawan bicara dengan nama dan foto profilmu sendiri. Teks aslinya tetap ada di bawah terjemahan dalam tulisan kecil, dan tombol <img class="icon" src="assets/button_original.png" width="20" height="20" alt="Tombol lihat teks asli"> menampilkan teks asli lengkapnya.</p></div><p class="count"><span class="count-label">Terjemahan</span><span class="fig">1</span> per pesan</p></li>
         <li><span class="no" aria-hidden="true">02</span><div><h3>Terjemahkan teks di gambar</h3><p>Menu, layar game, meme: kalau gambarnya ada teks, teksnya dibaca dan diterjemahkan. Buka lewat ikon <img class="icon" src="assets/button_read.png" width="20" height="20" alt="Ikon Terjemahkan teks"> di bawah gambar dari orang yang menyalakan terjemahan otomatis, atau lewat terjemahan klik kanan. Hanya orang yang memintanya yang melihat hasilnya, dan gambar tanpa teks tidak dihitung.</p></div><p class="count"><span class="count-label">Terjemahan</span>Biasanya sekitar <span class="fig">9</span> per gambar</p></li>
         <li><span class="no" aria-hidden="true">03</span><div><h3>Tulis di gambar (terjemahan ditulis di atasnya)</h3><p>Lewat ikon <img class="icon" src="assets/button_overlay.png" width="20" height="20" alt="Ikon Tulis di gambar">, dapatkan salinan gambar yang teks aslinya sudah dihapus dan terjemahannya digambar di tempat yang sama. Font awalnya “Sesuai aslinya”, yang mendekati huruf aslinya, dan kamu bisa berganti di antara maksimal 15 set font seperti “Serif”, “Tulisan tangan”, dan “Komik” tanpa dihitung. Fitur ini paling cocok untuk teks horizontal seperti tangkapan layar, meme, layar game, dan menu, dan hanya orang yang menekan yang melihat hasilnya.</p></div><p class="count"><span class="count-label">Terjemahan</span>Biasanya sekitar <span class="fig">19</span> per gambar</p>
           <figure class="figure figure--overlay"><div class="figure-pair"><picture><source srcset="assets/overlay_before.webp" type="image/webp"><img src="assets/overlay_before.png" width="720" height="520" alt="Sebelum: foto kartu menu restoran yang ditulis dalam bahasa Jepang" loading="lazy" decoding="async"></picture><svg class="arrow" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M3 14h20M16 7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><picture><source srcset="assets/overlay_after-id.webp" type="image/webp"><img src="assets/overlay_after-id.png" width="720" height="520" alt="Sesudah: foto yang sama setelah teks bahasa Jepang di kartu menu dihapus dan terjemahan bahasa Indonesia digambar di tempatnya" loading="lazy" decoding="async"></picture></div><figcaption>Contoh: foto asli (kartu menu berbahasa Jepang), dan foto yang sama setelah teksnya dihapus dan terjemahan bahasa Indonesia digambar di tempatnya dengan font “Serif”.</figcaption></figure></li>
         <li><span class="no" aria-hidden="true">04</span><div><h3>Pesan suara</h3><p>Dengan paket berbayar, klik kanan pesan suara di channel dengan batasan usia untuk melihat transkripsi ucapannya beserta terjemahannya. Pesan hingga 3 menit ditranskripsikan, dan pesan tanpa ucapan tidak dihitung.</p></div><p class="count"><span class="count-label">Terjemahan</span><span class="fig">1</span> per detik, ditambah terjemahan<small>Pesan 10 detik biasanya 11</small></p></li>
-        <li><span class="no" aria-hidden="true">05</span><div><h3>4 nada</h3><p>Bahasa gaul, santai, ramah, atau formal, dipilih untuk tiap server. Santai dengan teman, formal di tempat baru. Di paket Guest (gratis), kamu bisa memakai keempat nada selama 14 hari pertama, lalu nada ramah.</p></div><p class="count"><span class="count-label">Terjemahan</span>Berbayar: keempatnya. Free: <span class="fig">14</span> hari pertama</p></li>
+        <li><span class="no" aria-hidden="true">05</span><div><h3>4 nada</h3><p>Bahasa gaul, santai, ramah, atau formal, dipilih untuk tiap server. Santai dengan teman, formal di tempat baru. Di paket Guest, kamu bisa memakai keempat nada selama 14 hari pertama, lalu nada ramah.</p></div><p class="count"><span class="count-label">Terjemahan</span>Berbayar: keempatnya. Free: <span class="fig">14</span> hari pertama</p></li>
         <li><span class="no" aria-hidden="true">06</span><div><h3>31 bahasa</h3><p>Ada 31 bahasa yang bisa diterjemahkan. Tampilan dan nama perintah bot muncul dalam 30 bahasa Discord, jadi lawan bicaramu juga bisa mengaturnya dalam bahasanya sendiri.</p></div><p class="count"><span class="count-label">Terjemahan</span><span class="fig">31</span> diterjemahkan, <span class="fig">30</span> untuk tampilan</p></li>
+        <li><span class="no" aria-hidden="true">07</span><div><h3>Ruang terjemahan</h3><p>Buka ruang terjemahan pribadi bersama orang yang kamu pilih. Ruang bisa dibuka mulai dari paket Superior, dan orang yang kamu undang tidak perlu punya paket.</p></div><p class="count"><span class="count-label">Terjemahan</span><span class="fig">1</span> per pesan</p></li>
+        <li><span class="no" aria-hidden="true">08</span><div><h3>Jelaskan maksud</h3><p>Menjelaskan maksud sebenarnya dari sebuah pesan dan cara kamu bisa membalasnya, hanya untukmu. Tersedia mulai dari paket Superior.</p></div><p class="count"><span class="count-label">Terjemahan</span>Jatah bulanan, terpisah dari terjemahan</p></li>
       </ol>
     </div>
   </section>
@@ -123,8 +125,8 @@
     </div>
     <ol class="steps">
       <li><span class="no" aria-hidden="true">1</span><h3>Tambahkan bot ke server</h3><p>Admin server menambahkan bot ke server dengan tombol di bawah. Tautan undangannya juga bisa kamu dapat di <a href="https://discord.gg/96Jw2CYTpd">server dukungan</a>.</p><p><a class="btn" href="https://discord.com/oauth2/authorize?client_id=1558929598677524560&amp;scope=bot+applications.commands&amp;permissions=344134642688">Undang bot</a></p></li>
-      <li><span class="no" aria-hidden="true">2</span><h3>Nyalakan terjemahan</h3><p>Siapa pun yang ingin pesannya diterjemahkan menjalankan <code><span class="cmd">/terjemah</span> nyalakan</code> di server itu. Bot menebak bahasamu dan bahasa lawan bicara, lalu membuka panel pengaturan. Kalau tidak tepat, ubah di dropdown.</p></li>
-      <li><span class="no" aria-hidden="true">3</span><h3>Tulis seperti biasa</h3><p>Tulis seperti biasa, dan terjemahannya muncul atas namamu. Mulai dengan paket Guest (gratis), lalu ganti paket di <a href="plans-id.html">halaman paket</a> kalau butuh lebih banyak.</p></li>
+      <li><span class="no" aria-hidden="true">2</span><h3>Nyalakan terjemahan</h3><p>Siapa pun yang ingin pesannya diterjemahkan menjalankan <code><span class="cmd">/terjemah</span> nyalakan</code> di server itu. Begitu terjemahan muncul, orang lain bisa langsung mulai dengan tombol gelembung chat biru di bawahnya. Bahasamu sudah ditebak lebih dulu, dan kamu bisa mengubahnya di pengaturan.</p></li>
+      <li><span class="no" aria-hidden="true">3</span><h3>Tulis seperti biasa</h3><p>Tulis seperti biasa, dan terjemahannya muncul atas namamu. Mulai dengan paket Guest yang gratis, lalu ganti paket di <a href="plans-id.html">halaman paket</a> kalau butuh lebih banyak.</p></li>
     </ol>
   </section>
 
@@ -144,7 +146,7 @@
     <div class="footer-grid">
       <div class="footer-col footer-col--brand">
         <a class="footer-brand" href="index-id.html"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg><span class="brand-name">COZIROM</span></a>
-        <p class="footer-tag">Bot yang menerjemahkan chat Discord ke bahasa lawan bicara.</p>
+        <p class="footer-tag">Beda bahasa, tetap nyaman.</p>
         <p class="footer-note">Ketentuan layanan, kebijakan refund, dan kebijakan privasi kami hanya tersedia dalam bahasa Inggris.</p>
       </div>
       <nav class="footer-col" aria-labelledby="f-guide"><h2 id="f-guide">Panduan</h2><ul><li><a href="plans-id.html">Paket</a></li><li><a href="support-id.html">Bantuan dan kontak</a></li></ul></nav>

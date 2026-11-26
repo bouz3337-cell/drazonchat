@@ -1,13 +1,13 @@
 {
  "_": "python tools/build_site.py가 만든다 (손으로 고치지 않는다). python tools/build_site.py --check 폴더가 지금 원본과 견준다.",
- "fingerprint": "55f0158ad48fd79536d7c4e04aafe3e719daef67d5850358927fd6d3a58696e9",
+ "fingerprint": "82549f3a9b9761f039e01ae6d0773fb705d2368e892a75b18f30e761c379ce29",
  "info": {
-  "commit": "e2ac323b52ed201d92ba31f6475a786f65f2758a",
+  "commit": "5d5a3e8f04777bb45b27c79b70514ec4133c390e",
   "dirty": false,
   "pages": 277
  },
  "inputs": {
-  "catalog": "9731be4f506b1b1c",
+  "catalog": "7ba9f3762d058162",
   "catalog_keys": [
    "button.overlay",
    "button.read_images",
@@ -65,7 +65,7 @@
     "server_pro"
    ]
   },
-  "env": "d3cf3462eae6fd17",
+  "env": "ac1ce7bcd6f36841",
   "files": {
    ".font-cache/PretendardVariable.woff2": "9599f12fd42fc0bc",
    "assets/button_original.png": "84134b8d1a9cc100",
@@ -180,9 +180,9 @@
    "templates/site/plan.html": "0e9614d61f35c3f0",
    "templates/site/plans.html": "bf533cdf4f4a2a76",
    "tools/build_fonts.py": "ea7b7329ccf37e6a",
-   "tools/build_site.py": "9bb0ebbb0ca06971",
+   "tools/build_site.py": "16684a086abe5b0e",
    "usage_card.py": "102c819def023ebc",
-   "usage_view.py": "1ce41c1605abd45b"
+   "usage_view.py": "e4cc20df4295eec3"
   },
   "packages": {
    "Babel": "2.18.0",
@@ -238,36 +238,36 @@
    "voice_live": true
   },
   "texts": {
-   "bg": "a25b0e1bf90f83eb",
-   "cs": "49dbbf1810b80d84",
-   "da": "5cbd333fb151fed9",
-   "de": "e24f241c0a46fb58",
-   "el": "c004f18c58eeb119",
-   "en": "f1cb73d3d11745b1",
-   "es": "73d04fc6def89bac",
-   "fi": "85161530651b79d3",
-   "fr": "3d2dea0fa87d0dc1",
-   "hi": "e816ead35fb129ea",
-   "hr": "a3714179cf46a02d",
-   "hu": "c6a8dbda0845012d",
-   "id": "ddf8f57393da9ca1",
-   "it": "7b6cfe801232e911",
-   "ja": "10a927ac6fc23f1c",
-   "ko": "43b02df2c82929a2",
-   "lt": "03ec0455e353306e",
-   "nl": "cfbef317cf60d403",
-   "no": "6daa0c603908c7d0",
-   "pl": "babf211ad08cb825",
-   "pt-BR": "e5dacc6c55611f9a",
-   "ro": "50c879f893bb3823",
-   "ru": "f70b231120795d58",
-   "sv-SE": "545324d401319247",
-   "th": "cd42fcd45f153809",
-   "tr": "00215807f1e383a1",
-   "uk": "9036f7a4959dbb12",
-   "vi": "b7e60a1697ab719b",
-   "zh-CN": "3e1ed94189567f72",
-   "zh-TW": "2c5eb769b0e3d835"
+   "bg": "2e2085b0964d79e7",
+   "cs": "55f1e20af1d0d7f5",
+   "da": "f22eb611993169c6",
+   "de": "1cd295ccea3605f9",
+   "el": "bd675c9cac38b1f8",
+   "en": "e213903aac6b29b4",
+   "es": "90ff08339f40f203",
+   "fi": "154817bc55d3acb8",
+   "fr": "6ca66bddbf5ece13",
+   "hi": "a59b5193112af19b",
+   "hr": "644834b3cbb15a66",
+   "hu": "62a5bf4bd7fe4dfa",
+   "id": "9a3f2241de422f75",
+   "it": "d1c3767935c056ab",
+   "ja": "b034236a4bf42b24",
+   "ko": "9f625376288fa4f7",
+   "lt": "7d3905302991119a",
+   "nl": "23a15512945a2383",
+   "no": "d42facbade06c8be",
+   "pl": "607b3f61753cb163",
+   "pt-BR": "2d96341f6d31833b",
+   "ro": "d631587d263c0de7",
+   "ru": "2e9ac81ca3a91822",
+   "sv-SE": "f43705dbae08ccab",
+   "th": "ec3ef6da044e851f",
+   "tr": "c46c92d2c9b21aae",
+   "uk": "1fbc119e177efd51",
+   "vi": "dea9002f1adeef00",
+   "zh-CN": "5d372972b9748016",
+   "zh-TW": "29cb2a19480f9e08"
   }
  },
  "version": 1

@@ -7,7 +7,7 @@
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F1E8">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1E1A15">
 <title>Cozirom · Oversettelsesbot for Discord-chat</title>
-<meta name="description" content="En Discord-bot som oversetter chatten til den andres språk. Oversettelsene vises under navnet ditt, og tekst i bilder blir også oversatt.">
+<meta name="description" content="En Discord-bot som legger ut det du skriver på den andres språk, i en tone som passer, under ditt eget navn. Den oversetter også tekst i bilder.">
 <link rel="canonical" href="https://cozirom.com/index-no.html">
 <link rel="alternate" hreflang="ko" href="https://cozirom.com/index.html">
 <link rel="alternate" hreflang="en" href="https://cozirom.com/index-en.html">
@@ -43,18 +43,18 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cozirom">
 <meta property="og:title" content="Cozirom · Oversettelsesbot for Discord-chat">
-<meta property="og:description" content="En Discord-bot som oversetter chatten til den andres språk. Oversettelsene vises under navnet ditt, og tekst i bilder blir også oversatt.">
+<meta property="og:description" content="En Discord-bot som legger ut det du skriver på den andres språk, i en tone som passer, under ditt eget navn. Den oversetter også tekst i bilder.">
 <meta property="og:url" content="https://cozirom.com/index-no.html">
 <meta property="og:image" content="https://cozirom.com/assets/og-index-no.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Chat på Discord – hver på sitt eget språk">
+<meta property="og:image:alt" content="Oversettelsesbot for Discord-chat">
 <meta property="og:locale" content="nb_NO">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cozirom","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","inLanguage":"no","description":"En Discord-bot som oversetter chatten til den andres språk. Oversettelsene vises under navnet ditt, og tekst i bilder blir også oversatt.","url":"https://cozirom.com/index-no.html","publisher":{"@type":"Organization","name":"Cozirom","url":"https://cozirom.com/","email":"bouz3337@gmail.com"},"offers":[{"@type":"Offer","name":"Guest","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Superior","price":"9.99","priceCurrency":"USD"},{"@type":"Offer","name":"Deluxe","price":"14.99","priceCurrency":"USD"},{"@type":"Offer","name":"Suite","price":"36.99","priceCurrency":"USD"},{"@type":"Offer","name":"Lounge","price":"11.99","priceCurrency":"USD"},{"@type":"Offer","name":"Ballroom","price":"44.99","priceCurrency":"USD"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cozirom","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","inLanguage":"no","description":"En Discord-bot som legger ut det du skriver på den andres språk, i en tone som passer, under ditt eget navn. Den oversetter også tekst i bilder.","url":"https://cozirom.com/index-no.html","publisher":{"@type":"Organization","name":"Cozirom","url":"https://cozirom.com/","email":"bouz3337@gmail.com"},"offers":[{"@type":"Offer","name":"Guest","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Superior","price":"9.99","priceCurrency":"USD"},{"@type":"Offer","name":"Deluxe","price":"14.99","priceCurrency":"USD"},{"@type":"Offer","name":"Suite","price":"36.99","priceCurrency":"USD"},{"@type":"Offer","name":"Lounge","price":"11.99","priceCurrency":"USD"},{"@type":"Offer","name":"Ballroom","price":"44.99","priceCurrency":"USD"}]}</script>
 <link rel="preload" href="fonts/CoziromSans-fccf430d2838.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/CoziromSerif-03c35ac7d112.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:"Cozirom Sans";src:url("fonts/CoziromSans-fccf430d2838.woff2") format("woff2");font-weight:45 920;font-display:swap}@font-face{font-family:"Cozirom Sans Fallback";src:local("Arial"), local("Helvetica Neue");size-adjust:99.8%;ascent-override:95.4%;descent-override:24.2%;line-gap-override:0%}@font-face{font-family:"Cozirom Serif";src:url("fonts/CoziromSerif-03c35ac7d112.woff2") format("woff2");font-weight:700;font-display:swap}</style>
+<link rel="preload" href="fonts/CoziromSerif-084c33cbff9e.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Cozirom Sans";src:url("fonts/CoziromSans-fccf430d2838.woff2") format("woff2");font-weight:45 920;font-display:swap}@font-face{font-family:"Cozirom Sans Fallback";src:local("Arial"), local("Helvetica Neue");size-adjust:99.8%;ascent-override:95.4%;descent-override:24.2%;line-gap-override:0%}@font-face{font-family:"Cozirom Serif";src:url("fonts/CoziromSerif-084c33cbff9e.woff2") format("woff2");font-weight:700;font-display:swap}</style>
 <link rel="stylesheet" href="site.css">
 <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -85,14 +85,14 @@
   <section class="hero grid" aria-labelledby="hero-title">
     <div class="col-7">
       <p class="eyebrow">Oversettelsesbot for Discord-chat</p>
-      <h1 class="display" id="hero-title">Chat på Discord – hver på sitt eget språk</h1>
-      <p class="lead">Cozirom er en Discord-bot som oversetter chatten til den andres språk. Når du har slått den på, blir meldingene dine lagt ut oversatt under ditt eget navn og profilbilde, og tekst i bilder blir også oversatt.</p>
+      <h1 class="display" id="hero-title">Ulike språk, lett å prate</h1>
+      <p class="lead">Cozirom er en Discord-bot som legger ut det du skriver på den andres språk, i en tone som passer, under ditt eget navn og profilbilde. Den oversetter også tekst i bilder.</p>
       <p class="btn-row"><a class="btn btn--primary" href="https://discord.com/oauth2/authorize?client_id=1558929598677524560&amp;scope=bot+applications.commands&amp;permissions=344134642688">Legg til i Discord</a><a class="btn" href="plans-no.html">Se abonnementer</a></p>
       <p class="fineprint">Oversettelsene lages av AI (Claude fra Anthropic).</p>
     </div>
     <figure class="col-5 hero-card">
       <div class="key-card key-card--hero" aria-hidden="true"><div class="key-inner"><div class="key-top"><span class="key-no">03</span><svg class="seal" aria-hidden="true"><use href="#seal"/></svg></div><p class="plan-name"><span class="key-grade" lang="en">SUPERIOR</span></p><p class="price"><span class="cur">$</span><span class="amount">9,99</span>/mnd</p><p class="key-brand" aria-hidden="true">COZIROM</p></div></div>
-      <figcaption class="caption">Abonnementene har ulike nivåer, som romnøkler på et hotell. Du kan starte med Guest-abonnementet (gratis).</figcaption>
+      <figcaption class="caption">Abonnementene har navn som hotellrom. Guest-abonnementet er gratis.</figcaption>
     </figure>
   </section>
 
@@ -103,15 +103,17 @@
       <p class="lead">Grensene i abonnementene telles i oversettelser. Én melding oversatt til ett språk teller som 1.</p>
     </div>
     <div class="folio">
-      <div class="folio-head"><p class="eyebrow">6 funksjoner</p><p class="small">Antall oversettelser</p></div>
+      <div class="folio-head"><p class="eyebrow">8 funksjoner</p><p class="small">Antall oversettelser</p></div>
       <ol class="ledger">
         <li><span class="no" aria-hidden="true">01</span><div><h3>Automatisk oversettelse</h3><p>Én kjøring av <code><span class="cmd">/oversett</span> på</code> er nok, så blir meldingene dine på den serveren lagt ut på den andres språk, under ditt eget navn og profilbilde. Originalen blir stående med liten skrift under oversettelsen, og knappen <img class="icon" src="assets/button_original.png" width="20" height="20" alt="Knappen Vis originalen"> viser hele originalen.</p></div><p class="count"><span class="count-label">Oversettelser</span><span class="fig">1</span> per melding</p></li>
         <li><span class="no" aria-hidden="true">02</span><div><h3>Oversett tekst i bilder</h3><p>Menyer, spillskjermer, memes: Har et bilde tekst, blir den lest og oversatt. Åpne det fra ikonet <img class="icon" src="assets/button_read.png" width="20" height="20" alt="Ikonet Oversett tekst"> under bilder fra dem som har slått på oversettelse, eller via høyreklikk. Bare den som spurte, ser resultatet, og bilder uten tekst telles ikke.</p></div><p class="count"><span class="count-label">Oversettelser</span>Vanligvis omtrent <span class="fig">9</span> per bilde</p></li>
         <li><span class="no" aria-hidden="true">03</span><div><h3>Legg på bildet (tegnet inn i bildet)</h3><p>Med ikonet <img class="icon" src="assets/button_overlay.png" width="20" height="20" alt="Ikonet Legg på bildet"> får du en kopi av bildet der den opprinnelige teksten er fjernet og oversettelsen tegnet inn i stedet. Først brukes «Som originalen», som velger en skrifttype nær de opprinnelige bokstavene, og du kan bytte mellom opptil 15 skrifttypepakker som «Seriff», «Håndskrift» og «Tegneserie» uten at det telles. Det fungerer best på vannrett tekst som skjermbilder, memes, spillskjermer og menyer, og bare den som trykket, ser resultatet.</p></div><p class="count"><span class="count-label">Oversettelser</span>Vanligvis omtrent <span class="fig">19</span> per bilde</p>
           <figure class="figure figure--overlay"><div class="figure-pair"><picture><source srcset="assets/overlay_before.webp" type="image/webp"><img src="assets/overlay_before.png" width="720" height="520" alt="Før: et bilde av et menykort fra en restaurant, skrevet på japansk" loading="lazy" decoding="async"></picture><svg class="arrow" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M3 14h20M16 7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><picture><source srcset="assets/overlay_after-no.webp" type="image/webp"><img src="assets/overlay_after-no.png" width="720" height="520" alt="Etter: det samme bildet der den japanske teksten på menykortet er fjernet og den norske oversettelsen tegnet inn i stedet" loading="lazy" decoding="async"></picture></div><figcaption>Eksempel: originalbildet (et japansk menykort) og det samme bildet med teksten fjernet og den norske oversettelsen tegnet inn i stedet med skrifttypen «Seriff».</figcaption></figure></li>
         <li><span class="no" aria-hidden="true">04</span><div><h3>Talemeldinger</h3><p>Med et betalt abonnement høyreklikker du på en talemelding i en aldersbegrenset kanal for å se hva som ble sagt, og oversettelsen. Meldinger på opptil 3 minutter blir transkribert, og meldinger uten tale telles ikke.</p></div><p class="count"><span class="count-label">Oversettelser</span><span class="fig">1</span> per sekund, pluss oversettelsen<small>En melding på 10 sekunder gir vanligvis 11</small></p></li>
-        <li><span class="no" aria-hidden="true">05</span><div><h3>Fire toner</h3><p>Slang, uformell, vennlig eller formell – du velger for hver server. Uformell med venner, formell på nye steder. Med Guest-abonnementet (gratis) får du alle fire de første 14 dagene og deretter den vennlige tonen.</p></div><p class="count"><span class="count-label">Oversettelser</span>Betalte: alle fire. Free: de første <span class="fig">14</span> dagene</p></li>
+        <li><span class="no" aria-hidden="true">05</span><div><h3>Fire toner</h3><p>Slang, uformell, høflig eller formell – du velger for hver server. Uformell med venner, formell på nye steder. Med Guest-abonnementet får du alle fire de første 14 dagene og deretter den høflige tonen.</p></div><p class="count"><span class="count-label">Oversettelser</span>Betalte: alle fire. Free: de første <span class="fig">14</span> dagene</p></li>
         <li><span class="no" aria-hidden="true">06</span><div><h3>31 språk</h3><p>Boten oversetter 31 språk. Botens tekster og kommandonavn finnes på 30 av Discords språk, så den andre kan sette den opp på sitt eget språk.</p></div><p class="count"><span class="count-label">Oversettelser</span><span class="fig">31</span> for oversettelse, <span class="fig">30</span> visningsspråk</p></li>
+        <li><span class="no" aria-hidden="true">07</span><div><h3>Oversettelsesrom</h3><p>Åpne et privat oversettelsesrom med folk du velger. Rom starter med Superior-abonnementet, og de du inviterer, trenger ikke abonnement.</p></div><p class="count"><span class="count-label">Oversettelser</span><span class="fig">1</span> per melding</p></li>
+        <li><span class="no" aria-hidden="true">08</span><div><h3>Forklar betydningen</h3><p>Forklarer hva en melding egentlig betyr og hvordan du kan svare, bare for deg. Tilgjengelig fra Superior-abonnementet.</p></div><p class="count"><span class="count-label">Oversettelser</span>Bruk per måned, utenom oversettelser</p></li>
       </ol>
     </div>
   </section>
@@ -123,8 +125,8 @@
     </div>
     <ol class="steps">
       <li><span class="no" aria-hidden="true">1</span><h3>Legg boten til på serveren</h3><p>En serveradministrator legger boten til på serveren med knappen under. Invitasjonslenken får du også på <a href="https://discord.gg/96Jw2CYTpd">supportserveren</a>.</p><p><a class="btn" href="https://discord.com/oauth2/authorize?client_id=1558929598677524560&amp;scope=bot+applications.commands&amp;permissions=344134642688">Inviter boten</a></p></li>
-      <li><span class="no" aria-hidden="true">2</span><h3>Slå på oversettelse</h3><p>På serveren kjører alle som vil bli oversatt, <code><span class="cmd">/oversett</span> på</code>. Boten gjetter språket ditt og den andres og åpner innstillingspanelet. Endre dem i nedtrekksmenyene hvis de ikke stemmer.</p></li>
-      <li><span class="no" aria-hidden="true">3</span><h3>Skriv som vanlig</h3><p>Skriv som vanlig, så vises oversettelsen under navnet ditt. Start med Guest-abonnementet (gratis), og bytt abonnement på <a href="plans-no.html">abonnementssiden</a> når du trenger mer.</p></li>
+      <li><span class="no" aria-hidden="true">2</span><h3>Slå på oversettelse</h3><p>Alle som vil bli oversatt, kjører <code><span class="cmd">/oversett</span> på</code> på serveren. Når oversettelsene dukker opp, kan andre starte med den blå snakkeboble-knappen under dem. Språkene gjettes for deg, og du kan endre dem i innstillingene.</p></li>
+      <li><span class="no" aria-hidden="true">3</span><h3>Skriv som vanlig</h3><p>Skriv som vanlig, så vises oversettelsen under navnet ditt. Start med det gratis Guest-abonnementet, og bytt abonnement på <a href="plans-no.html">abonnementssiden</a> når du trenger mer.</p></li>
     </ol>
   </section>
 
@@ -144,7 +146,7 @@
     <div class="footer-grid">
       <div class="footer-col footer-col--brand">
         <a class="footer-brand" href="index-no.html"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg><span class="brand-name">COZIROM</span></a>
-        <p class="footer-tag">En bot som oversetter Discord-chatten til den andres språk.</p>
+        <p class="footer-tag">Ulike språk, lett å prate.</p>
         <p class="footer-note">Brukervilkårene, refusjonsreglene og personvernerklæringen vår finnes bare på engelsk.</p>
       </div>
       <nav class="footer-col" aria-labelledby="f-guide"><h2 id="f-guide">Informasjon</h2><ul><li><a href="plans-no.html">Abonnementer</a></li><li><a href="support-no.html">Hjelp og support</a></li></ul></nav>

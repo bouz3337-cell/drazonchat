@@ -7,7 +7,7 @@
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F1E8">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1E1A15">
 <title>Cozirom · Vertaalbot voor Discord-chats</title>
-<meta name="description" content="Een Discord-bot die de chat vertaalt naar de taal van de ander. Vertalingen verschijnen onder je naam, en tekst in afbeeldingen wordt ook vertaald.">
+<meta name="description" content="Een Discord-bot die wat je schrijft opnieuw plaatst in de taal van de ander, in een passende toon, onder je eigen naam. Ook tekst in afbeeldingen wordt vertaald.">
 <link rel="canonical" href="https://cozirom.com/index-nl.html">
 <link rel="alternate" hreflang="ko" href="https://cozirom.com/index.html">
 <link rel="alternate" hreflang="en" href="https://cozirom.com/index-en.html">
@@ -43,18 +43,18 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cozirom">
 <meta property="og:title" content="Cozirom · Vertaalbot voor Discord-chats">
-<meta property="og:description" content="Een Discord-bot die de chat vertaalt naar de taal van de ander. Vertalingen verschijnen onder je naam, en tekst in afbeeldingen wordt ook vertaald.">
+<meta property="og:description" content="Een Discord-bot die wat je schrijft opnieuw plaatst in de taal van de ander, in een passende toon, onder je eigen naam. Ook tekst in afbeeldingen wordt vertaald.">
 <meta property="og:url" content="https://cozirom.com/index-nl.html">
 <meta property="og:image" content="https://cozirom.com/assets/og-index-nl.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Chat op Discord in je eigen taal">
+<meta property="og:image:alt" content="Vertaalbot voor Discord-chats">
 <meta property="og:locale" content="nl_NL">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cozirom","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","inLanguage":"nl","description":"Een Discord-bot die de chat vertaalt naar de taal van de ander. Vertalingen verschijnen onder je naam, en tekst in afbeeldingen wordt ook vertaald.","url":"https://cozirom.com/index-nl.html","publisher":{"@type":"Organization","name":"Cozirom","url":"https://cozirom.com/","email":"bouz3337@gmail.com"},"offers":[{"@type":"Offer","name":"Guest","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Superior","price":"9.99","priceCurrency":"USD"},{"@type":"Offer","name":"Deluxe","price":"14.99","priceCurrency":"USD"},{"@type":"Offer","name":"Suite","price":"36.99","priceCurrency":"USD"},{"@type":"Offer","name":"Lounge","price":"11.99","priceCurrency":"USD"},{"@type":"Offer","name":"Ballroom","price":"44.99","priceCurrency":"USD"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cozirom","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","inLanguage":"nl","description":"Een Discord-bot die wat je schrijft opnieuw plaatst in de taal van de ander, in een passende toon, onder je eigen naam. Ook tekst in afbeeldingen wordt vertaald.","url":"https://cozirom.com/index-nl.html","publisher":{"@type":"Organization","name":"Cozirom","url":"https://cozirom.com/","email":"bouz3337@gmail.com"},"offers":[{"@type":"Offer","name":"Guest","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Superior","price":"9.99","priceCurrency":"USD"},{"@type":"Offer","name":"Deluxe","price":"14.99","priceCurrency":"USD"},{"@type":"Offer","name":"Suite","price":"36.99","priceCurrency":"USD"},{"@type":"Offer","name":"Lounge","price":"11.99","priceCurrency":"USD"},{"@type":"Offer","name":"Ballroom","price":"44.99","priceCurrency":"USD"}]}</script>
 <link rel="preload" href="fonts/CoziromSans-5a4c8d766178.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/CoziromSerif-ca33eca7130c.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:"Cozirom Sans";src:url("fonts/CoziromSans-5a4c8d766178.woff2") format("woff2");font-weight:45 920;font-display:swap}@font-face{font-family:"Cozirom Sans Fallback";src:local("Arial"), local("Helvetica Neue");size-adjust:99.8%;ascent-override:95.4%;descent-override:24.2%;line-gap-override:0%}@font-face{font-family:"Cozirom Serif";src:url("fonts/CoziromSerif-ca33eca7130c.woff2") format("woff2");font-weight:700;font-display:swap}</style>
+<link rel="preload" href="fonts/CoziromSerif-956e7878cc5a.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Cozirom Sans";src:url("fonts/CoziromSans-5a4c8d766178.woff2") format("woff2");font-weight:45 920;font-display:swap}@font-face{font-family:"Cozirom Sans Fallback";src:local("Arial"), local("Helvetica Neue");size-adjust:99.8%;ascent-override:95.4%;descent-override:24.2%;line-gap-override:0%}@font-face{font-family:"Cozirom Serif";src:url("fonts/CoziromSerif-956e7878cc5a.woff2") format("woff2");font-weight:700;font-display:swap}</style>
 <link rel="stylesheet" href="site.css">
 <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -85,14 +85,14 @@
   <section class="hero grid" aria-labelledby="hero-title">
     <div class="col-7">
       <p class="eyebrow">Vertaalbot voor Discord-chats</p>
-      <h1 class="display" id="hero-title">Chat op Discord in je eigen taal</h1>
-      <p class="lead">Cozirom is een Discord-bot die de chat vertaalt naar de taal van de ander. Zet je hem aan, dan worden je berichten vertaald geplaatst onder je eigen naam en profielfoto, en tekst in afbeeldingen wordt ook vertaald.</p>
+      <h1 class="display" id="hero-title">Andere taal, toch op je gemak</h1>
+      <p class="lead">Cozirom is een Discord-bot die wat je schrijft opnieuw plaatst in de taal van de ander, in een passende toon, onder je eigen naam en profielfoto. Ook tekst in afbeeldingen wordt vertaald.</p>
       <p class="btn-row"><a class="btn btn--primary" href="https://discord.com/oauth2/authorize?client_id=1558929598677524560&amp;scope=bot+applications.commands&amp;permissions=344134642688">Toevoegen aan Discord</a><a class="btn" href="plans-nl.html">Abonnementen bekijken</a></p>
       <p class="fineprint">Vertalingen worden gemaakt door AI (Claude van Anthropic).</p>
     </div>
     <figure class="col-5 hero-card">
       <div class="key-card key-card--hero" aria-hidden="true"><div class="key-inner"><div class="key-top"><span class="key-no">03</span><svg class="seal" aria-hidden="true"><use href="#seal"/></svg></div><p class="plan-name"><span class="key-grade" lang="en">SUPERIOR</span></p><p class="price"><span class="cur">$</span><span class="amount">9,99</span>/maand</p><p class="key-brand" aria-hidden="true">COZIROM</p></div></div>
-      <figcaption class="caption">Abonnementen hebben niveaus, net als kamersleutels in een hotel. Je kunt beginnen met Guest (gratis).</figcaption>
+      <figcaption class="caption">De abonnementen heten zoals hotelkamers. Het Guest-abonnement is gratis.</figcaption>
     </figure>
   </section>
 
@@ -103,15 +103,17 @@
       <p class="lead">De limieten van abonnementen worden in vertalingen geteld. Eén bericht vertaald naar één taal telt als 1.</p>
     </div>
     <div class="folio">
-      <div class="folio-head"><p class="eyebrow">6 functies</p><p class="small">In vertalingen</p></div>
+      <div class="folio-head"><p class="eyebrow">8 functies</p><p class="small">In vertalingen</p></div>
       <ol class="ledger">
         <li><span class="no" aria-hidden="true">01</span><div><h3>Automatisch vertalen</h3><p>Voer <code><span class="cmd">/vertalen</span> aan</code> één keer uit en je berichten op die server verschijnen in de andere taal, onder je eigen naam en profielfoto. Het origineel blijft in kleine tekst onder de vertaling staan, en de knop <img class="icon" src="assets/button_original.png" width="20" height="20" alt="Knop Origineel bekijken"> toont het volledige origineel.</p></div><p class="count"><span class="count-label">Vertalingen</span><span class="fig">1</span> per bericht</p></li>
         <li><span class="no" aria-hidden="true">02</span><div><h3>Tekst in afbeeldingen vertalen</h3><p>Menukaarten, gameschermen, memes: staat er tekst in een afbeelding, dan wordt die gelezen en vertaald. Open het via het pictogram <img class="icon" src="assets/button_read.png" width="20" height="20" alt="Pictogram Tekst vertalen"> onder afbeeldingen van mensen die vertalen hebben aangezet, of met rechtsklik. Alleen wie erom vroeg ziet het resultaat, en afbeeldingen zonder tekst tellen niet mee.</p></div><p class="count"><span class="count-label">Vertalingen</span>Ongeveer <span class="fig">9</span> per afbeelding</p></li>
         <li><span class="no" aria-hidden="true">03</span><div><h3>Vertaling erop (in de afbeelding getekend)</h3><p>Via het pictogram <img class="icon" src="assets/button_overlay.png" width="20" height="20" alt="Pictogram Op beeld zetten"> krijg je een kopie van de afbeelding waarin de originele tekst is gewist en de vertaling op die plek is getekend. Eerst staat het lettertype op “Zoals het origineel”, dicht bij de originele letters, en je kunt kosteloos wisselen tussen maximaal 15 lettertypesets zoals “Schreefletter”, “Handschrift” en “Strip”. Het werkt het best bij horizontale tekst zoals screenshots, memes, gameschermen en menukaarten, en alleen wie erop drukte ziet het resultaat.</p></div><p class="count"><span class="count-label">Vertalingen</span>Ongeveer <span class="fig">19</span> per afbeelding</p>
           <figure class="figure figure--overlay"><div class="figure-pair"><picture><source srcset="assets/overlay_before.webp" type="image/webp"><img src="assets/overlay_before.png" width="720" height="520" alt="Voor: foto van een restaurantmenukaart in het Japans" loading="lazy" decoding="async"></picture><svg class="arrow" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M3 14h20M16 7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><picture><source srcset="assets/overlay_after-nl.webp" type="image/webp"><img src="assets/overlay_after-nl.png" width="720" height="520" alt="Na: dezelfde foto met het Japans van de menukaart gewist en de Nederlandse vertaling op die plek getekend" loading="lazy" decoding="async"></picture></div><figcaption>Voorbeeld: de originele foto (een Japanse menukaart) en dezelfde foto met de tekst gewist en de Nederlandse vertaling op die plek getekend in het lettertype “Schreefletter”.</figcaption></figure></li>
         <li><span class="no" aria-hidden="true">04</span><div><h3>Spraakberichten</h3><p>Rechtsklik met een betaald abonnement op een spraakbericht in een kanaal met leeftijdsbeperking en je ziet wat er gezegd is, met de vertaling erbij. Berichten tot 3 minuten worden getranscribeerd, en berichten zonder spraak tellen niet mee.</p></div><p class="count"><span class="count-label">Vertalingen</span><span class="fig">1</span> per seconde, plus de vertaling<small>Een bericht van 10 seconden telt meestal 11</small></p></li>
-        <li><span class="no" aria-hidden="true">05</span><div><h3>Vier tonen</h3><p>Slang, Casual, Vriendelijk of Formeel, per server te kiezen. Jij tegen vrienden, u op een nieuwe plek. Met het Guest-abonnement (gratis) heb je de eerste 14 dagen alle vier, daarna de vriendelijke toon.</p></div><p class="count"><span class="count-label">Vertalingen</span>Betaald: alle vier. Free: de eerste <span class="fig">14</span> dagen</p></li>
+        <li><span class="no" aria-hidden="true">05</span><div><h3>Vier tonen</h3><p>Slang, casual, beleefd of formeel, per server te kiezen. Jij tegen vrienden, u op een nieuwe plek. Met het Guest-abonnement heb je de eerste 14 dagen alle vier, daarna de beleefde toon.</p></div><p class="count"><span class="count-label">Vertalingen</span>Betaald: alle vier. Free: de eerste <span class="fig">14</span> dagen</p></li>
         <li><span class="no" aria-hidden="true">06</span><div><h3>31 talen</h3><p>Er wordt vertaald tussen 31 talen. De interface en de commandonamen van de bot zijn er in 30 Discord-talen, dus de ander stelt hem gewoon in de eigen taal in.</p></div><p class="count"><span class="count-label">Vertalingen</span><span class="fig">31</span> voor vertalen, <span class="fig">30</span> voor de interface</p></li>
+        <li><span class="no" aria-hidden="true">07</span><div><h3>Vertaalkamers</h3><p>Open een besloten vertaalkamer met mensen die je zelf kiest. Kamers kun je openen vanaf het Superior-abonnement, en wie je uitnodigt heeft geen abonnement nodig.</p></div><p class="count"><span class="count-label">Vertalingen</span><span class="fig">1</span> per bericht</p></li>
+        <li><span class="no" aria-hidden="true">08</span><div><h3>Betekenis uitleggen</h3><p>Legt alleen voor jou uit wat een bericht echt betekent en hoe je zou kunnen antwoorden. Beschikbaar vanaf het Superior-abonnement.</p></div><p class="count"><span class="count-label">Vertalingen</span>Per maand, los van vertalingen</p></li>
       </ol>
     </div>
   </section>
@@ -123,8 +125,8 @@
     </div>
     <ol class="steps">
       <li><span class="no" aria-hidden="true">1</span><h3>Voeg de bot toe aan de server</h3><p>Een serverbeheerder voegt de bot toe aan de server met de knop hieronder. De uitnodigingslink krijg je ook op <a href="https://discord.gg/96Jw2CYTpd">de supportserver</a>.</p><p><a class="btn" href="https://discord.com/oauth2/authorize?client_id=1558929598677524560&amp;scope=bot+applications.commands&amp;permissions=344134642688">Bot uitnodigen</a></p></li>
-      <li><span class="no" aria-hidden="true">2</span><h3>Zet vertalen aan</h3><p>Wie vertaald wil worden, voert <code><span class="cmd">/vertalen</span> aan</code> uit op die server. De bot raadt jouw taal en die van de ander en opent het instellingenpaneel. Klopt het niet, pas het dan aan in de keuzemenu's.</p></li>
-      <li><span class="no" aria-hidden="true">3</span><h3>Schrijf zoals altijd</h3><p>Schrijf zoals altijd en de vertaling verschijnt onder je naam. Begin met het Guest-abonnement (gratis) en stap via <a href="plans-nl.html">de abonnementenpagina</a> over op een ander abonnement als je meer nodig hebt.</p></li>
+      <li><span class="no" aria-hidden="true">2</span><h3>Zet vertalen aan</h3><p>Wie vertaald wil worden, voert <code><span class="cmd">/vertalen</span> aan</code> uit op die server. Zodra er vertalingen verschijnen, kunnen anderen beginnen met de blauwe tekstballonknop eronder. Je talen worden voor je geraden en je kunt ze aanpassen in de instellingen.</p></li>
+      <li><span class="no" aria-hidden="true">3</span><h3>Schrijf zoals altijd</h3><p>Schrijf zoals altijd en de vertaling verschijnt onder je naam. Begin met het gratis Guest-abonnement en stap via <a href="plans-nl.html">de abonnementenpagina</a> over op een ander abonnement als je meer nodig hebt.</p></li>
     </ol>
   </section>
 
@@ -144,7 +146,7 @@
     <div class="footer-grid">
       <div class="footer-col footer-col--brand">
         <a class="footer-brand" href="index-nl.html"><svg class="seal" aria-hidden="true"><use href="#seal"/></svg><span class="brand-name">COZIROM</span></a>
-        <p class="footer-tag">Een bot die Discord-chats vertaalt naar de taal van de ander.</p>
+        <p class="footer-tag">Andere taal, toch op je gemak.</p>
         <p class="footer-note">Onze gebruiksvoorwaarden, ons terugbetalingsbeleid en ons privacybeleid zijn alleen in het Engels beschikbaar.</p>
       </div>
       <nav class="footer-col" aria-labelledby="f-guide"><h2 id="f-guide">Info</h2><ul><li><a href="plans-nl.html">Abonnementen</a></li><li><a href="support-nl.html">Hulp en support</a></li></ul></nav>
