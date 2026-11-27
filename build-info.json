@@ -1,8 +1,8 @@
 {
  "_": "python tools/build_site.py가 만든다 (손으로 고치지 않는다). python tools/build_site.py --check 폴더가 지금 원본과 견준다.",
- "fingerprint": "82549f3a9b9761f039e01ae6d0773fb705d2368e892a75b18f30e761c379ce29",
+ "fingerprint": "2467cc13d72c453323d6fec812601fb6ea0b9a0855fdc66a43c91ef87fbcc7b1",
  "info": {
-  "commit": "5d5a3e8f04777bb45b27c79b70514ec4133c390e",
+  "commit": "c0fbfe6d1a709aa7080872d6ff7143eb771c37ec",
   "dirty": false,
   "pages": 277
  },
@@ -131,13 +131,13 @@
    "assets/site/overlay_before-ja.webp": "a52cf0dbf9fff713",
    "assets/site/overlay_before.png": "24664215f4b3da3a",
    "assets/site/overlay_before.webp": "f70ac7eaf080734e",
-   "docs/privacy_policy_draft.en.md": "21a24a969445dd65",
-   "docs/privacy_policy_draft.ko.md": "1fe8067650962e48",
+   "docs/privacy_policy_draft.en.md": "9b224335befec33c",
+   "docs/privacy_policy_draft.ko.md": "02f609eb5516be87",
    "docs/refund_policy_draft.en.md": "3d1d56ceb4ecc7fe",
    "docs/refund_policy_draft.ko.md": "4558030fae7b40ba",
    "docs/site.css": "e2f032c523089b25",
-   "docs/terms_draft.en.md": "fb0d5894664a9b83",
-   "docs/terms_draft.ko.md": "bc78c2f77f920268",
+   "docs/terms_draft.en.md": "75dad8fb83976c94",
+   "docs/terms_draft.ko.md": "5b18d83f85424eb6",
    "fonts/card/DrazonCard-Caps.ttf": "cd59a4f0205a2e70",
    "fonts/card/DrazonCard-Numerals.ttf": "603025313083ad11",
    "fonts/card/DrazonCard-Sans.ttf": "38ce307f395c710e",
